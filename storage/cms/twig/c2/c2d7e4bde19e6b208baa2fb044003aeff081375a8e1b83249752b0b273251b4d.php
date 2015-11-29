@@ -31,67 +31,45 @@ class __TwigTemplate_0b8979be3d4bc1edaa3a65b06229973a5ac9ed4af795851436a99cddae3
         Главная
     </title>
 
-    <link href=\"/styles/css/superfish.css\" rel=\"stylesheet\" media=\"screen\">
-
     ";
-        // line 18
+        // line 16
         echo $this->env->getExtension('CMS')->assetsFunction('css');
         echo $this->env->getExtension('CMS')->displayBlock('styles');
-        // line 19
+        // line 17
         echo "
 </head>
 
 <body>
-<div class=\"language\">
-    <a href=\"#\" title=\"UA\" class=\"language-flag\"><img  src=\"img/ua.png\" alt=\"\" width=\"18\" height=\"12\"></a>
-    <a href=\"#\" title=\"RU\" class=\"language-flag\"><img  src=\"img/ru.png\" alt=\"\" width=\"18\" height=\"12\"></a>
-    <span class=\"language-text\">Язык</span>
-</div>
-<!--header start-->
+
 ";
-        // line 29
+        // line 22
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('CMS')->partialFunction("header"        , $context['__cms_partial_params']        );
         unset($context['__cms_partial_params']);
-        // line 30
-        echo "<!--header end-->
-
-";
-        // line 32
-        echo $this->env->getExtension('CMS')->pageFunction();
-        // line 33
+        // line 23
         echo "
 ";
-        // line 34
+        // line 24
+        echo $this->env->getExtension('CMS')->pageFunction();
+        // line 25
+        echo "
+";
+        // line 26
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('CMS')->partialFunction("footer"        , $context['__cms_partial_params']        );
         unset($context['__cms_partial_params']);
-        // line 35
+        // line 27
         echo "
-<!-- js placed at the end of the document so the pages load faster
-<script src=\"js/jquery.js\">
+<!-- Cкрипты -->
+
+<script src=\"https://maps.googleapis.com/maps/api/js?v=3.exp&AMP;sensor=false\">
 </script>
--->
-<script type=\"text/javascript\" src=\"js/jquery-1.8.3.min.js\"></script>
-
-<script src=\"js/jquery-1.8.3.min.js\"></script>
-<script src=\"js/bootstrap.min.js\"></script>
-<script type=\"text/javascript\" src=\"js/hover-dropdown.js\"></script>
-<script defer src=\"js/jquery.flexslider.js\"></script>
-<script type=\"text/javascript\" src=\"assets/bxslider/jquery.bxslider.js\"></script>
-
-<script type=\"text/javascript\" src=\"js/jquery.parallax-1.1.3.js\"></script>
-<script src=\"js/wow.min.js\"></script>
-<script src=\"assets/owlcarousel/owl.carousel.js\"></script>
-
-<script src=\"js/jquery.easing.min.js\"></script>
-<script src=\"js/link-hover.js\"></script>
-<script src=\"js/superfish.js\"></script>
-<script type=\"text/javascript\" src=\"js/parallax-slider/jquery.cslider.js\"></script>
-
-<!--common script for all pages-->
-<script src=\"js/common-scripts.js\"></script>
-
+";
+        // line 32
+        echo $this->env->getExtension('CMS')->assetsFunction('js');
+        echo $this->env->getExtension('CMS')->displayBlock('scripts');
+        // line 33
+        echo "
 </body>
 </html>";
     }
@@ -108,7 +86,7 @@ class __TwigTemplate_0b8979be3d4bc1edaa3a65b06229973a5ac9ed4af795851436a99cddae3
 
     public function getDebugInfo()
     {
-        return array (  70 => 35,  66 => 34,  63 => 33,  61 => 32,  57 => 30,  53 => 29,  41 => 19,  38 => 18,  19 => 1,);
+        return array (  72 => 33,  69 => 32,  62 => 27,  58 => 26,  55 => 25,  53 => 24,  50 => 23,  46 => 22,  39 => 17,  36 => 16,  19 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -126,49 +104,23 @@ class __TwigTemplate_0b8979be3d4bc1edaa3a65b06229973a5ac9ed4af795851436a99cddae3
 /*         Главная*/
 /*     </title>*/
 /* */
-/*     <link href="/styles/css/superfish.css" rel="stylesheet" media="screen">*/
-/* */
 /*     {% styles %}*/
 /* */
 /* </head>*/
 /* */
 /* <body>*/
-/* <div class="language">*/
-/*     <a href="#" title="UA" class="language-flag"><img  src="img/ua.png" alt="" width="18" height="12"></a>*/
-/*     <a href="#" title="RU" class="language-flag"><img  src="img/ru.png" alt="" width="18" height="12"></a>*/
-/*     <span class="language-text">Язык</span>*/
-/* </div>*/
-/* <!--header start-->*/
+/* */
 /* {% partial 'header' %}*/
-/* <!--header end-->*/
 /* */
 /* {% page %}*/
 /* */
 /* {% partial 'footer' %}*/
 /* */
-/* <!-- js placed at the end of the document so the pages load faster*/
-/* <script src="js/jquery.js">*/
+/* <!-- Cкрипты -->*/
+/* */
+/* <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&AMP;sensor=false">*/
 /* </script>*/
-/* -->*/
-/* <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>*/
-/* */
-/* <script src="js/jquery-1.8.3.min.js"></script>*/
-/* <script src="js/bootstrap.min.js"></script>*/
-/* <script type="text/javascript" src="js/hover-dropdown.js"></script>*/
-/* <script defer src="js/jquery.flexslider.js"></script>*/
-/* <script type="text/javascript" src="assets/bxslider/jquery.bxslider.js"></script>*/
-/* */
-/* <script type="text/javascript" src="js/jquery.parallax-1.1.3.js"></script>*/
-/* <script src="js/wow.min.js"></script>*/
-/* <script src="assets/owlcarousel/owl.carousel.js"></script>*/
-/* */
-/* <script src="js/jquery.easing.min.js"></script>*/
-/* <script src="js/link-hover.js"></script>*/
-/* <script src="js/superfish.js"></script>*/
-/* <script type="text/javascript" src="js/parallax-slider/jquery.cslider.js"></script>*/
-/* */
-/* <!--common script for all pages-->*/
-/* <script src="js/common-scripts.js"></script>*/
+/* {% scripts %}*/
 /* */
 /* </body>*/
 /* </html>*/

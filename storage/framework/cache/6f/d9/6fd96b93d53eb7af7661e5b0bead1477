@@ -1,0 +1,429 @@
+1448809768s:18018:"a:6:{s:5:"mtime";i:1448808344;s:7:"content";s:8927:"url = "/museum/:slug"
+==
+function onStart()
+{
+}
+==
+<!--breadcrumbs start-->
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-sm-4">
+                <h1>
+                    Название страницы
+                </h1>
+            </div>
+            <div class="col-lg-8 col-sm-8">
+                <ol class="breadcrumb pull-right">
+                    <li>
+                        <a href="#">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Pages
+                        </a>
+                    </li>
+                    <li class="active">
+                        Ета страница!
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+<!--breadcrumbs end-->
+
+<!--container start-->
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="blog-left wow fadeInLeft">
+                <div class="blog-img">
+                    <img src="img/blog/img8.jpg" alt=""/>
+                </div>
+                <div class="blog-content">
+                    <h3>
+                        This is heading
+                    </h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+                <a href="news-detail.html" class="btn btn-primary">Читать</a>
+
+            </div>
+
+
+            <div class="blog-left wow fadeInLeft">
+                <div class="blog-img">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/qvBX9VgPGSg" allowfullscreen="" style="border:none;">
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="blog-content">
+                    <h3>
+                        This is heading
+                    </h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+                <a href="news-detail.html" class="btn btn-primary">Читать</a>
+            </div>
+
+
+            <div class="blog-left wow fadeInLeft">
+                <div class="blog-img">
+                    <img src="img/blog/img7.jpg" alt=""/>
+                </div>
+                <div class="blog-content">
+                    <h3>
+                        This is heading
+                    </h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+                <a href="news-detail.html" class="btn btn-primary">Читать</a>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+
+            <div class="blog-right wow fadeInRight">
+                <div class="blog-img">
+                    <img src="img/blog/img6.jpg" alt=""/>
+                </div>
+                <div class="blog-content">
+                    <h3>
+                        This is heading
+                    </h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+                <a href="news-detail.html" class="btn btn-primary">Читать</a>
+            </div>
+
+            <div class="blog-right wow fadeInRight">
+                <div class="blog-img">
+                    <img src="img/blog/img4.jpg" alt=""/>
+                </div>
+                <div class="blog-content">
+                    <h3>
+                        This is heading
+                    </h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+                <a href="news-detail.html" class="btn btn-primary">Читать</a>
+            </div>
+
+            <div class="blog-right wow fadeInRight">
+                <div class="blog-img">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/qvBX9VgPGSg" allowfullscreen="" style="border:none;">
+                        </iframe>
+                    </div>
+                </div>
+                <div class="blog-content">
+                    <h3>
+                        This is heading
+                    </h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+                <a href="news-detail.html" class="btn btn-primary">Читать</a>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <ul class="pagination">
+                <li>
+                    <a href="#">
+                        «
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="#">
+                        1
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        2
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        3
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        4
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        5
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        »
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--blog end-->
+    </div>
+</div>";s:7:"viewBag";a:0:{}s:8:"settings";a:2:{s:3:"url";s:13:"/museum/:slug";s:10:"components";a:0:{}}s:4:"code";s:22:"function onStart()
+{
+}";s:6:"markup";s:8876:"<!--breadcrumbs start-->
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-sm-4">
+                <h1>
+                    Название страницы
+                </h1>
+            </div>
+            <div class="col-lg-8 col-sm-8">
+                <ol class="breadcrumb pull-right">
+                    <li>
+                        <a href="#">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Pages
+                        </a>
+                    </li>
+                    <li class="active">
+                        Ета страница!
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+<!--breadcrumbs end-->
+
+<!--container start-->
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="blog-left wow fadeInLeft">
+                <div class="blog-img">
+                    <img src="img/blog/img8.jpg" alt=""/>
+                </div>
+                <div class="blog-content">
+                    <h3>
+                        This is heading
+                    </h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+                <a href="news-detail.html" class="btn btn-primary">Читать</a>
+
+            </div>
+
+
+            <div class="blog-left wow fadeInLeft">
+                <div class="blog-img">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/qvBX9VgPGSg" allowfullscreen="" style="border:none;">
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="blog-content">
+                    <h3>
+                        This is heading
+                    </h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+                <a href="news-detail.html" class="btn btn-primary">Читать</a>
+            </div>
+
+
+            <div class="blog-left wow fadeInLeft">
+                <div class="blog-img">
+                    <img src="img/blog/img7.jpg" alt=""/>
+                </div>
+                <div class="blog-content">
+                    <h3>
+                        This is heading
+                    </h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+                <a href="news-detail.html" class="btn btn-primary">Читать</a>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+
+            <div class="blog-right wow fadeInRight">
+                <div class="blog-img">
+                    <img src="img/blog/img6.jpg" alt=""/>
+                </div>
+                <div class="blog-content">
+                    <h3>
+                        This is heading
+                    </h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+                <a href="news-detail.html" class="btn btn-primary">Читать</a>
+            </div>
+
+            <div class="blog-right wow fadeInRight">
+                <div class="blog-img">
+                    <img src="img/blog/img4.jpg" alt=""/>
+                </div>
+                <div class="blog-content">
+                    <h3>
+                        This is heading
+                    </h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+                <a href="news-detail.html" class="btn btn-primary">Читать</a>
+            </div>
+
+            <div class="blog-right wow fadeInRight">
+                <div class="blog-img">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/qvBX9VgPGSg" allowfullscreen="" style="border:none;">
+                        </iframe>
+                    </div>
+                </div>
+                <div class="blog-content">
+                    <h3>
+                        This is heading
+                    </h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+                <a href="news-detail.html" class="btn btn-primary">Читать</a>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <ul class="pagination">
+                <li>
+                    <a href="#">
+                        «
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="#">
+                        1
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        2
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        3
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        4
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        5
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        »
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--blog end-->
+    </div>
+</div>";}";

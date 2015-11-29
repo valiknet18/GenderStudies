@@ -16,7 +16,19 @@ class __TwigTemplate_8b8efcc5cb91d89cef0a9495164b585b4c66509a5f229393897a45c6e60
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 1
-        echo "<header class=\"head-section\">
+        echo "<div class=\"language\">
+    <a href=\"#\" title=\"UA\" class=\"language-flag\"><img  src=\"";
+        // line 2
+        echo $this->env->getExtension('CMS')->themeFilter("assets/image/ua.png");
+        echo "\" alt=\"\" width=\"18\" height=\"12\"></a>
+    <a href=\"#\" title=\"RU\" class=\"language-flag\"><img  src=\"";
+        // line 3
+        echo $this->env->getExtension('CMS')->themeFilter("assets/image/ru.png");
+        echo "\" alt=\"\" width=\"18\" height=\"12\"></a>
+    <span class=\"language-text\">Язык</span>
+</div>
+
+<header class=\"head-section\">
     <div class=\"navbar navbar-default navbar-static-top container\">
         <div class=\"navbar-header\">
             <button class=\"navbar-toggle\" data-target=\".navbar-collapse\" data-toggle=\"collapse\" type=\"button\">
@@ -24,12 +36,12 @@ class __TwigTemplate_8b8efcc5cb91d89cef0a9495164b585b4c66509a5f229393897a45c6e60
                 <span class=\"icon-bar\"></span>
                 <span class=\"icon-bar\"></span>
             </button>
-            <a class=\"navbar-brand\" href=\"index.html\">L<span>ogo</span></a>
+            <a class=\"navbar-brand\" href=\"/\">L<span>ogo</span></a>
         </div>
         <div class=\"navbar-collapse collapse\">
             <ul class=\"nav navbar-nav\">
                 <li>
-                    <a href=\"index.html\">Главная</a>
+                    <a href=\"/\">Главная</a>
                 </li>
                 <li class=\"dropdown\">
                     <a class=\"dropdown-toggle\" data-close-others=\"false\" data-delay=\"0\" data-hover=
@@ -37,10 +49,10 @@ class __TwigTemplate_8b8efcc5cb91d89cef0a9495164b585b4c66509a5f229393897a45c6e60
                     </a>
                     <ul class=\"dropdown-menu\">
                         <li>
-                            <a href=\"story.html\">История</a>
+                            <a href=\"/history\">История</a>
                         </li>
                         <li>
-                            <a href=\"structure.html\">Структура</a>
+                            <a href=\"/structure\">Структура</a>
                         </li>
                     </ul>
                 </li>
@@ -50,16 +62,16 @@ class __TwigTemplate_8b8efcc5cb91d89cef0a9495164b585b4c66509a5f229393897a45c6e60
                     </a>
                     <ul class=\"dropdown-menu\">
                         <li>
-                            <a href=\"news.html\">Тренинг</a>
+                            <a href=\"/news\">Тренинг</a>
                         </li>
                         <li>
-                            <a href=\"news.html\">Обявления</a>
+                            <a href=\"/news\">Обявления</a>
                         </li>
                         <li>
-                            <a href=\"news.html\">Благотворительность</a>
+                            <a href=\"/news\">Благотворительность</a>
                         </li>
                         <li>
-                            <a href=\"archive.html\">Архив</a>
+                            <a href=\"/archive\">Архив</a>
                         </li>
                     </ul>
                 </li>
@@ -69,13 +81,13 @@ class __TwigTemplate_8b8efcc5cb91d89cef0a9495164b585b4c66509a5f229393897a45c6e60
                     </a>
                     <ul class=\"dropdown-menu\">
                         <li>
-                            <a href=\"projects.html\">Конференции</a>
+                            <a href=\"/projects\">Конференции</a>
                         </li>
                         <li>
-                            <a href=\"projects.html\">Иследования</a>
+                            <a href=\"/projects\">Иследования</a>
                         </li>
                         <li>
-                            <a href=\"projects.html\">Стажировка</a>
+                            <a href=\"/projects\">Стажировка</a>
                         </li>
                     </ul>
                 </li>
@@ -85,10 +97,10 @@ class __TwigTemplate_8b8efcc5cb91d89cef0a9495164b585b4c66509a5f229393897a45c6e60
                     </a>
                     <ul class=\"dropdown-menu\">
                         <li>
-                            <a href=\"publishing.html\">Статьи</a>
+                            <a href=\"/articles\">Статьи</a>
                         </li>
                         <li>
-                            <a href=\"book.html\">Книги</a>
+                            <a href=\"/books\">Книги</a>
                         </li>
                         <li>
                             <a href=\"#\">Библиография</a>
@@ -101,13 +113,13 @@ class __TwigTemplate_8b8efcc5cb91d89cef0a9495164b585b4c66509a5f229393897a45c6e60
                     </a>
                     <ul class=\"dropdown-menu\">
                         <li>
-                            <a href=\"announcement.html\">Анонсы</a>
+                            <a href=\"/announcement\">Анонсы</a>
                         </li>
                         <li>
-                            <a href=\"photo.html\">Фотографии</a>
+                            <a href=\"/albums\">Фотографии</a>
                         </li>
                         <li>
-                            <a href=\"museum.html\">Виртуальный музей</a>
+                            <a href=\"/museum\">Виртуальный музей</a>
                         </li>
                     </ul>
                 </li>
@@ -117,14 +129,16 @@ class __TwigTemplate_8b8efcc5cb91d89cef0a9495164b585b4c66509a5f229393897a45c6e60
                     </a>
                     <ul class=\"dropdown-menu\">
                         <li>
-                            <a href=\"partners.html\">Партнеры</a>
+                            <a href=\"/partners\">Партнеры</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href=\"contact.html\">Контакты</a>
+                    <a href=\"/contacts\">Контакты</a>
                 </li>
-                <li><input class=\"form-control search\" placeholder=\" Search\" type=\"text\"></li>
+                <li>
+                    <input class=\"form-control search\" placeholder=\" Search\" type=\"text\">
+                </li>
             </ul>
         </div>
     </div>
@@ -136,11 +150,22 @@ class __TwigTemplate_8b8efcc5cb91d89cef0a9495164b585b4c66509a5f229393897a45c6e60
         return "/var/www/GenderStudies/themes/site/partials/header.htm";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  19 => 1,);
+        return array (  26 => 3,  22 => 2,  19 => 1,);
     }
 }
+/* <div class="language">*/
+/*     <a href="#" title="UA" class="language-flag"><img  src="{{ 'assets/image/ua.png'|theme }}" alt="" width="18" height="12"></a>*/
+/*     <a href="#" title="RU" class="language-flag"><img  src="{{ 'assets/image/ru.png'|theme }}" alt="" width="18" height="12"></a>*/
+/*     <span class="language-text">Язык</span>*/
+/* </div>*/
+/* */
 /* <header class="head-section">*/
 /*     <div class="navbar navbar-default navbar-static-top container">*/
 /*         <div class="navbar-header">*/
@@ -149,12 +174,12 @@ class __TwigTemplate_8b8efcc5cb91d89cef0a9495164b585b4c66509a5f229393897a45c6e60
 /*                 <span class="icon-bar"></span>*/
 /*                 <span class="icon-bar"></span>*/
 /*             </button>*/
-/*             <a class="navbar-brand" href="index.html">L<span>ogo</span></a>*/
+/*             <a class="navbar-brand" href="/">L<span>ogo</span></a>*/
 /*         </div>*/
 /*         <div class="navbar-collapse collapse">*/
 /*             <ul class="nav navbar-nav">*/
 /*                 <li>*/
-/*                     <a href="index.html">Главная</a>*/
+/*                     <a href="/">Главная</a>*/
 /*                 </li>*/
 /*                 <li class="dropdown">*/
 /*                     <a class="dropdown-toggle" data-close-others="false" data-delay="0" data-hover=*/
@@ -162,10 +187,10 @@ class __TwigTemplate_8b8efcc5cb91d89cef0a9495164b585b4c66509a5f229393897a45c6e60
 /*                     </a>*/
 /*                     <ul class="dropdown-menu">*/
 /*                         <li>*/
-/*                             <a href="story.html">История</a>*/
+/*                             <a href="/history">История</a>*/
 /*                         </li>*/
 /*                         <li>*/
-/*                             <a href="structure.html">Структура</a>*/
+/*                             <a href="/structure">Структура</a>*/
 /*                         </li>*/
 /*                     </ul>*/
 /*                 </li>*/
@@ -175,16 +200,16 @@ class __TwigTemplate_8b8efcc5cb91d89cef0a9495164b585b4c66509a5f229393897a45c6e60
 /*                     </a>*/
 /*                     <ul class="dropdown-menu">*/
 /*                         <li>*/
-/*                             <a href="news.html">Тренинг</a>*/
+/*                             <a href="/news">Тренинг</a>*/
 /*                         </li>*/
 /*                         <li>*/
-/*                             <a href="news.html">Обявления</a>*/
+/*                             <a href="/news">Обявления</a>*/
 /*                         </li>*/
 /*                         <li>*/
-/*                             <a href="news.html">Благотворительность</a>*/
+/*                             <a href="/news">Благотворительность</a>*/
 /*                         </li>*/
 /*                         <li>*/
-/*                             <a href="archive.html">Архив</a>*/
+/*                             <a href="/archive">Архив</a>*/
 /*                         </li>*/
 /*                     </ul>*/
 /*                 </li>*/
@@ -194,13 +219,13 @@ class __TwigTemplate_8b8efcc5cb91d89cef0a9495164b585b4c66509a5f229393897a45c6e60
 /*                     </a>*/
 /*                     <ul class="dropdown-menu">*/
 /*                         <li>*/
-/*                             <a href="projects.html">Конференции</a>*/
+/*                             <a href="/projects">Конференции</a>*/
 /*                         </li>*/
 /*                         <li>*/
-/*                             <a href="projects.html">Иследования</a>*/
+/*                             <a href="/projects">Иследования</a>*/
 /*                         </li>*/
 /*                         <li>*/
-/*                             <a href="projects.html">Стажировка</a>*/
+/*                             <a href="/projects">Стажировка</a>*/
 /*                         </li>*/
 /*                     </ul>*/
 /*                 </li>*/
@@ -210,10 +235,10 @@ class __TwigTemplate_8b8efcc5cb91d89cef0a9495164b585b4c66509a5f229393897a45c6e60
 /*                     </a>*/
 /*                     <ul class="dropdown-menu">*/
 /*                         <li>*/
-/*                             <a href="publishing.html">Статьи</a>*/
+/*                             <a href="/articles">Статьи</a>*/
 /*                         </li>*/
 /*                         <li>*/
-/*                             <a href="book.html">Книги</a>*/
+/*                             <a href="/books">Книги</a>*/
 /*                         </li>*/
 /*                         <li>*/
 /*                             <a href="#">Библиография</a>*/
@@ -226,13 +251,13 @@ class __TwigTemplate_8b8efcc5cb91d89cef0a9495164b585b4c66509a5f229393897a45c6e60
 /*                     </a>*/
 /*                     <ul class="dropdown-menu">*/
 /*                         <li>*/
-/*                             <a href="announcement.html">Анонсы</a>*/
+/*                             <a href="/announcement">Анонсы</a>*/
 /*                         </li>*/
 /*                         <li>*/
-/*                             <a href="photo.html">Фотографии</a>*/
+/*                             <a href="/albums">Фотографии</a>*/
 /*                         </li>*/
 /*                         <li>*/
-/*                             <a href="museum.html">Виртуальный музей</a>*/
+/*                             <a href="/museum">Виртуальный музей</a>*/
 /*                         </li>*/
 /*                     </ul>*/
 /*                 </li>*/
@@ -242,14 +267,16 @@ class __TwigTemplate_8b8efcc5cb91d89cef0a9495164b585b4c66509a5f229393897a45c6e60
 /*                     </a>*/
 /*                     <ul class="dropdown-menu">*/
 /*                         <li>*/
-/*                             <a href="partners.html">Партнеры</a>*/
+/*                             <a href="/partners">Партнеры</a>*/
 /*                         </li>*/
 /*                     </ul>*/
 /*                 </li>*/
 /*                 <li>*/
-/*                     <a href="contact.html">Контакты</a>*/
+/*                     <a href="/contacts">Контакты</a>*/
 /*                 </li>*/
-/*                 <li><input class="form-control search" placeholder=" Search" type="text"></li>*/
+/*                 <li>*/
+/*                     <input class="form-control search" placeholder=" Search" type="text">*/
+/*                 </li>*/
 /*             </ul>*/
 /*         </div>*/
 /*     </div>*/

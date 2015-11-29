@@ -1,0 +1,194 @@
+1448809768s:8236:"a:6:{s:5:"mtime";i:1448808830;s:7:"content";s:4031:"url = "/projects/:slug"
+layout = layout
+==
+function onStart()
+{
+}
+==
+<!--breadcrumbs start-->
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-sm-4">
+                <h1>
+                    Blog Details
+                </h1>
+            </div>
+            <div class="col-lg-8 col-sm-8">
+                <ol class="breadcrumb pull-right">
+                    <li>
+                        <a href="#">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Blog
+                        </a>
+                    </li>
+                    <li class="active">
+                        Blog Details
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+<!--breadcrumbs end-->
+
+<!--container start-->
+<div class="container">
+    <div class="row">
+        <!--blog start-->
+        <div class="col-lg-10">
+            <div class="blog-item">
+                <div class="row">
+                    <div class="col-lg-2 col-sm-2">
+                        <div class="date-wrap">
+                  <span class="date">
+                    11
+                  </span>
+                  <span class="month">
+                    January
+                  </span>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-10 col-sm-10">
+
+
+                        <div class="blog-img gs">
+                            <img src="img/blog/img6.jpg" alt=""/>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2 col-sm-2 text-right"></div>
+                    <div class="col-lg-10 col-sm-10">
+                        <h1>
+                            <a href="blog_detail.html">
+                                Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium.
+                            </a>
+                        </h1>
+                        <p>
+                            Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets.. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit
+                        </p>
+                        <blockquote>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit posuere erat a ante.
+                            </p>
+                            <small>
+                                Someone famous
+                                <cite title="Source Title">
+                                    Source Title
+                                </cite>
+                            </small>
+                        </blockquote>
+                        <p>
+                            Nam sed arcu non tellus fringilla fringilla ut vel ipsum. Aliquam ac magna metus. Nam sed arcu non tellus fringilla fringilla ut vel ipsum. Aliquam ac magna metus. Nam sed arcu non tellus fringilla fringilla ut vel ipsum. Aliquam ac magna metus. Nam sed arcu non tellus fringilla fringilla ut vel ipsum. Aliquam ac magna metus. Nam sed arcu non tellus fringilla fringilla ut vel ipsum. Aliquam ac magna metus. Nam sed arcu non tellus fringilla fringilla ut vel ipsum. Aliquam ac magna metus. Nam sed arcu non tellus fringilla fringilla ut vel ipsum. Aliquam ac magna metus. Nam sed arcu non tellus fringilla fringilla ut vel ipsum. Aliquam ac magna metus.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<!--container end-->";s:7:"viewBag";a:0:{}s:8:"settings";a:3:{s:3:"url";s:15:"/projects/:slug";s:6:"layout";s:6:"layout";s:10:"components";a:0:{}}s:4:"code";s:22:"function onStart()
+{
+}";s:6:"markup";s:3962:"<!--breadcrumbs start-->
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-sm-4">
+                <h1>
+                    Blog Details
+                </h1>
+            </div>
+            <div class="col-lg-8 col-sm-8">
+                <ol class="breadcrumb pull-right">
+                    <li>
+                        <a href="#">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Blog
+                        </a>
+                    </li>
+                    <li class="active">
+                        Blog Details
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+<!--breadcrumbs end-->
+
+<!--container start-->
+<div class="container">
+    <div class="row">
+        <!--blog start-->
+        <div class="col-lg-10">
+            <div class="blog-item">
+                <div class="row">
+                    <div class="col-lg-2 col-sm-2">
+                        <div class="date-wrap">
+                  <span class="date">
+                    11
+                  </span>
+                  <span class="month">
+                    January
+                  </span>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-10 col-sm-10">
+
+
+                        <div class="blog-img gs">
+                            <img src="img/blog/img6.jpg" alt=""/>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2 col-sm-2 text-right"></div>
+                    <div class="col-lg-10 col-sm-10">
+                        <h1>
+                            <a href="blog_detail.html">
+                                Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium.
+                            </a>
+                        </h1>
+                        <p>
+                            Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets.. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit
+                        </p>
+                        <blockquote>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit posuere erat a ante.
+                            </p>
+                            <small>
+                                Someone famous
+                                <cite title="Source Title">
+                                    Source Title
+                                </cite>
+                            </small>
+                        </blockquote>
+                        <p>
+                            Nam sed arcu non tellus fringilla fringilla ut vel ipsum. Aliquam ac magna metus. Nam sed arcu non tellus fringilla fringilla ut vel ipsum. Aliquam ac magna metus. Nam sed arcu non tellus fringilla fringilla ut vel ipsum. Aliquam ac magna metus. Nam sed arcu non tellus fringilla fringilla ut vel ipsum. Aliquam ac magna metus. Nam sed arcu non tellus fringilla fringilla ut vel ipsum. Aliquam ac magna metus. Nam sed arcu non tellus fringilla fringilla ut vel ipsum. Aliquam ac magna metus. Nam sed arcu non tellus fringilla fringilla ut vel ipsum. Aliquam ac magna metus. Nam sed arcu non tellus fringilla fringilla ut vel ipsum. Aliquam ac magna metus.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<!--container end-->";}";
