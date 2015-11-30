@@ -1,0 +1,24 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    fb:
+        label: Facebook
+        type: text
+
+    twitter:
+        label: Twitter
+        type: text
+
+    vk:
+        label: Vkontakte
+        type: text
+
+    gplus:
+        label: Google plus
+        type: text
+
+    youtube:
+        label: Youtube
+        type: text

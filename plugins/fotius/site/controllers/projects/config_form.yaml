@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Project
+
+# Model Form Field configuration
+form: $/fotius/site/models/project/fields.yaml
+
+# Model Class name
+modelClass: Fotius\Site\Models\Project
+
+# Default redirect location
+defaultRedirect: fotius/site/projects
+
+# Create page
+create:
+    title: Create Project
+    redirect: fotius/site/projects/update/:id
+    redirectClose: fotius/site/projects
+
+# Update page
+update:
+    title: Edit Project
+    redirect: fotius/site/projects
+    redirectClose: fotius/site/projects
+
+# Preview page
+preview:
+    title: Preview Project

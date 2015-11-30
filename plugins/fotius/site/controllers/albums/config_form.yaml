@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Album
+
+# Model Form Field configuration
+form: $/fotius/site/models/album/fields.yaml
+
+# Model Class name
+modelClass: Fotius\Site\Models\Album
+
+# Default redirect location
+defaultRedirect: fotius/site/albums
+
+# Create page
+create:
+    title: Create Album
+    redirect: fotius/site/albums/update/:id
+    redirectClose: fotius/site/albums
+
+# Update page
+update:
+    title: Edit Album
+    redirect: fotius/site/albums
+    redirectClose: fotius/site/albums
+
+# Preview page
+preview:
+    title: Preview Album

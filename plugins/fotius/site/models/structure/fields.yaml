@@ -1,0 +1,22 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    photo:
+        title: Фото
+        type: fileupload
+
+    full_name:
+        label: П.І.П.
+        type: text
+        span: left
+
+    title:
+        label: Статус
+        type: text
+        span: right
+
+    description:
+        label: Опис
+        type: textarea

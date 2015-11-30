@@ -1,0 +1,8 @@
+tags:
+    label: Тег
+    view:
+        list: $/fotius/site/models/tag/columns.yaml
+        toolbarButtons: create|add|remove
+    manage:
+        list: $/fotius/site/models/tag/columns.yaml
+        form: $/fotius/site/models/tag/fields.yaml

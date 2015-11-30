@@ -1,0 +1,36 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    title:
+        label: Назва
+        type: text
+        span: left
+
+    slug:
+        label: Slug
+        preset: title
+        span: right
+
+    short_description:
+        label: Короткий опис
+        type: richeditor
+        span: left
+
+    description:
+        label: Опис
+        type: richeditor
+        span: right
+
+    category:
+        label: Категорія
+        type: dropdown
+        options:
+            conferentions: Конференції
+            exploration: Дослідження
+            internships: Стажування
+
+    photo:
+        label: Фото
+        type: fileupload

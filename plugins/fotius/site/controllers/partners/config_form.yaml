@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Partner
+
+# Model Form Field configuration
+form: $/fotius/site/models/partner/fields.yaml
+
+# Model Class name
+modelClass: Fotius\Site\Models\Partner
+
+# Default redirect location
+defaultRedirect: fotius/site/partners
+
+# Create page
+create:
+    title: Create Partner
+    redirect: fotius/site/partners/update/:id
+    redirectClose: fotius/site/partners
+
+# Update page
+update:
+    title: Edit Partner
+    redirect: fotius/site/partners
+    redirectClose: fotius/site/partners
+
+# Preview page
+preview:
+    title: Preview Partner

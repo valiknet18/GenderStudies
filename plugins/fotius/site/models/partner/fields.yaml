@@ -1,0 +1,22 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    title:
+        label: Партнер
+        type: text
+        span: left
+
+    email:
+        label: E-mail партнера
+        type: text
+        span: right
+
+    site:
+        label: Сайт партнера
+        type: text
+
+    description:
+        label: Опис
+        type: textarea

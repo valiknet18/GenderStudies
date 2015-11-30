@@ -1,0 +1,38 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    title:
+        label: Назва
+        type: text
+        span: left
+
+    slug:
+        label: slug
+        preset: title
+        span: right
+
+secondaryTabs:
+    fields:
+        photo:
+            label: Фото
+            type: fileupload
+            tab: Основна інформація
+
+        short_description:
+            label: Короткий опис
+            type: richeditor
+            span: left
+            tab: Основна інформація
+
+        description:
+            label: Опис
+            type: richeditor
+            span: right
+            tab: Основна інформація
+        tags:
+            title: Теги
+            type: partial
+            path: field_tags
+            tab: Теги

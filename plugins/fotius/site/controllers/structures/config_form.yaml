@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Structure
+
+# Model Form Field configuration
+form: $/fotius/site/models/structure/fields.yaml
+
+# Model Class name
+modelClass: Fotius\Site\Models\Structure
+
+# Default redirect location
+defaultRedirect: fotius/site/structures
+
+# Create page
+create:
+    title: Create Structure
+    redirect: fotius/site/structures/update/:id
+    redirectClose: fotius/site/structures
+
+# Update page
+update:
+    title: Edit Structure
+    redirect: fotius/site/structures
+    redirectClose: fotius/site/structures
+
+# Preview page
+preview:
+    title: Preview Structure

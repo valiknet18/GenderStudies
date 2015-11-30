@@ -1,0 +1,22 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    title:
+        label: Назва
+        type: text
+        span: left
+
+    slug:
+        label: Slug
+        preset: title
+        span: right
+
+    description:
+        label: Опис
+        type: textarea
+
+    photos:
+        label: Фотографії
+        type: fileupload

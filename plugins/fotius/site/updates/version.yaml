@@ -1,1 +1,16 @@
 1.0.1: First version of site
+1.0.2:
+  - Update database scheme
+  - create_albums_table.php
+  - create_announcements_table.php
+  - create_articles_table.php
+  - create_partners_table.php
+  - create_structures_table.php
+  - create_tags_table.php
+  - create_article_tag_table.php
+
+1.0.3:
+  - Update database schema 2
+  - update_articles_table.php
+  - create_news_table.php
+  - create_projects_table.php
