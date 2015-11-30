@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Announcment
+
+# Model Form Field configuration
+form: $/fotius/site/models/announcment/fields.yaml
+
+# Model Class name
+modelClass: Fotius\Site\Models\Announcment
+
+# Default redirect location
+defaultRedirect: fotius/site/announcments
+
+# Create page
+create:
+    title: Create Announcment
+    redirect: fotius/site/announcments/update/:id
+    redirectClose: fotius/site/announcments
+
+# Update page
+update:
+    title: Edit Announcment
+    redirect: fotius/site/announcments
+    redirectClose: fotius/site/announcments
+
+# Preview page
+preview:
+    title: Preview Announcment

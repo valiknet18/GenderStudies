@@ -1,0 +1,16 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    title:
+        label: Назва
+        type: text
+
+    link:
+        label: Посилання
+        type: text
+
+    description:
+        label: Опис
+        type: textarea

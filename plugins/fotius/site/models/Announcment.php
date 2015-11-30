@@ -5,7 +5,7 @@ use Model;
 /**
  * announcement Model
  */
-class Announcement extends Model
+class Announcment extends Model
 {
 
     /**

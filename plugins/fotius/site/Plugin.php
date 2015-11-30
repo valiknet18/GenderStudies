@@ -82,7 +82,15 @@ class Plugin extends PluginBase
                         'permissions' => [
                             'intertech.subscriber.access_articles'
                         ],
-                    ]
+                    ],
+                    'announcments' => [
+                        'label' => 'Анонси',
+                        'icon' => '',
+                        'url' => Backend::url('fotius/site/announcments'),
+                        'permissions' => [
+                            'intertech.subscriber.access_articles'
+                        ],
+                    ],
                 ]
             ],
         ];
@@ -112,6 +120,14 @@ class Plugin extends PluginBase
                 'category' => 'Сайт',
                 'icon' => '',
                 'class' => 'Fotius\Site\Models\Slider',
+                'order' => 100
+            ],
+            'histories' => [
+                'label' => 'Історія',
+                'description' => 'Історія відділу',
+                'category' => 'Сайт',
+                'icon' => '',
+                'class' => 'Fotius\Site\Models\History',
                 'order' => 100
             ]
         ];

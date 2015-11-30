@@ -1,0 +1,12 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    photos:
+        label: Слайдер
+        type: fileupload
+
+    description:
+        label: Опис
+        type: richeditor
