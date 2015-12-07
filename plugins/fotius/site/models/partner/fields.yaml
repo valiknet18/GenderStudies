@@ -20,3 +20,7 @@ fields:
     description:
         label: Опис
         type: textarea
+
+    photo:
+        label: Фото
+        type: fileupload

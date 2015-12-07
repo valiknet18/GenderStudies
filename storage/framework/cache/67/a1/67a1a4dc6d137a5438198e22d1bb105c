@@ -1,4 +1,4 @@
-1448815993s:11447:"a:6:{s:5:"mtime";i:1448809166;s:7:"content";s:5646:"==
+1449460056s:11549:"a:6:{s:5:"mtime";i:1449456950;s:7:"content";s:5697:"==
 ==
 <div class="language">
     <a href="#" title="UA" class="language-flag"><img  src="{{ 'assets/image/ua.png'|theme }}" alt="" width="18" height="12"></a>
@@ -19,7 +19,7 @@
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="/">Главная</a>
+                    <a href="/">Головна</a>
                 </li>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-close-others="false" data-delay="0" data-hover=
@@ -27,7 +27,7 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="/history">История</a>
+                            <a href="/history">Істория</a>
                         </li>
                         <li>
                             <a href="/structure">Структура</a>
@@ -36,52 +36,52 @@
                 </li>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-close-others="false" data-delay="0" data-hover=
-                            "dropdown" data-toggle="dropdown" href="#">Новости <i class="fa fa-angle-down"></i>
+                            "dropdown" data-toggle="dropdown" href="#">Новини <i class="fa fa-angle-down"></i>
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="/news">Тренинг</a>
+                            <a href="/news/training">Тренінги</a>
                         </li>
                         <li>
-                            <a href="/news">Обявления</a>
+                            <a href="/news/ad">Оголошення</a>
                         </li>
                         <li>
-                            <a href="/news">Благотворительность</a>
+                            <a href="/news/charity">Благодійність</a>
                         </li>
                         <li>
-                            <a href="/archive">Архив</a>
+                            <a href="/archive">Архів</a>
                         </li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-close-others="false" data-delay="0" data-hover=
-                            "dropdown" data-toggle="dropdown" href="#">Проекты <i class="fa fa-angle-down"></i>
+                            "dropdown" data-toggle="dropdown" href="#">Проекти <i class="fa fa-angle-down"></i>
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="/projects">Конференции</a>
+                            <a href="/projects/conferentions">Конференції</a>
                         </li>
                         <li>
-                            <a href="/projects">Иследования</a>
+                            <a href="/projects/exploration">Дослідження</a>
                         </li>
                         <li>
-                            <a href="/projects">Стажировка</a>
+                            <a href="/projects/internships">Стажування</a>
                         </li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-close-others="false" data-delay="0" data-hover=
-                            "dropdown" data-toggle="dropdown" href="#">Публикации <i class="fa fa-angle-down"></i>
+                            "dropdown" data-toggle="dropdown" href="#">Публікації <i class="fa fa-angle-down"></i>
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="/articles">Статьи</a>
+                            <a href="/articles">Статі</a>
                         </li>
                         <li>
                             <a href="/books">Книги</a>
                         </li>
                         <li>
-                            <a href="#">Библиография</a>
+                            <a href="#">Бібліографія</a>
                         </li>
                     </ul>
                 </li>
@@ -91,28 +91,28 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="/announcement">Анонсы</a>
+                            <a href="/announcment">Анонси</a>
                         </li>
                         <li>
-                            <a href="/albums">Фотографии</a>
+                            <a href="/albums">Фотографії</a>
                         </li>
                         <li>
-                            <a href="/museum">Виртуальный музей</a>
+                            <a href="/museum">Віртуальний музей</a>
                         </li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-close-others="false" data-delay="0" data-hover=
-                            "dropdown" data-toggle="dropdown" href="#">Ссылки <i class="fa fa-angle-down"></i>
+                            "dropdown" data-toggle="dropdown" href="#">Посилання <i class="fa fa-angle-down"></i>
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="/partners">Партнеры</a>
+                            <a href="/partners">Партнери</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="/contacts">Контакты</a>
+                    <a href="/contacts">Контакти</a>
                 </li>
                 <li>
                     <input class="form-control search" placeholder=" Search" type="text">
@@ -120,7 +120,7 @@
             </ul>
         </div>
     </div>
-</header>";s:7:"viewBag";a:0:{}s:8:"settings";a:1:{s:10:"components";a:0:{}}s:4:"code";s:0:"";s:6:"markup";s:5640:"<div class="language">
+</header>";s:7:"viewBag";a:0:{}s:8:"settings";a:1:{s:10:"components";a:0:{}}s:4:"code";s:0:"";s:6:"markup";s:5691:"<div class="language">
     <a href="#" title="UA" class="language-flag"><img  src="{{ 'assets/image/ua.png'|theme }}" alt="" width="18" height="12"></a>
     <a href="#" title="RU" class="language-flag"><img  src="{{ 'assets/image/ru.png'|theme }}" alt="" width="18" height="12"></a>
     <span class="language-text">Язык</span>
@@ -139,7 +139,7 @@
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="/">Главная</a>
+                    <a href="/">Головна</a>
                 </li>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-close-others="false" data-delay="0" data-hover=
@@ -147,7 +147,7 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="/history">История</a>
+                            <a href="/history">Істория</a>
                         </li>
                         <li>
                             <a href="/structure">Структура</a>
@@ -156,52 +156,52 @@
                 </li>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-close-others="false" data-delay="0" data-hover=
-                            "dropdown" data-toggle="dropdown" href="#">Новости <i class="fa fa-angle-down"></i>
+                            "dropdown" data-toggle="dropdown" href="#">Новини <i class="fa fa-angle-down"></i>
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="/news">Тренинг</a>
+                            <a href="/news/training">Тренінги</a>
                         </li>
                         <li>
-                            <a href="/news">Обявления</a>
+                            <a href="/news/ad">Оголошення</a>
                         </li>
                         <li>
-                            <a href="/news">Благотворительность</a>
+                            <a href="/news/charity">Благодійність</a>
                         </li>
                         <li>
-                            <a href="/archive">Архив</a>
+                            <a href="/archive">Архів</a>
                         </li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-close-others="false" data-delay="0" data-hover=
-                            "dropdown" data-toggle="dropdown" href="#">Проекты <i class="fa fa-angle-down"></i>
+                            "dropdown" data-toggle="dropdown" href="#">Проекти <i class="fa fa-angle-down"></i>
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="/projects">Конференции</a>
+                            <a href="/projects/conferentions">Конференції</a>
                         </li>
                         <li>
-                            <a href="/projects">Иследования</a>
+                            <a href="/projects/exploration">Дослідження</a>
                         </li>
                         <li>
-                            <a href="/projects">Стажировка</a>
+                            <a href="/projects/internships">Стажування</a>
                         </li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-close-others="false" data-delay="0" data-hover=
-                            "dropdown" data-toggle="dropdown" href="#">Публикации <i class="fa fa-angle-down"></i>
+                            "dropdown" data-toggle="dropdown" href="#">Публікації <i class="fa fa-angle-down"></i>
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="/articles">Статьи</a>
+                            <a href="/articles">Статі</a>
                         </li>
                         <li>
                             <a href="/books">Книги</a>
                         </li>
                         <li>
-                            <a href="#">Библиография</a>
+                            <a href="#">Бібліографія</a>
                         </li>
                     </ul>
                 </li>
@@ -211,28 +211,28 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="/announcement">Анонсы</a>
+                            <a href="/announcment">Анонси</a>
                         </li>
                         <li>
-                            <a href="/albums">Фотографии</a>
+                            <a href="/albums">Фотографії</a>
                         </li>
                         <li>
-                            <a href="/museum">Виртуальный музей</a>
+                            <a href="/museum">Віртуальний музей</a>
                         </li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-close-others="false" data-delay="0" data-hover=
-                            "dropdown" data-toggle="dropdown" href="#">Ссылки <i class="fa fa-angle-down"></i>
+                            "dropdown" data-toggle="dropdown" href="#">Посилання <i class="fa fa-angle-down"></i>
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="/partners">Партнеры</a>
+                            <a href="/partners">Партнери</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="/contacts">Контакты</a>
+                    <a href="/contacts">Контакти</a>
                 </li>
                 <li>
                     <input class="form-control search" placeholder=" Search" type="text">

@@ -1,8 +1,30 @@
-1448815993s:13613:"a:6:{s:5:"mtime";i:1448808771;s:7:"content";s:6720:"url = "/projects"
+1449459660s:5127:"a:6:{s:5:"mtime";i:1449457633;s:7:"content";s:2476:"url = "/projects/:category"
 layout = layout
 ==
 function onStart()
 {
+    switch ($this->param("category")) {
+        case "conferentions": {
+            $this['category'] = "Конференції";
+        }
+            break;
+
+        case "exploration": {
+            $this['category'] = "Дослідження";
+        }
+            break;
+
+        case "internships": {
+            $this['category'] = "Стажування";
+        }
+            break;
+
+        default: {
+            throw new Exception("Сторінка не знайдена");
+        }
+    }
+
+    $this['projects'] = \Fotius\Site\Models\Project::where('category', $this->param('category'))->paginate(9);
 }
 ==
 <!--breadcrumbs start-->
@@ -11,23 +33,18 @@ function onStart()
         <div class="row">
             <div class="col-lg-4 col-sm-4">
                 <h1>
-                    Проекты
+                    Проекти
                 </h1>
             </div>
             <div class="col-lg-8 col-sm-8">
                 <ol class="breadcrumb pull-right">
                     <li>
                         <a href="#">
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Pages
+                            Проекти
                         </a>
                     </li>
                     <li class="active">
-                        Story
+                        {{ category }}
                     </li>
                 </ol>
             </div>
@@ -39,140 +56,74 @@ function onStart()
 <!--container start-->
 <div class="container">
     <div class="row">
-        <div class="col-sm-4 col-md-4">
-            <div class="post wow zoomIn">
-                <div class="post-img-content">
-                    <img src="http://placehold.it/460x250/e67e22/ffffff&text=HTML5" class="img-responsive" />
-                    <span class="post-title"><b>Название</b><br />
-                </div>
-                <div class="content">
-                    <div>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                        unknown printer took a galley of type and scrambled it to make a type specimen book.
+        {% for item in projects %}
+            <div class="col-sm-4 col-md-4">
+                <div class="post wow zoomIn">
+                    <div class="post-img-content">
+                        <img src="{{ item.photo.path }}" class="img-responsive" />
+                        <span class="post-title">
+                            <b>{{ item.title }}</b><br />
+                        </span>
                     </div>
-                    <div>
-                        <a href="#" class="btn btn-primary btn-sm">Читать</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 col-md-4">
-            <div class="post wow zoomIn">
-                <div class="post-img-content">
-                    <img src="http://placehold.it/460x250/2980b9/ffffff&text=CSS3" class="img-responsive" />
-                    <span class="post-title"><b>Название</b><br />
-                </div>
-                <div class="content">
-                    <div>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                        unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    </div>
-                    <div>
-                        <a href="projects-detail.html" class="btn btn-primary btn-sm">Читать</a>
+                    <div class="content">
+                        <div>
+                            {{ item.short_description|raw }}
+                        </div>
+                        <div>
+                            <a href="/projects/{{ item.category }}/item/{{ item.slug }}" class="btn btn-primary btn-sm">Читать</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-4 col-md-4">
-            <div class="post wow zoomIn">
-                <div class="post-img-content">
-                    <img src="http://placehold.it/460x250/47A447/ffffff&text=jQuery" class="img-responsive" />
-                    <span class="post-title"><b>Название</b><br />
-                </div>
-                <div class="content">
-                    <div>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                        unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    </div>
-                    <div>
-                        <a href="projects-detail.html" class="btn btn-primary btn-sm">Читать</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 col-md-4">
-            <div class="post wow zoomIn">
-                <div class="post-img-content">
-                    <img src="http://placehold.it/460x250/e67e22/ffffff&text=HTML5" class="img-responsive" />
-                    <span class="post-title"><b>Название</b><br />
-                </div>
-                <div class="content">
-                    <div>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                        unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    </div>
-                    <div>
-                        <a href="projects-detail.html" class="btn btn-primary btn-sm">Читать</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 col-md-4">
-            <div class="post wow zoomIn">
-                <div class="post-img-content">
-                    <img src="http://placehold.it/460x250/2980b9/ffffff&text=CSS3" class="img-responsive" />
-                    <span class="post-title"><b>Название</b><br />
-                </div>
-                <div class="content">
-                    <div>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                        unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    </div>
-                    <div>
-                        <a href="projects-detail.html" class="btn btn-primary btn-sm">Читать</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 col-md-4">
-            <div class="post wow zoomIn">
-                <div class="post-img-content">
-                    <img src="http://placehold.it/460x250/47A447/ffffff&text=jQuery" class="img-responsive" />
-                    <span class="post-title"><b>Название</b><br />
-                </div>
-                <div class="content">
-                    <div>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                        unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    </div>
-                    <div>
-                        <a href="projects-detail.html" class="btn btn-primary btn-sm">Читать</a>
-                    </div>
-                </div>
-            </div>
+        {% endfor %}
+    </div>
+    <div class="col-md-12">
+        <div class="text-center">
+            {{ projects|raw }}
         </div>
     </div>
-</div>";s:7:"viewBag";a:0:{}s:8:"settings";a:3:{s:3:"url";s:9:"/projects";s:6:"layout";s:6:"layout";s:10:"components";a:0:{}}s:4:"code";s:22:"function onStart()
+</div>";s:7:"viewBag";a:0:{}s:8:"settings";a:3:{s:3:"url";s:19:"/projects/:category";s:6:"layout";s:6:"layout";s:10:"components";a:0:{}}s:4:"code";s:638:"function onStart()
 {
-}";s:6:"markup";s:6657:"<!--breadcrumbs start-->
+    switch ($this->param("category")) {
+        case "conferentions": {
+            $this['category'] = "Конференції";
+        }
+            break;
+
+        case "exploration": {
+            $this['category'] = "Дослідження";
+        }
+            break;
+
+        case "internships": {
+            $this['category'] = "Стажування";
+        }
+            break;
+
+        default: {
+            throw new Exception("Сторінка не знайдена");
+        }
+    }
+
+    $this['projects'] = \Fotius\Site\Models\Project::where('category', $this->param('category'))->paginate(9);
+}";s:6:"markup";s:1787:"<!--breadcrumbs start-->
 <div class="breadcrumbs">
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-sm-4">
                 <h1>
-                    Проекты
+                    Проекти
                 </h1>
             </div>
             <div class="col-lg-8 col-sm-8">
                 <ol class="breadcrumb pull-right">
                     <li>
                         <a href="#">
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Pages
+                            Проекти
                         </a>
                     </li>
                     <li class="active">
-                        Story
+                        {{ category }}
                     </li>
                 </ol>
             </div>
@@ -184,113 +135,30 @@ function onStart()
 <!--container start-->
 <div class="container">
     <div class="row">
-        <div class="col-sm-4 col-md-4">
-            <div class="post wow zoomIn">
-                <div class="post-img-content">
-                    <img src="http://placehold.it/460x250/e67e22/ffffff&text=HTML5" class="img-responsive" />
-                    <span class="post-title"><b>Название</b><br />
-                </div>
-                <div class="content">
-                    <div>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                        unknown printer took a galley of type and scrambled it to make a type specimen book.
+        {% for item in projects %}
+            <div class="col-sm-4 col-md-4">
+                <div class="post wow zoomIn">
+                    <div class="post-img-content">
+                        <img src="{{ item.photo.path }}" class="img-responsive" />
+                        <span class="post-title">
+                            <b>{{ item.title }}</b><br />
+                        </span>
                     </div>
-                    <div>
-                        <a href="#" class="btn btn-primary btn-sm">Читать</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 col-md-4">
-            <div class="post wow zoomIn">
-                <div class="post-img-content">
-                    <img src="http://placehold.it/460x250/2980b9/ffffff&text=CSS3" class="img-responsive" />
-                    <span class="post-title"><b>Название</b><br />
-                </div>
-                <div class="content">
-                    <div>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                        unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    </div>
-                    <div>
-                        <a href="projects-detail.html" class="btn btn-primary btn-sm">Читать</a>
+                    <div class="content">
+                        <div>
+                            {{ item.short_description|raw }}
+                        </div>
+                        <div>
+                            <a href="/projects/{{ item.category }}/item/{{ item.slug }}" class="btn btn-primary btn-sm">Читать</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-4 col-md-4">
-            <div class="post wow zoomIn">
-                <div class="post-img-content">
-                    <img src="http://placehold.it/460x250/47A447/ffffff&text=jQuery" class="img-responsive" />
-                    <span class="post-title"><b>Название</b><br />
-                </div>
-                <div class="content">
-                    <div>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                        unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    </div>
-                    <div>
-                        <a href="projects-detail.html" class="btn btn-primary btn-sm">Читать</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 col-md-4">
-            <div class="post wow zoomIn">
-                <div class="post-img-content">
-                    <img src="http://placehold.it/460x250/e67e22/ffffff&text=HTML5" class="img-responsive" />
-                    <span class="post-title"><b>Название</b><br />
-                </div>
-                <div class="content">
-                    <div>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                        unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    </div>
-                    <div>
-                        <a href="projects-detail.html" class="btn btn-primary btn-sm">Читать</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 col-md-4">
-            <div class="post wow zoomIn">
-                <div class="post-img-content">
-                    <img src="http://placehold.it/460x250/2980b9/ffffff&text=CSS3" class="img-responsive" />
-                    <span class="post-title"><b>Название</b><br />
-                </div>
-                <div class="content">
-                    <div>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                        unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    </div>
-                    <div>
-                        <a href="projects-detail.html" class="btn btn-primary btn-sm">Читать</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 col-md-4">
-            <div class="post wow zoomIn">
-                <div class="post-img-content">
-                    <img src="http://placehold.it/460x250/47A447/ffffff&text=jQuery" class="img-responsive" />
-                    <span class="post-title"><b>Название</b><br />
-                </div>
-                <div class="content">
-                    <div>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                        unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    </div>
-                    <div>
-                        <a href="projects-detail.html" class="btn btn-primary btn-sm">Читать</a>
-                    </div>
-                </div>
-            </div>
+        {% endfor %}
+    </div>
+    <div class="col-md-12">
+        <div class="text-center">
+            {{ projects|raw }}
         </div>
     </div>
 </div>";}";

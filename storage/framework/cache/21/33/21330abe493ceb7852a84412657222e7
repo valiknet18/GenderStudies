@@ -1,8 +1,30 @@
-1448815993s:18093:"a:6:{s:5:"mtime";i:1448808014;s:7:"content";s:8960:"url = "/news"
+1449459972s:4777:"a:6:{s:5:"mtime";i:1449453276;s:7:"content";s:2301:"url = "/news/:category"
 layout = layout
 ==
 function onStart()
 {
+    switch ($this->param('category')) {
+        case "training": {
+            $this['category'] = 'Тренинг';
+        }
+            break;
+
+        case "ad": {
+            $this['category'] = 'Оголошення';
+        }
+            break;
+
+        case "charity": {
+            $this['category'] = 'Благодійність';
+        }
+            break;
+
+        default: {
+            throw new Exception('Такой сторінки не існує');
+        }
+    }
+
+    $this['news'] = \Fotius\Site\Models\News::where('category', $this->param('category'))->paginate(10);
 }
 ==
 <!--header end-->
@@ -13,23 +35,18 @@ function onStart()
         <div class="row">
             <div class="col-lg-4 col-sm-4">
                 <h1>
-                    Название страницы
+                    Новини
                 </h1>
             </div>
             <div class="col-lg-8 col-sm-8">
                 <ol class="breadcrumb pull-right">
                     <li>
                         <a href="#">
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Pages
+                            Новини
                         </a>
                     </li>
                     <li class="active">
-                        Ета страница!
+                        {{ category }}
                     </li>
                 </ol>
             </div>
@@ -42,190 +59,55 @@ function onStart()
 <div class="container">
     <div class="row">
 
-
-        <div class="col-md-6">
-            <div class="blog-left wow fadeInLeft">
-                <div class="blog-img">
-                    <img src="img/blog/img8.jpg" alt=""/>
-                </div>
-                <div class="blog-content">
-                    <h3>
-                        This is heading
-                    </h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                </div>
-                <a href="news-detail.html" class="btn btn-primary">Читать</a>
-
-            </div>
-
-
-            <div class="blog-left wow fadeInLeft">
-                <div class="blog-img">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/qvBX9VgPGSg" allowfullscreen="" style="border:none;">
-                        </iframe>
+        {% for item in news %}
+            <div class="col-md-6">
+                <div class="blog-left wow fadeInLeft">
+                    <div class="blog-img">
+                        <img src="{{ item.photo.path }}" alt=""/>
                     </div>
-                </div>
-
-                <div class="blog-content">
-                    <h3>
-                        This is heading
-                    </h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                </div>
-                <a href="news-detail.html" class="btn btn-primary">Читать</a>
-            </div>
-
-
-            <div class="blog-left wow fadeInLeft">
-                <div class="blog-img">
-                    <img src="img/blog/img7.jpg" alt=""/>
-                </div>
-                <div class="blog-content">
-                    <h3>
-                        This is heading
-                    </h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                </div>
-                <a href="news-detail.html" class="btn btn-primary">Читать</a>
-            </div>
-
-
-
-        </div>
-        <div class="col-md-6">
-
-            <div class="blog-right wow fadeInRight">
-                <div class="blog-img">
-                    <img src="img/blog/img6.jpg" alt=""/>
-                </div>
-                <div class="blog-content">
-                    <h3>
-                        This is heading
-                    </h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                </div>
-                <a href="news-detail.html" class="btn btn-primary">Читать</a>
-            </div>
-
-
-            <div class="blog-right wow fadeInRight">
-                <div class="blog-img">
-                    <img src="img/blog/img4.jpg" alt=""/>
-                </div>
-                <div class="blog-content">
-                    <h3>
-                        This is heading
-                    </h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                </div>
-                <a href="news-detail.html" class="btn btn-primary">Читать</a>
-            </div>
-
-
-            <div class="blog-right wow fadeInRight">
-                <div class="blog-img">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/qvBX9VgPGSg" allowfullscreen="" style="border:none;">
-                        </iframe>
+                    <div class="blog-content">
+                        <h3>
+                            {{ item.title }}
+                        </h3>
+                        <p>
+                            {{ item.short_description|raw }}
+                        </p>
                     </div>
+                    <a href="/news/{{ item.category }}/item/{{ item.slug }}" class="btn btn-primary">Читати</a>
                 </div>
-                <div class="blog-content">
-                    <h3>
-                        This is heading
-                    </h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                </div>
-                <a href="news-detail.html" class="btn btn-primary">Читать</a>
             </div>
-        </div>
-        <div class="text-center">
-            <ul class="pagination">
-                <li>
-                    <a href="#">
-                        «
-                    </a>
-                </li>
-                <li class="active">
-                    <a href="#">
-                        1
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        2
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        3
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        4
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        5
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        »
-                    </a>
-                </li>
-            </ul>
-        </div>
+        {% endfor %}
         <!--blog end-->
     </div>
 
-</div>";s:7:"viewBag";a:0:{}s:8:"settings";a:3:{s:3:"url";s:5:"/news";s:6:"layout";s:6:"layout";s:10:"components";a:0:{}}s:4:"code";s:22:"function onStart()
+    <div class="text-center col-md-12">
+        {{ news|raw }}
+    </div>
+</div>";s:7:"viewBag";a:0:{}s:8:"settings";a:3:{s:3:"url";s:15:"/news/:category";s:6:"layout";s:6:"layout";s:10:"components";a:0:{}}s:4:"code";s:615:"function onStart()
 {
-}";s:6:"markup";s:8901:"<!--header end-->
+    switch ($this->param('category')) {
+        case "training": {
+            $this['category'] = 'Тренинг';
+        }
+            break;
+
+        case "ad": {
+            $this['category'] = 'Оголошення';
+        }
+            break;
+
+        case "charity": {
+            $this['category'] = 'Благодійність';
+        }
+            break;
+
+        default: {
+            throw new Exception('Такой сторінки не існує');
+        }
+    }
+
+    $this['news'] = \Fotius\Site\Models\News::where('category', $this->param('category'))->paginate(10);
+}";s:6:"markup";s:1639:"<!--header end-->
 
 <!--breadcrumbs start-->
 <div class="breadcrumbs">
@@ -233,23 +115,18 @@ function onStart()
         <div class="row">
             <div class="col-lg-4 col-sm-4">
                 <h1>
-                    Название страницы
+                    Новини
                 </h1>
             </div>
             <div class="col-lg-8 col-sm-8">
                 <ol class="breadcrumb pull-right">
                     <li>
                         <a href="#">
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Pages
+                            Новини
                         </a>
                     </li>
                     <li class="active">
-                        Ета страница!
+                        {{ category }}
                     </li>
                 </ol>
             </div>
@@ -262,185 +139,28 @@ function onStart()
 <div class="container">
     <div class="row">
 
-
-        <div class="col-md-6">
-            <div class="blog-left wow fadeInLeft">
-                <div class="blog-img">
-                    <img src="img/blog/img8.jpg" alt=""/>
-                </div>
-                <div class="blog-content">
-                    <h3>
-                        This is heading
-                    </h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                </div>
-                <a href="news-detail.html" class="btn btn-primary">Читать</a>
-
-            </div>
-
-
-            <div class="blog-left wow fadeInLeft">
-                <div class="blog-img">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/qvBX9VgPGSg" allowfullscreen="" style="border:none;">
-                        </iframe>
+        {% for item in news %}
+            <div class="col-md-6">
+                <div class="blog-left wow fadeInLeft">
+                    <div class="blog-img">
+                        <img src="{{ item.photo.path }}" alt=""/>
                     </div>
-                </div>
-
-                <div class="blog-content">
-                    <h3>
-                        This is heading
-                    </h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                </div>
-                <a href="news-detail.html" class="btn btn-primary">Читать</a>
-            </div>
-
-
-            <div class="blog-left wow fadeInLeft">
-                <div class="blog-img">
-                    <img src="img/blog/img7.jpg" alt=""/>
-                </div>
-                <div class="blog-content">
-                    <h3>
-                        This is heading
-                    </h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                </div>
-                <a href="news-detail.html" class="btn btn-primary">Читать</a>
-            </div>
-
-
-
-        </div>
-        <div class="col-md-6">
-
-            <div class="blog-right wow fadeInRight">
-                <div class="blog-img">
-                    <img src="img/blog/img6.jpg" alt=""/>
-                </div>
-                <div class="blog-content">
-                    <h3>
-                        This is heading
-                    </h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                </div>
-                <a href="news-detail.html" class="btn btn-primary">Читать</a>
-            </div>
-
-
-            <div class="blog-right wow fadeInRight">
-                <div class="blog-img">
-                    <img src="img/blog/img4.jpg" alt=""/>
-                </div>
-                <div class="blog-content">
-                    <h3>
-                        This is heading
-                    </h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                </div>
-                <a href="news-detail.html" class="btn btn-primary">Читать</a>
-            </div>
-
-
-            <div class="blog-right wow fadeInRight">
-                <div class="blog-img">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/qvBX9VgPGSg" allowfullscreen="" style="border:none;">
-                        </iframe>
+                    <div class="blog-content">
+                        <h3>
+                            {{ item.title }}
+                        </h3>
+                        <p>
+                            {{ item.short_description|raw }}
+                        </p>
                     </div>
+                    <a href="/news/{{ item.category }}/item/{{ item.slug }}" class="btn btn-primary">Читати</a>
                 </div>
-                <div class="blog-content">
-                    <h3>
-                        This is heading
-                    </h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                </div>
-                <a href="news-detail.html" class="btn btn-primary">Читать</a>
             </div>
-        </div>
-        <div class="text-center">
-            <ul class="pagination">
-                <li>
-                    <a href="#">
-                        «
-                    </a>
-                </li>
-                <li class="active">
-                    <a href="#">
-                        1
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        2
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        3
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        4
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        5
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        »
-                    </a>
-                </li>
-            </ul>
-        </div>
+        {% endfor %}
         <!--blog end-->
     </div>
 
+    <div class="text-center col-md-12">
+        {{ news|raw }}
+    </div>
 </div>";}";

@@ -1,0 +1,32 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    id:
+        label: ID
+        disabled: true
+
+    title:
+        label: Назва
+        type: text
+
+    description:
+        label: Опис
+        type: textarea
+
+    link:
+        label: Посилання
+        type: text
+
+    category:
+        label: Категорія
+        type: dropdown
+        options:
+            main: Головна сторінка, посилання
+            news: Актуально
+            needKnow: Потрібно знати
+
+    photo:
+        label: Фото
+        type: fileupload

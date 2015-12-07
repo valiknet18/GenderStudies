@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Museum
+
+# Model Form Field configuration
+form: $/fotius/site/models/museum/fields.yaml
+
+# Model Class name
+modelClass: Fotius\Site\Models\Museum
+
+# Default redirect location
+defaultRedirect: fotius/site/museums
+
+# Create page
+create:
+    title: Create Museum
+    redirect: fotius/site/museums/update/:id
+    redirectClose: fotius/site/museums
+
+# Update page
+update:
+    title: Edit Museum
+    redirect: fotius/site/museums
+    redirectClose: fotius/site/museums
+
+# Preview page
+preview:
+    title: Preview Museum

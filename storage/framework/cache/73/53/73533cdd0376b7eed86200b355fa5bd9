@@ -1,8 +1,10 @@
-1448815993s:14096:"a:6:{s:5:"mtime";i:1448809038;s:7:"content";s:6962:"url = "/history"
+1449459972s:4537:"a:6:{s:5:"mtime";i:1449455636;s:7:"content";s:2182:"url = "/history"
 layout = layout
 ==
 function onStart()
 {
+    $this['slider'] = \System\Models\File::where('attachment_type', 'Fotius\Site\Models\History')->get();
+    $this['history'] = \Fotius\Site\Models\History::get('description');
 }
 ==
 <!--breadcrumbs start-->
@@ -11,23 +13,18 @@ function onStart()
         <div class="row">
             <div class="col-lg-4 col-sm-4">
                 <h1>
-                    История
+                    Історія
                 </h1>
             </div>
             <div class="col-lg-8 col-sm-8">
                 <ol class="breadcrumb pull-right">
                     <li>
                         <a href="#">
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Pages
+                            Про центр
                         </a>
                     </li>
                     <li class="active">
-                        Story
+                        Історія
                     </li>
                 </ol>
             </div>
@@ -44,15 +41,11 @@ function onStart()
                 <div id="myCarousel" class="carousel slide">
                     <!-- Carousel items -->
                     <div class="carousel-inner">
-                        <div class="active item">
-                            <img src="img/service3.jpg" alt="">
-                        </div>
-                        <div class="item">
-                            <img src="img/service2.jpg" alt="">
-                        </div>
-                        <div class="item">
-                            <img src="img/service5.jpg" alt="">
-                        </div>
+                        {% for item in slider %}
+                            <div class="{% if loop.index == 1 %} active {% endif %} item">
+                                <img src="{{ item.photo.path }}" alt="">
+                            </div>
+                        {% endfor %}
                     </div>
                     <!-- Carousel nav -->
                     <a class="carousel-control left" href="#myCarousel" data-slide="prev">
@@ -67,155 +60,32 @@ function onStart()
             </div>
         </div>
         <div class="col-lg-7 about wow fadeInRight">
-
-            <p>
-                Aenean nibh ante, lacinia non tincidunt nec, lobortis ut tellus. Sed in porta diam. Suspendisse potenti. Donec luctus ullamcorper nulla. Duis nec velit odio.Suspendisse potenti. Donec luctus ullamcorper nulla. Duis nec velit odio.
-            </p>
-            <ul class="list-unstyled">
-                <li>
-                    <i class="fa fa-angle-right pr-10">
-                    </i>
-                    Vestibulum auctor dapibus neque.
-                </li>
-
-                <li>
-                    <i class="fa fa-angle-right pr-10">
-                    </i>
-                    Lorem ipsum dolor sit amet adipiscing elit.
-                </li>
-
-                <li>
-                    <i class="fa fa-angle-right pr-10">
-                    </i>
-                    Aliquam tincidunt mauris eu risus.
-                </li>
-
-                <li>
-                    <i class="fa fa-angle-right pr-10">
-                    </i>
-                    Vestibulum auctor dapibus neque
-                </li>
-
-                <li>
-                    <i class="fa fa-angle-right pr-10">
-                    </i>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                </li>
-
-                <li>
-                    <i class="fa fa-angle-right pr-10">
-                    </i>
-                    Aliquam tincidunt mauris eu risus.
-                </li>
-
-            </ul>
-            <blockquote>
-                <p>
-                    Award winning digital agency. We bring a personal and effective approach to every project we work on, which is why.
-                </p>
-                <small>
-                    текст_1
-                </small>
-                <small>
-                    текст_2
-                </small>
-                <small>
-                    текст_3
-                </small>
-            </blockquote>
-        </div>
-    </div>
-    <div class="row">
-        <div class="hiring">
-            <h2 class="wow flipInX">
-                какойто блок
-            </h2>
-            <div class="col-lg-6 col-sm-6 about-hiring">
-                <div class="icon-wrap ico-bg round-five wow zoomIn" data-wow-duration="1s" data-wow-delay=".1s">
-                    <i class="fa fa-user">
-                    </i>
-                </div>
-                <div class="content">
-                    <h3 class="title wow flipInX">
-                        Текс_1
-                    </h3>
-                    <p>
-                        Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-6 col-sm-6 about-hiring">
-                <div class="icon-wrap ico-bg round-five wow zoomIn" data-wow-duration="1s" data-wow-delay=".3s">
-                    <i class="fa fa-user">
-                    </i>
-                </div>
-                <div class="content">
-                    <h3 class="title wow flipInX">
-                        Текст_2
-                    </h3>
-                    <p>
-                        Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere.
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-lg-6 col-sm-6 about-hiring">
-                <div class="icon-wrap ico-bg round-five wow zoomIn" data-wow-duration="1s" data-wow-delay=".5s">
-                    <i class="fa fa-user">
-                    </i>
-                </div>
-                <div class="content">
-                    <h3 class="title wow flipInX">
-                        Текст_3
-                    </h3>
-                    <p>
-                        Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-6 col-sm-6 about-hiring">
-                <div class="icon-wrap ico-bg round-five wow zoomIn" data-wow-duration="1s" data-wow-delay=".7s">
-                    <i class="fa fa-user">
-                    </i>
-                </div>
-                <div class="content">
-                    <h3 class="title wow flipInX">
-                        Текст_4
-                    </h3>
-                    <p>
-                        Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere.
-                    </p>
-                </div>
-            </div>
-
+            {{ history|raw }}
         </div>
     </div>
 </div>
-";s:7:"viewBag";a:0:{}s:8:"settings";a:3:{s:3:"url";s:8:"/history";s:6:"layout";s:6:"layout";s:10:"components";a:0:{}}s:4:"code";s:22:"function onStart()
+";s:7:"viewBag";a:0:{}s:8:"settings";a:3:{s:3:"url";s:8:"/history";s:6:"layout";s:6:"layout";s:10:"components";a:0:{}}s:4:"code";s:200:"function onStart()
 {
-}";s:6:"markup";s:6899:"<!--breadcrumbs start-->
+    $this['slider'] = \System\Models\File::where('attachment_type', 'Fotius\Site\Models\History')->get();
+    $this['history'] = \Fotius\Site\Models\History::get('description');
+}";s:6:"markup";s:1941:"<!--breadcrumbs start-->
 <div class="breadcrumbs">
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-sm-4">
                 <h1>
-                    История
+                    Історія
                 </h1>
             </div>
             <div class="col-lg-8 col-sm-8">
                 <ol class="breadcrumb pull-right">
                     <li>
                         <a href="#">
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Pages
+                            Про центр
                         </a>
                     </li>
                     <li class="active">
-                        Story
+                        Історія
                     </li>
                 </ol>
             </div>
@@ -232,15 +102,11 @@ function onStart()
                 <div id="myCarousel" class="carousel slide">
                     <!-- Carousel items -->
                     <div class="carousel-inner">
-                        <div class="active item">
-                            <img src="img/service3.jpg" alt="">
-                        </div>
-                        <div class="item">
-                            <img src="img/service2.jpg" alt="">
-                        </div>
-                        <div class="item">
-                            <img src="img/service5.jpg" alt="">
-                        </div>
+                        {% for item in slider %}
+                            <div class="{% if loop.index == 1 %} active {% endif %} item">
+                                <img src="{{ item.photo.path }}" alt="">
+                            </div>
+                        {% endfor %}
                     </div>
                     <!-- Carousel nav -->
                     <a class="carousel-control left" href="#myCarousel" data-slide="prev">
@@ -255,127 +121,7 @@ function onStart()
             </div>
         </div>
         <div class="col-lg-7 about wow fadeInRight">
-
-            <p>
-                Aenean nibh ante, lacinia non tincidunt nec, lobortis ut tellus. Sed in porta diam. Suspendisse potenti. Donec luctus ullamcorper nulla. Duis nec velit odio.Suspendisse potenti. Donec luctus ullamcorper nulla. Duis nec velit odio.
-            </p>
-            <ul class="list-unstyled">
-                <li>
-                    <i class="fa fa-angle-right pr-10">
-                    </i>
-                    Vestibulum auctor dapibus neque.
-                </li>
-
-                <li>
-                    <i class="fa fa-angle-right pr-10">
-                    </i>
-                    Lorem ipsum dolor sit amet adipiscing elit.
-                </li>
-
-                <li>
-                    <i class="fa fa-angle-right pr-10">
-                    </i>
-                    Aliquam tincidunt mauris eu risus.
-                </li>
-
-                <li>
-                    <i class="fa fa-angle-right pr-10">
-                    </i>
-                    Vestibulum auctor dapibus neque
-                </li>
-
-                <li>
-                    <i class="fa fa-angle-right pr-10">
-                    </i>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                </li>
-
-                <li>
-                    <i class="fa fa-angle-right pr-10">
-                    </i>
-                    Aliquam tincidunt mauris eu risus.
-                </li>
-
-            </ul>
-            <blockquote>
-                <p>
-                    Award winning digital agency. We bring a personal and effective approach to every project we work on, which is why.
-                </p>
-                <small>
-                    текст_1
-                </small>
-                <small>
-                    текст_2
-                </small>
-                <small>
-                    текст_3
-                </small>
-            </blockquote>
-        </div>
-    </div>
-    <div class="row">
-        <div class="hiring">
-            <h2 class="wow flipInX">
-                какойто блок
-            </h2>
-            <div class="col-lg-6 col-sm-6 about-hiring">
-                <div class="icon-wrap ico-bg round-five wow zoomIn" data-wow-duration="1s" data-wow-delay=".1s">
-                    <i class="fa fa-user">
-                    </i>
-                </div>
-                <div class="content">
-                    <h3 class="title wow flipInX">
-                        Текс_1
-                    </h3>
-                    <p>
-                        Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-6 col-sm-6 about-hiring">
-                <div class="icon-wrap ico-bg round-five wow zoomIn" data-wow-duration="1s" data-wow-delay=".3s">
-                    <i class="fa fa-user">
-                    </i>
-                </div>
-                <div class="content">
-                    <h3 class="title wow flipInX">
-                        Текст_2
-                    </h3>
-                    <p>
-                        Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere.
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-lg-6 col-sm-6 about-hiring">
-                <div class="icon-wrap ico-bg round-five wow zoomIn" data-wow-duration="1s" data-wow-delay=".5s">
-                    <i class="fa fa-user">
-                    </i>
-                </div>
-                <div class="content">
-                    <h3 class="title wow flipInX">
-                        Текст_3
-                    </h3>
-                    <p>
-                        Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-6 col-sm-6 about-hiring">
-                <div class="icon-wrap ico-bg round-five wow zoomIn" data-wow-duration="1s" data-wow-delay=".7s">
-                    <i class="fa fa-user">
-                    </i>
-                </div>
-                <div class="content">
-                    <h3 class="title wow flipInX">
-                        Текст_4
-                    </h3>
-                    <p>
-                        Suspendisse dignissim in sem eget pulvinar. Mauris aliquam nulla at libero pretium, eu tincidunt nulla molestie pulvinar posuere.
-                    </p>
-                </div>
-            </div>
-
+            {{ history|raw }}
         </div>
     </div>
 </div>";}";

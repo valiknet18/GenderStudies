@@ -14,3 +14,8 @@
   - update_articles_table.php
   - create_news_table.php
   - create_projects_table.php
+
+1.0.4:
+  - Update database schema 3
+  - create_museums_table.php
+  - create_links_table.php

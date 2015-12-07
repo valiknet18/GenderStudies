@@ -1,8 +1,9 @@
-1448815993s:15436:"a:6:{s:5:"mtime";i:1448807660;s:7:"content";s:7632:"url = "/archive"
+1449459972s:3913:"a:6:{s:5:"mtime";i:1449456384;s:7:"content";s:1870:"url = "/archive"
 layout = layout
 ==
 function onStart()
 {
+    $this['news'] = \Fotius\Site\Models\News::paginate(10);
 }
 ==
 <!--breadcrumbs start-->
@@ -11,23 +12,18 @@ function onStart()
         <div class="row">
             <div class="col-lg-4 col-sm-4">
                 <h1>
-                    Архив
+                    Архів
                 </h1>
             </div>
             <div class="col-lg-8 col-sm-8">
                 <ol class="breadcrumb pull-right">
                     <li>
                         <a href="#">
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Pages
+                            Новини
                         </a>
                     </li>
                     <li class="active">
-                        Story
+                        Архів
                     </li>
                 </ol>
             </div>
@@ -38,170 +34,53 @@ function onStart()
 
 <!--container start-->
 <div class="container">
-    <div class="well wow fadeInUp">
-        <div class="media">
-            <a class="pull-left wow zoomIn" href="#">
-                <img class="media-object" src="http://lorempixel.com/250/250/cats/4">
-            </a>
+    {% for item in news %}
+        <div class="well wow fadeInUp">
+            <div class="media">
+                <a class="pull-left wow zoomIn" href="/news/{{ item.category }}/item/{{ item.slug }}">
+                    <img class="media-object" src="{{ item.photo.path }}">
+                </a>
 
-            <div class="media-body">
-                <h4 class="media-heading"><a href="#">Название</a></h4>
+                <div class="media-body">
+                    <h4 class="media-heading"><a href="#">{{ item.title }}</a></h4>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet
-                    vulputate.
-                    Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis
-                    dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor
-                    accumsan.
-                    Aliquam in felis sit amet augue.</p>
+                    <p>{{ item.short_description|raw }}</p>
 
-                <p class="label label-primary pull-left">01/01/2016</p>
+                    <p class="label label-primary pull-left">{{ item.created_at|date('d.m.Y') }}</p>
 
-                <p class="label label-primary pull-left otstup-left">новости/категория</p>
-                <a href="#" class="pull-right btn btn-primary btn-sm">Читать</a>
+                    <p class="label label-primary pull-left otstup-left">{{ item.category }}</p>
+                    <a href="/news/{{ item.category }}/item/{{ item.slug }}" class="pull-right btn btn-primary btn-sm">Читать</a>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="well wow fadeInUp">
-        <div class="media">
-            <a class="pull-left wow zoomIn" href="#">
-                <img class="media-object" src="http://lorempixel.com/250/250/cats/4">
-            </a>
-
-            <div class="media-body">
-                <h4 class="media-heading"><a href="#">Название</a></h4>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet
-                    vulputate.
-                    Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis
-                    dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor
-                    accumsan.
-                    Aliquam in felis sit amet augue.</p>
-
-                <p class="label label-primary pull-left">01/01/2016</p>
-
-                <p class="label label-primary pull-left otstup-left">новости/категория</p>
-                <a href="#" class="pull-right btn btn-primary btn-sm">Читать</a>
-            </div>
-        </div>
-    </div>
-    <div class="well wow fadeInUp">
-        <div class="media">
-            <a class="pull-left wow zoomIn" href="#">
-                <img class="media-object" src="http://lorempixel.com/250/250/cats/4">
-            </a>
-
-            <div class="media-body">
-                <h4 class="media-heading"><a href="#">Название</a></h4>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet
-                    vulputate.
-                    Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis
-                    dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor
-                    accumsan.
-                    Aliquam in felis sit amet augue.</p>
-
-                <p class="label label-primary pull-left">01/01/2016</p>
-
-                <p class="label label-primary pull-left otstup-left">новости/категория</p>
-                <a href="#" class="pull-right btn btn-primary btn-sm">Читать</a>
-            </div>
-        </div>
-    </div>
-    <div class="well wow fadeInUp">
-        <div class="media">
-            <a class="pull-left wow zoomIn" href="#">
-                <img class="media-object" src="http://lorempixel.com/250/250/cats/4">
-            </a>
-
-            <div class="media-body">
-                <h4 class="media-heading"><a href="#">Название</a></h4>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet
-                    vulputate.
-                    Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis
-                    dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor
-                    accumsan.
-                    Aliquam in felis sit amet augue.</p>
-
-                <p class="label label-primary pull-left">01/01/2016</p>
-
-                <p class="label label-primary pull-left otstup-left">новости/категория</p>
-                <a href="#" class="pull-right btn btn-primary btn-sm">Читать</a>
-            </div>
-        </div>
-    </div>
-    <div class="well wow fadeInUp">
-        <div class="media">
-            <a class="pull-left wow zoomIn" href="#">
-                <img class="media-object" src="http://lorempixel.com/250/250/cats/4">
-            </a>
-
-            <div class="media-body">
-                <h4 class="media-heading"><a href="#">Название</a></h4>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet
-                    vulputate.
-                    Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis
-                    dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor
-                    accumsan.
-                    Aliquam in felis sit amet augue.</p>
-
-                <p class="label label-primary pull-left">01/01/2016</p>
-
-                <p class="label label-primary pull-left otstup-left">новости/категория</p>
-                <a href="#" class="pull-right btn btn-primary btn-sm">Читать</a>
-            </div>
-        </div>
-    </div>
-    <div class="well wow fadeInUp">
-        <div class="media">
-            <a class="pull-left wow zoomIn" href="#">
-                <img class="media-object" src="http://lorempixel.com/250/250/cats/4">
-            </a>
-
-            <div class="media-body">
-                <h4 class="media-heading"><a href="#">Название</a></h4>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet
-                    vulputate.
-                    Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis
-                    dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor
-                    accumsan.
-                    Aliquam in felis sit amet augue.</p>
-
-                <p class="label label-primary pull-left">01/01/2016</p>
-
-                <p class="label label-primary pull-left otstup-left">новости/категория</p>
-                <a href="#" class="pull-right btn btn-primary btn-sm">Читать</a>
-            </div>
-        </div>
-    </div>
+    {% endfor %}
 </div>
-";s:7:"viewBag";a:0:{}s:8:"settings";a:3:{s:3:"url";s:8:"/archive";s:6:"layout";s:6:"layout";s:10:"components";a:0:{}}s:4:"code";s:22:"function onStart()
+
+<div class="col-md-12 container">
+    <div class="text-center">
+        {{ news|raw }}
+    </div>
+</div>";s:7:"viewBag";a:0:{}s:8:"settings";a:3:{s:3:"url";s:8:"/archive";s:6:"layout";s:6:"layout";s:10:"components";a:0:{}}s:4:"code";s:82:"function onStart()
 {
-}";s:6:"markup";s:7569:"<!--breadcrumbs start-->
+    $this['news'] = \Fotius\Site\Models\News::paginate(10);
+}";s:6:"markup";s:1748:"<!--breadcrumbs start-->
 <div class="breadcrumbs">
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-sm-4">
                 <h1>
-                    Архив
+                    Архів
                 </h1>
             </div>
             <div class="col-lg-8 col-sm-8">
                 <ol class="breadcrumb pull-right">
                     <li>
                         <a href="#">
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Pages
+                            Новини
                         </a>
                     </li>
                     <li class="active">
-                        Story
+                        Архів
                     </li>
                 </ol>
             </div>
@@ -212,142 +91,30 @@ function onStart()
 
 <!--container start-->
 <div class="container">
-    <div class="well wow fadeInUp">
-        <div class="media">
-            <a class="pull-left wow zoomIn" href="#">
-                <img class="media-object" src="http://lorempixel.com/250/250/cats/4">
-            </a>
+    {% for item in news %}
+        <div class="well wow fadeInUp">
+            <div class="media">
+                <a class="pull-left wow zoomIn" href="/news/{{ item.category }}/item/{{ item.slug }}">
+                    <img class="media-object" src="{{ item.photo.path }}">
+                </a>
 
-            <div class="media-body">
-                <h4 class="media-heading"><a href="#">Название</a></h4>
+                <div class="media-body">
+                    <h4 class="media-heading"><a href="#">{{ item.title }}</a></h4>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet
-                    vulputate.
-                    Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis
-                    dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor
-                    accumsan.
-                    Aliquam in felis sit amet augue.</p>
+                    <p>{{ item.short_description|raw }}</p>
 
-                <p class="label label-primary pull-left">01/01/2016</p>
+                    <p class="label label-primary pull-left">{{ item.created_at|date('d.m.Y') }}</p>
 
-                <p class="label label-primary pull-left otstup-left">новости/категория</p>
-                <a href="#" class="pull-right btn btn-primary btn-sm">Читать</a>
+                    <p class="label label-primary pull-left otstup-left">{{ item.category }}</p>
+                    <a href="/news/{{ item.category }}/item/{{ item.slug }}" class="pull-right btn btn-primary btn-sm">Читать</a>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="well wow fadeInUp">
-        <div class="media">
-            <a class="pull-left wow zoomIn" href="#">
-                <img class="media-object" src="http://lorempixel.com/250/250/cats/4">
-            </a>
+    {% endfor %}
+</div>
 
-            <div class="media-body">
-                <h4 class="media-heading"><a href="#">Название</a></h4>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet
-                    vulputate.
-                    Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis
-                    dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor
-                    accumsan.
-                    Aliquam in felis sit amet augue.</p>
-
-                <p class="label label-primary pull-left">01/01/2016</p>
-
-                <p class="label label-primary pull-left otstup-left">новости/категория</p>
-                <a href="#" class="pull-right btn btn-primary btn-sm">Читать</a>
-            </div>
-        </div>
-    </div>
-    <div class="well wow fadeInUp">
-        <div class="media">
-            <a class="pull-left wow zoomIn" href="#">
-                <img class="media-object" src="http://lorempixel.com/250/250/cats/4">
-            </a>
-
-            <div class="media-body">
-                <h4 class="media-heading"><a href="#">Название</a></h4>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet
-                    vulputate.
-                    Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis
-                    dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor
-                    accumsan.
-                    Aliquam in felis sit amet augue.</p>
-
-                <p class="label label-primary pull-left">01/01/2016</p>
-
-                <p class="label label-primary pull-left otstup-left">новости/категория</p>
-                <a href="#" class="pull-right btn btn-primary btn-sm">Читать</a>
-            </div>
-        </div>
-    </div>
-    <div class="well wow fadeInUp">
-        <div class="media">
-            <a class="pull-left wow zoomIn" href="#">
-                <img class="media-object" src="http://lorempixel.com/250/250/cats/4">
-            </a>
-
-            <div class="media-body">
-                <h4 class="media-heading"><a href="#">Название</a></h4>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet
-                    vulputate.
-                    Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis
-                    dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor
-                    accumsan.
-                    Aliquam in felis sit amet augue.</p>
-
-                <p class="label label-primary pull-left">01/01/2016</p>
-
-                <p class="label label-primary pull-left otstup-left">новости/категория</p>
-                <a href="#" class="pull-right btn btn-primary btn-sm">Читать</a>
-            </div>
-        </div>
-    </div>
-    <div class="well wow fadeInUp">
-        <div class="media">
-            <a class="pull-left wow zoomIn" href="#">
-                <img class="media-object" src="http://lorempixel.com/250/250/cats/4">
-            </a>
-
-            <div class="media-body">
-                <h4 class="media-heading"><a href="#">Название</a></h4>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet
-                    vulputate.
-                    Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis
-                    dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor
-                    accumsan.
-                    Aliquam in felis sit amet augue.</p>
-
-                <p class="label label-primary pull-left">01/01/2016</p>
-
-                <p class="label label-primary pull-left otstup-left">новости/категория</p>
-                <a href="#" class="pull-right btn btn-primary btn-sm">Читать</a>
-            </div>
-        </div>
-    </div>
-    <div class="well wow fadeInUp">
-        <div class="media">
-            <a class="pull-left wow zoomIn" href="#">
-                <img class="media-object" src="http://lorempixel.com/250/250/cats/4">
-            </a>
-
-            <div class="media-body">
-                <h4 class="media-heading"><a href="#">Название</a></h4>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet
-                    vulputate.
-                    Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis
-                    dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor
-                    accumsan.
-                    Aliquam in felis sit amet augue.</p>
-
-                <p class="label label-primary pull-left">01/01/2016</p>
-
-                <p class="label label-primary pull-left otstup-left">новости/категория</p>
-                <a href="#" class="pull-right btn btn-primary btn-sm">Читать</a>
-            </div>
-        </div>
+<div class="col-md-12 container">
+    <div class="text-center">
+        {{ news|raw }}
     </div>
 </div>";}";

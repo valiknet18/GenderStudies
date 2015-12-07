@@ -35,8 +35,8 @@ h6 {
     font-family: 'Lato', sans-serif;
     /*font-family: 'Open Sans', sans-serif;*/
 }
-a { color: #444e67 }
-a:hover { color: #48cfad }
+a { color: #48cfad }
+a:hover { color: #17BB92 }
 p { line-height: 22px }
 /*header*/
 .head-section { 
@@ -3595,4 +3595,13 @@ z-index:999;
 
 .language:hover{
     cursor:pointer;
+}
+
+.otstup-bottom-1 {
+    margin-bottom:40px;
+}
+
+.img-circle{
+    width:186px;
+    height:186px;
 }

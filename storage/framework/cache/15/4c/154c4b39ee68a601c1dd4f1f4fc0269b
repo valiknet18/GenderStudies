@@ -1,4 +1,8 @@
-1448815994s:7816:"a:6:{s:5:"mtime";i:1448801249;s:7:"content";s:3831:"==
+1449460056s:8098:"a:6:{s:5:"mtime";i:1449447420;s:7:"content";s:3972:"==
+function onStart()
+{
+    $this['socials'] = \Fotius\Site\Models\Social::instance();
+}
 ==
 <footer class="footer">
     <div class="container">
@@ -57,14 +61,26 @@
         <div class="row">
             <div class="col-lg-6 col-sm-6 pull-right">
                 <ul class="social-link-footer list-unstyled">
-                    <li class="wow flipInX" data-wow-duration="2s" data-wow-delay=".1s"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li class="wow flipInX" data-wow-duration="2s" data-wow-delay=".2s"><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                    <li class="wow flipInX" data-wow-duration="2s" data-wow-delay=".3s"><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                    <li class="wow flipInX" data-wow-duration="2s" data-wow-delay=".4s"><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                    <li class="wow flipInX" data-wow-duration="2s" data-wow-delay=".5s"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li class="wow flipInX" data-wow-duration="2s" data-wow-delay=".6s"><a href="#"><i class="fa fa-skype"></i></a></li>
-                    <li class="wow flipInX" data-wow-duration="2s" data-wow-delay=".7s"><a href="#"><i class="fa fa-github"></i></a></li>
-                    <li class="wow flipInX" data-wow-duration="2s" data-wow-delay=".8s"><a href="#"><i class="fa fa-youtube"></i></a></li>
+                    {% if social.fb %}
+                        <li class="wow flipInX" data-wow-duration="2s" data-wow-delay=".1s"><a href="{{ social.fb }}"><i class="fa fa-facebook"></i></a></li>
+                    {% endif %}
+
+                    {% if social.twitter %}
+                        <li class="wow flipInX" data-wow-duration="2s" data-wow-delay=".2s"><a href="{{ social.twitter }}"><i class="fa fa-twitter"></i></a></li>
+                    {% endif %}
+
+                    {% if social.vk %}
+                        <li class="wow flipInX" data-wow-duration="2s" data-wow-delay=".3s"><a href="{{ social.vk }}"><i class="fa fa-vk"></i></a></li>
+                    {% endif %}
+
+                    {% if social.gplus %}
+                        <li class="wow flipInX" data-wow-duration="2s" data-wow-delay=".4s"><a href="{{ social.gplus }}"><i class="fa fa-google-plus"></i></a></li>
+                    {% endif %}
+
+                    {% if social.youtube %}
+                        <li class="wow flipInX" data-wow-duration="2s" data-wow-delay=".5s"><a href="{{ social.youtube }}"><i class="fa fa-youtube"></i></a></li>
+                    {% endif %}
+
                 </ul>
             </div>
             <div class="col-md-4">
@@ -75,7 +91,10 @@
         </div>
     </div>
 </footer>
-";s:7:"viewBag";a:0:{}s:8:"settings";a:1:{s:10:"components";a:0:{}}s:4:"code";s:0:"";s:6:"markup";s:3824:"<footer class="footer">
+";s:7:"viewBag";a:0:{}s:8:"settings";a:1:{s:10:"components";a:0:{}}s:4:"code";s:85:"function onStart()
+{
+    $this['socials'] = \Fotius\Site\Models\Social::instance();
+}";s:6:"markup";s:3879:"<footer class="footer">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-sm-6 col-xs-12 address wow fadeInUp" data-wow-duration="2s" data-wow-delay=".1s">
@@ -132,14 +151,26 @@
         <div class="row">
             <div class="col-lg-6 col-sm-6 pull-right">
                 <ul class="social-link-footer list-unstyled">
-                    <li class="wow flipInX" data-wow-duration="2s" data-wow-delay=".1s"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li class="wow flipInX" data-wow-duration="2s" data-wow-delay=".2s"><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                    <li class="wow flipInX" data-wow-duration="2s" data-wow-delay=".3s"><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                    <li class="wow flipInX" data-wow-duration="2s" data-wow-delay=".4s"><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                    <li class="wow flipInX" data-wow-duration="2s" data-wow-delay=".5s"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li class="wow flipInX" data-wow-duration="2s" data-wow-delay=".6s"><a href="#"><i class="fa fa-skype"></i></a></li>
-                    <li class="wow flipInX" data-wow-duration="2s" data-wow-delay=".7s"><a href="#"><i class="fa fa-github"></i></a></li>
-                    <li class="wow flipInX" data-wow-duration="2s" data-wow-delay=".8s"><a href="#"><i class="fa fa-youtube"></i></a></li>
+                    {% if social.fb %}
+                        <li class="wow flipInX" data-wow-duration="2s" data-wow-delay=".1s"><a href="{{ social.fb }}"><i class="fa fa-facebook"></i></a></li>
+                    {% endif %}
+
+                    {% if social.twitter %}
+                        <li class="wow flipInX" data-wow-duration="2s" data-wow-delay=".2s"><a href="{{ social.twitter }}"><i class="fa fa-twitter"></i></a></li>
+                    {% endif %}
+
+                    {% if social.vk %}
+                        <li class="wow flipInX" data-wow-duration="2s" data-wow-delay=".3s"><a href="{{ social.vk }}"><i class="fa fa-vk"></i></a></li>
+                    {% endif %}
+
+                    {% if social.gplus %}
+                        <li class="wow flipInX" data-wow-duration="2s" data-wow-delay=".4s"><a href="{{ social.gplus }}"><i class="fa fa-google-plus"></i></a></li>
+                    {% endif %}
+
+                    {% if social.youtube %}
+                        <li class="wow flipInX" data-wow-duration="2s" data-wow-delay=".5s"><a href="{{ social.youtube }}"><i class="fa fa-youtube"></i></a></li>
+                    {% endif %}
+
                 </ul>
             </div>
             <div class="col-md-4">

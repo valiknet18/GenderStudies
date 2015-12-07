@@ -30,14 +30,14 @@ class Plugin extends PluginBase
             'site' => [
                 'label' => 'Сторінки',
                 'url' => Backend::url('fotius/site/articles'),
-                'icon' => '',
+                'icon' => 'icon-list',
                 'permissions' => [
                 ],
                 'order' => 5,
                 'sideMenu' => [
                     'articles' => [
                         'label' => 'Статті',
-                        'icon'  => '',
+                        'icon'  => 'icon-file-text',
                         'url'   => Backend::url('fotius/site/articles'),
                         'permissions' => [
                             'intertech.subscriber.access_articles'
@@ -45,7 +45,7 @@ class Plugin extends PluginBase
                     ],
                     'structures' => [
                         'label' => 'Структура',
-                        'icon' => '',
+                        'icon' => 'icon-tasks',
                         'url' => Backend::url('fotius/site/structures'),
                         'permissions' => [
                             'intertech.subscriber.access_articles'
@@ -53,7 +53,7 @@ class Plugin extends PluginBase
                     ],
                     'partners' => [
                         'label' => 'Партнери',
-                        'icon' => '',
+                        'icon' => 'icon-user',
                         'url' => Backend::url('fotius/site/partners'),
                         'permissions' => [
                             'intertech.subscriber.access_articles'
@@ -61,7 +61,7 @@ class Plugin extends PluginBase
                     ],
                     'news' => [
                         'label' => 'Новини',
-                        'icon' => '',
+                        'icon' => 'icon-file-text-o',
                         'url' => Backend::url('fotius/site/news'),
                         'permissions' => [
                             'intertech.subscriber.access_articles'
@@ -69,7 +69,7 @@ class Plugin extends PluginBase
                     ],
                     'projects' => [
                         'label' => 'Проекти',
-                        'icon' => '',
+                        'icon' => 'icon-sticky-note',
                         'url' => Backend::url('fotius/site/projects'),
                         'permissions' => [
                             'intertech.subscriber.access_articles'
@@ -77,7 +77,7 @@ class Plugin extends PluginBase
                     ],
                     'albums' => [
                         'label' => 'Альбоми',
-                        'icon' => '',
+                        'icon' => 'icon-picture-o',
                         'url' => Backend::url('fotius/site/albums'),
                         'permissions' => [
                             'intertech.subscriber.access_articles'
@@ -85,8 +85,24 @@ class Plugin extends PluginBase
                     ],
                     'announcments' => [
                         'label' => 'Анонси',
-                        'icon' => '',
+                        'icon' => 'icon-file',
                         'url' => Backend::url('fotius/site/announcments'),
+                        'permissions' => [
+                            'intertech.subscriber.access_articles'
+                        ],
+                    ],
+                    'museums' => [
+                        'label' => 'Віртуальний музей',
+                        'icon' => 'icon-university',
+                        'url' => Backend::url('fotius/site/museums'),
+                        'permissions' => [
+                            'intertech.subscriber.access_articles'
+                        ],
+                    ],
+                    'links' => [
+                        'label' => 'Посилання',
+                        'icon' => 'icon-link',
+                        'url' => Backend::url('fotius/site/links'),
                         'permissions' => [
                             'intertech.subscriber.access_articles'
                         ],
@@ -102,7 +118,7 @@ class Plugin extends PluginBase
                 'label' => 'Контакти',
                 'description' => 'Контактні данні',
                 'category' => 'Сайт',
-                'icon' => '',
+                'icon' => 'icon-sticky-note',
                 'class' => 'Fotius\Site\Models\Contact',
                 'order' => 100
             ],
@@ -110,7 +126,7 @@ class Plugin extends PluginBase
                 'label' => 'Соціальні мережі',
                 'description' => 'Соціальні мережі',
                 'category' => 'Сайт',
-                'icon' => '',
+                'icon' => 'icon-weixin',
                 'class' => 'Fotius\Site\Models\Social',
                 'order' => 100
             ],
@@ -118,7 +134,7 @@ class Plugin extends PluginBase
                 'label' => 'Слайдер',
                 'description' => 'Слайдер на головній сторінці',
                 'category' => 'Сайт',
-                'icon' => '',
+                'icon' => 'icon-sliders',
                 'class' => 'Fotius\Site\Models\Slider',
                 'order' => 100
             ],
@@ -126,7 +142,7 @@ class Plugin extends PluginBase
                 'label' => 'Історія',
                 'description' => 'Історія відділу',
                 'category' => 'Сайт',
-                'icon' => '',
+                'icon' => 'icon-file',
                 'class' => 'Fotius\Site\Models\History',
                 'order' => 100
             ]
