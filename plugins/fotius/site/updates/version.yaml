@@ -19,3 +19,11 @@
   - Update database schema 3
   - create_museums_table.php
   - create_links_table.php
+
+1.0.5:
+  - Update database schema 4
+  - create_bibliographies_table.php
+
+1.0.6:
+  - Update database schema 5
+  - create_books_table.php

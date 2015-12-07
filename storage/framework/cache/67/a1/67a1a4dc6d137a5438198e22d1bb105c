@@ -1,4 +1,4 @@
-1449460056s:11549:"a:6:{s:5:"mtime";i:1449456950;s:7:"content";s:5697:"==
+1449470418s:11581:"a:6:{s:5:"mtime";i:1449467501;s:7:"content";s:5713:"==
 ==
 <div class="language">
     <a href="#" title="UA" class="language-flag"><img  src="{{ 'assets/image/ua.png'|theme }}" alt="" width="18" height="12"></a>
@@ -81,7 +81,7 @@
                             <a href="/books">Книги</a>
                         </li>
                         <li>
-                            <a href="#">Бібліографія</a>
+                            <a href="/bibliographies">Бібліографія</a>
                         </li>
                     </ul>
                 </li>
@@ -91,7 +91,7 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="/announcment">Анонси</a>
+                            <a href="/announcements">Анонси</a>
                         </li>
                         <li>
                             <a href="/albums">Фотографії</a>
@@ -120,7 +120,7 @@
             </ul>
         </div>
     </div>
-</header>";s:7:"viewBag";a:0:{}s:8:"settings";a:1:{s:10:"components";a:0:{}}s:4:"code";s:0:"";s:6:"markup";s:5691:"<div class="language">
+</header>";s:7:"viewBag";a:0:{}s:8:"settings";a:1:{s:10:"components";a:0:{}}s:4:"code";s:0:"";s:6:"markup";s:5707:"<div class="language">
     <a href="#" title="UA" class="language-flag"><img  src="{{ 'assets/image/ua.png'|theme }}" alt="" width="18" height="12"></a>
     <a href="#" title="RU" class="language-flag"><img  src="{{ 'assets/image/ru.png'|theme }}" alt="" width="18" height="12"></a>
     <span class="language-text">Язык</span>
@@ -201,7 +201,7 @@
                             <a href="/books">Книги</a>
                         </li>
                         <li>
-                            <a href="#">Бібліографія</a>
+                            <a href="/bibliographies">Бібліографія</a>
                         </li>
                     </ul>
                 </li>
@@ -211,7 +211,7 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="/announcment">Анонси</a>
+                            <a href="/announcements">Анонси</a>
                         </li>
                         <li>
                             <a href="/albums">Фотографії</a>

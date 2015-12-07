@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Book
+
+# Model Form Field configuration
+form: $/fotius/site/models/book/fields.yaml
+
+# Model Class name
+modelClass: Fotius\Site\Models\Book
+
+# Default redirect location
+defaultRedirect: fotius/site/books
+
+# Create page
+create:
+    title: Create Book
+    redirect: fotius/site/books/update/:id
+    redirectClose: fotius/site/books
+
+# Update page
+update:
+    title: Edit Book
+    redirect: fotius/site/books
+    redirectClose: fotius/site/books
+
+# Preview page
+preview:
+    title: Preview Book

@@ -3,6 +3,7 @@ layout = layout
 ==
 function onStart()
 {
+    $this['books'] = \Fotius\Site\Models\Book::orderBy('created_at', 'DESC')->get();
 }
 ==
 <!--breadcrumbs start-->
@@ -11,23 +12,18 @@ function onStart()
         <div class="row">
             <div class="col-lg-4 col-sm-4">
                 <h1>
-                    Книги
+                    Публікації
                 </h1>
             </div>
             <div class="col-lg-8 col-sm-8">
                 <ol class="breadcrumb pull-right">
                     <li>
                         <a href="#">
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Pages
+                            Публікації
                         </a>
                     </li>
                     <li class="active">
-                        Story
+                        Книги
                     </li>
                 </ol>
             </div>
@@ -39,220 +35,28 @@ function onStart()
 <!--container start-->
 <div class="container">
     <div class="row">
-        <div class="col-sm-6 col-md-6 bt-bottom wow zoomIn">
-            <div class="col-sm-4 col-md-4">
-                <img src="http://thetransformedmale.files.wordpress.com/2011/06/bruce-wayne-armani.jpg"
-                     alt="" class="img-rounded img-responsive"/>
-            </div>
-            <div class="col-sm-8 col-md-8">
-                <blockquote>
-                    <p>Автор</p>
-                    <small><cite title="Source Title">Название книги</cite></small>
-                </blockquote>
-                <p>
-                    <i class="glyphicon glyphicon-calendar"></i> 01/01/1990
-                    <br/><i class="glyphicon glyphicon-floppy-save"></i>
-                    <a href="#" class="label label-tema"> Скачать</a>
-                </p>
-            </div>
-        </div>
 
-        <div class="col-sm-6 col-md-6 bt-bottom wow zoomIn">
-            <div class="col-sm-4 col-md-4">
-                <img src="http://thetransformedmale.files.wordpress.com/2011/06/bruce-wayne-armani.jpg"
-                     alt="" class="img-rounded img-responsive"/>
+        {% for book in books %}
+            <div class="col-sm-6 col-md-6 bt-bottom wow zoomIn">
+                <div class="col-sm-4 col-md-4">
+                    <img src="{{ book.photo.path }}"
+                         alt="" class="img-rounded img-responsive"/>
+                </div>
+                <div class="col-sm-8 col-md-8">
+                    <blockquote>
+                        <p>{{ book.author }}</p>
+                        <small><cite title="Source Title">{{ book.title }}</cite></small>
+                        <p>
+                            {{ book.description }}
+                        </p>
+                    </blockquote>
+                    <p>
+                        <i class="glyphicon glyphicon-calendar"></i> {{ book.released_at|date('d.m.Y') }}
+                        <br/><i class="glyphicon glyphicon-floppy-save"></i>
+                        <a href="{{ book.link_to_book }}" class="label label-tema"> Скачать</a>
+                    </p>
+                </div>
             </div>
-            <div class="col-sm-8 col-md-8">
-                <blockquote>
-                    <p>Автор</p>
-                    <small><cite title="Source Title">Название книги</cite></small>
-                </blockquote>
-                <p>
-                    <i class="glyphicon glyphicon-calendar"></i> 01/01/1990
-                    <br/><i class="glyphicon glyphicon-floppy-save"></i>
-                    <a href="#" class="label label-tema"> Скачать</a>
-                </p>
-            </div>
-        </div>
-
-        <div class="col-sm-6 col-md-6 bt-bottom wow zoomIn">
-            <div class="col-sm-4 col-md-4">
-                <img src="http://thetransformedmale.files.wordpress.com/2011/06/bruce-wayne-armani.jpg"
-                     alt="" class="img-rounded img-responsive"/>
-            </div>
-            <div class="col-sm-8 col-md-8">
-                <blockquote>
-                    <p>Автор</p>
-                    <small><cite title="Source Title">Название книги</cite></small>
-                </blockquote>
-                <p>
-                    <i class="glyphicon glyphicon-calendar"></i> 01/01/1990
-                    <br/><i class="glyphicon glyphicon-floppy-save"></i>
-                    <a href="#" class="label label-tema"> Скачать</a>
-                </p>
-            </div>
-        </div>
-
-        <div class="col-sm-6 col-md-6 bt-bottom wow zoomIn">
-            <div class="col-sm-4 col-md-4">
-                <img src="http://thetransformedmale.files.wordpress.com/2011/06/bruce-wayne-armani.jpg"
-                     alt="" class="img-rounded img-responsive"/>
-            </div>
-            <div class="col-sm-8 col-md-8">
-                <blockquote>
-                    <p>Автор</p>
-                    <small><cite title="Source Title">Название книги</cite></small>
-                </blockquote>
-                <p>
-                    <i class="glyphicon glyphicon-calendar"></i> 01/01/1990
-                    <br/><i class="glyphicon glyphicon-floppy-save"></i>
-                    <a href="#" class="label label-tema"> Скачать</a>
-                </p>
-            </div>
-        </div>
-
-        <div class="col-sm-6 col-md-6 bt-bottom wow zoomIn">
-            <div class="col-sm-4 col-md-4">
-                <img src="http://thetransformedmale.files.wordpress.com/2011/06/bruce-wayne-armani.jpg"
-                     alt="" class="img-rounded img-responsive"/>
-            </div>
-            <div class="col-sm-8 col-md-8">
-                <blockquote>
-                    <p>Автор</p>
-                    <small><cite title="Source Title">Название книги</cite></small>
-                </blockquote>
-                <p>
-                    <i class="glyphicon glyphicon-calendar"></i> 01/01/1990
-                    <br/><i class="glyphicon glyphicon-floppy-save"></i>
-                    <a href="#" class="label label-tema"> Скачать</a>
-                </p>
-            </div>
-        </div>
-
-        <div class="col-sm-6 col-md-6 bt-bottom wow zoomIn">
-            <div class="col-sm-4 col-md-4">
-                <img src="http://thetransformedmale.files.wordpress.com/2011/06/bruce-wayne-armani.jpg"
-                     alt="" class="img-rounded img-responsive"/>
-            </div>
-            <div class="col-sm-8 col-md-8">
-                <blockquote>
-                    <p>Автор</p>
-                    <small><cite title="Source Title">Название книги</cite></small>
-                </blockquote>
-                <p>
-                    <i class="glyphicon glyphicon-calendar"></i> 01/01/1990
-                    <br/><i class="glyphicon glyphicon-floppy-save"></i>
-                    <a href="#" class="label label-tema"> Скачать</a>
-                </p>
-            </div>
-        </div>
-
-        <div class="col-sm-6 col-md-6 bt-bottom wow zoomIn">
-            <div class="col-sm-4 col-md-4">
-                <img src="http://thetransformedmale.files.wordpress.com/2011/06/bruce-wayne-armani.jpg"
-                     alt="" class="img-rounded img-responsive"/>
-            </div>
-            <div class="col-sm-8 col-md-8">
-                <blockquote>
-                    <p>Автор</p>
-                    <small><cite title="Source Title">Название книги</cite></small>
-                </blockquote>
-                <p>
-                    <i class="glyphicon glyphicon-calendar"></i> 01/01/1990
-                    <br/><i class="glyphicon glyphicon-floppy-save"></i>
-                    <a href="#" class="label label-tema"> Скачать</a>
-                </p>
-            </div>
-        </div>
-
-        <div class="col-sm-6 col-md-6 bt-bottom wow zoomIn">
-            <div class="col-sm-4 col-md-4">
-                <img src="http://thetransformedmale.files.wordpress.com/2011/06/bruce-wayne-armani.jpg"
-                     alt="" class="img-rounded img-responsive"/>
-            </div>
-            <div class="col-sm-8 col-md-8">
-                <blockquote>
-                    <p>Автор</p>
-                    <small><cite title="Source Title">Название книги</cite></small>
-                </blockquote>
-                <p>
-                    <i class="glyphicon glyphicon-calendar"></i> 01/01/1990
-                    <br/><i class="glyphicon glyphicon-floppy-save"></i>
-                    <a href="#" class="label label-tema"> Скачать</a>
-                </p>
-            </div>
-        </div>
-
-        <div class="col-sm-6 col-md-6 bt-bottom wow zoomIn">
-            <div class="col-sm-4 col-md-4">
-                <img src="http://thetransformedmale.files.wordpress.com/2011/06/bruce-wayne-armani.jpg"
-                     alt="" class="img-rounded img-responsive"/>
-            </div>
-            <div class="col-sm-8 col-md-8">
-                <blockquote>
-                    <p>Автор</p>
-                    <small><cite title="Source Title">Название книги</cite></small>
-                </blockquote>
-                <p>
-                    <i class="glyphicon glyphicon-calendar"></i> 01/01/1990
-                    <br/><i class="glyphicon glyphicon-floppy-save"></i>
-                    <a href="#" class="label label-tema"> Скачать</a>
-                </p>
-            </div>
-        </div>
-
-        <div class="col-sm-6 col-md-6 bt-bottom wow zoomIn">
-            <div class="col-sm-4 col-md-4">
-                <img src="http://thetransformedmale.files.wordpress.com/2011/06/bruce-wayne-armani.jpg"
-                     alt="" class="img-rounded img-responsive"/>
-            </div>
-            <div class="col-sm-8 col-md-8">
-                <blockquote>
-                    <p>Автор</p>
-                    <small><cite title="Source Title">Название книги</cite></small>
-                </blockquote>
-                <p>
-                    <i class="glyphicon glyphicon-calendar"></i> 01/01/1990
-                    <br/><i class="glyphicon glyphicon-floppy-save"></i>
-                    <a href="#" class="label label-tema"> Скачать</a>
-                </p>
-            </div>
-        </div>
-
-        <div class="col-sm-6 col-md-6 bt-bottom wow zoomIn">
-            <div class="col-sm-4 col-md-4">
-                <img src="http://thetransformedmale.files.wordpress.com/2011/06/bruce-wayne-armani.jpg"
-                     alt="" class="img-rounded img-responsive"/>
-            </div>
-            <div class="col-sm-8 col-md-8">
-                <blockquote>
-                    <p>Автор</p>
-                    <small><cite title="Source Title">Название книги</cite></small>
-                </blockquote>
-                <p>
-                    <i class="glyphicon glyphicon-calendar"></i> 01/01/1990
-                    <br/><i class="glyphicon glyphicon-floppy-save"></i>
-                    <a href="#" class="label label-tema"> Скачать</a>
-                </p>
-            </div>
-        </div>
-
-        <div class="col-sm-6 col-md-6 bt-bottom wow zoomIn">
-            <div class="col-sm-4 col-md-4">
-                <img src="http://thetransformedmale.files.wordpress.com/2011/06/bruce-wayne-armani.jpg"
-                     alt="" class="img-rounded img-responsive"/>
-            </div>
-            <div class="col-sm-8 col-md-8">
-                <blockquote>
-                    <p>Автор</p>
-                    <small><cite title="Source Title">Название книги</cite></small>
-                </blockquote>
-                <p>
-                    <i class="glyphicon glyphicon-calendar"></i> 01/01/1990
-                    <br/><i class="glyphicon glyphicon-floppy-save"></i>
-                    <a href="#" class="label label-tema"> Скачать</a>
-                </p>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 </div>

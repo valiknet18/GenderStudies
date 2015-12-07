@@ -70,6 +70,66 @@ class __TwigTemplate_0b8979be3d4bc1edaa3a65b06229973a5ac9ed4af795851436a99cddae3
         echo $this->env->getExtension('CMS')->displayBlock('scripts');
         // line 33
         echo "
+<script>
+
+    wow = new WOW(
+            {
+                boxClass:     'wow',      // default
+                animateClass: 'animated', // default
+                offset:       0          // default
+            }
+    )
+    wow.init();
+
+
+    \$(window).load(function() {
+                \$('.flexslider').flexslider({
+                            animation: \"slide\",
+                            start: function(slider) {
+                                \$('body').removeClass('loading');
+                            }
+                        }
+                );
+            }
+    );
+
+
+
+
+    \$(window).scroll(function() {
+                \$('#skillz').each(function(){
+                            var imagePos = \$(this).offset().top;
+                            var viewportheight = window.innerHeight;
+
+                            var topOfWindow = \$(window).scrollTop();
+                            if (imagePos < topOfWindow+viewportheight) {
+                                \$('.skill_bar').fadeIn('slow');
+                                \$('.skill_one').animate({
+                                            width:'60%'}
+                                        , 2000);
+                                \$('.skill_two').animate({
+                                            width:'90%'}
+                                        , 2000);
+                                \$('.skill_three').animate({
+                                            width:'70%'}
+                                        , 1000);
+                                \$('.skill_four').animate({
+                                            width:'55%'}
+                                        , 1000);
+                                \$('.skill_bar_progress p').fadeIn('slow',function(){
+
+                                        }
+                                );
+                            }
+                        }
+                );
+            }
+    );
+
+
+
+
+</script>
 </body>
 </html>";
     }
@@ -122,5 +182,65 @@ class __TwigTemplate_0b8979be3d4bc1edaa3a65b06229973a5ac9ed4af795851436a99cddae3
 /* </script>*/
 /* {% scripts %}*/
 /* */
+/* <script>*/
+/* */
+/*     wow = new WOW(*/
+/*             {*/
+/*                 boxClass:     'wow',      // default*/
+/*                 animateClass: 'animated', // default*/
+/*                 offset:       0          // default*/
+/*             }*/
+/*     )*/
+/*     wow.init();*/
+/* */
+/* */
+/*     $(window).load(function() {*/
+/*                 $('.flexslider').flexslider({*/
+/*                             animation: "slide",*/
+/*                             start: function(slider) {*/
+/*                                 $('body').removeClass('loading');*/
+/*                             }*/
+/*                         }*/
+/*                 );*/
+/*             }*/
+/*     );*/
+/* */
+/* */
+/* */
+/* */
+/*     $(window).scroll(function() {*/
+/*                 $('#skillz').each(function(){*/
+/*                             var imagePos = $(this).offset().top;*/
+/*                             var viewportheight = window.innerHeight;*/
+/* */
+/*                             var topOfWindow = $(window).scrollTop();*/
+/*                             if (imagePos < topOfWindow+viewportheight) {*/
+/*                                 $('.skill_bar').fadeIn('slow');*/
+/*                                 $('.skill_one').animate({*/
+/*                                             width:'60%'}*/
+/*                                         , 2000);*/
+/*                                 $('.skill_two').animate({*/
+/*                                             width:'90%'}*/
+/*                                         , 2000);*/
+/*                                 $('.skill_three').animate({*/
+/*                                             width:'70%'}*/
+/*                                         , 1000);*/
+/*                                 $('.skill_four').animate({*/
+/*                                             width:'55%'}*/
+/*                                         , 1000);*/
+/*                                 $('.skill_bar_progress p').fadeIn('slow',function(){*/
+/* */
+/*                                         }*/
+/*                                 );*/
+/*                             }*/
+/*                         }*/
+/*                 );*/
+/*             }*/
+/*     );*/
+/* */
+/* */
+/* */
+/* */
+/* </script>*/
 /* </body>*/
 /* </html>*/

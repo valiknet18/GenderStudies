@@ -1,8 +1,9 @@
-1449459972s:14274:"a:6:{s:5:"mtime";i:1448807324;s:7:"content";s:7050:"url = "/announcment"
+1449470409s:5795:"a:6:{s:5:"mtime";i:1449461160;s:7:"content";s:2810:"url = "/announcements"
 layout = layout
 ==
 function onStart()
 {
+    $this['announcements'] = \Fotius\Site\Models\Announcement::orderBy('created_at', 'DESC')->paginate(10);
 }
 ==
 <!--breadcrumbs start-->
@@ -11,23 +12,18 @@ function onStart()
         <div class="row">
             <div class="col-lg-4 col-sm-4">
                 <h1>
-                    Анонсы
+                    Галерея
                 </h1>
             </div>
             <div class="col-lg-8 col-sm-8">
                 <ol class="breadcrumb pull-right">
                     <li>
                         <a href="#">
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Pages
+                            Галерея
                         </a>
                     </li>
                     <li class="active">
-                        Story
+                        Анонси
                     </li>
                 </ol>
             </div>
@@ -42,149 +38,63 @@ function onStart()
         <div class="panel panel-default widget">
             <div class="panel-body">
                 <ul class="list-group">
-                    <li class="list-group-item">
-                        <div class="row">
-                            <div class="col-lg-2 col-sm-2">
-                                <div class="date-wrap anons-famely">
-								<span class="date">
-									11
-								</span>
-								<span class="month">
-									January
-								</span>
-								<span class="yiers">
-									2016
-								</span>
+                    {% for announcement in announcements %}
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-lg-2 col-sm-2">
+                                    <div class="date-wrap anons-famely">
+                                    <span class="date">
+                                        {{ announcement.created_at|date("d") }}
+                                    </span>
+                                    <span class="month">
+                                        {{ announcement.created_at|date("F") }}
+                                    </span>
+                                    <span class="yiers">
+                                        {{ announcement.created_at|date("Y") }}
+                                    </span>
+                                    </div>
+                                </div>
+                                <div class="col-xs-10 col-md-10">
+                                    <div class="name-anons">
+                                        <a href="{{ announcement.link }}">{{ announcement.title }}</a>
+                                    </div>
+                                    <div class="comment-text">
+                                        {{ announcement.description|raw }}
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-xs-10 col-md-10">
-                                <div class="name-anons">
-                                    <a href="#">Название (сылка на анонс в новостях, как идея/вариант)</a>
-                                </div>
-                                <div class="comment-text">
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-                                    euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-                                    euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="row">
-                            <div class="col-lg-2 col-sm-2">
-                                <div class="date-wrap anons-famely">
-								<span class="date">
-									11
-								</span>
-								<span class="month">
-									January
-								</span>
-								<span class="yiers">
-									2016
-								</span>
-                                </div>
-                            </div>
-                            <div class="col-xs-10 col-md-10">
-                                <div class="name-anons">
-                                    <a href="#">Название (сылка на анонс в новостях, как идея/вариант)</a>
-                                </div>
-                                <div class="comment-text">
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-                                    euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-                                    euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="row">
-                            <div class="col-lg-2 col-sm-2">
-                                <div class="date-wrap anons-famely">
-								<span class="date">
-									11
-								</span>
-								<span class="month">
-									January
-								</span>
-								<span class="yiers">
-									2016
-								</span>
-                                </div>
-                            </div>
-                            <div class="col-xs-10 col-md-10">
-                                <div class="name-anons">
-                                    <a href="#">Название (сылка на анонс в новостях, как идея/вариант)</a>
-                                </div>
-                                <div class="comment-text">
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-                                    euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-                                    euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="row">
-                            <div class="col-lg-2 col-sm-2">
-                                <div class="date-wrap anons-famely">
-								<span class="date">
-									11
-								</span>
-								<span class="month">
-									January
-								</span>
-								<span class="yiers">
-									2016
-								</span>
-                                </div>
-                            </div>
-                            <div class="col-xs-10 col-md-10">
-                                <div class="name-anons">
-                                    <a href="#">Название (сылка на анонс в новостях, как идея/вариант)</a>
-                                </div>
-                                <div class="comment-text">
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-                                    euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-                                    euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim
-                                </div>
-                            </div>
-                        </div>
-                    </li>
+                        </li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>
-        <a href="#" class="btn btn-primary btn-sm btn-block otstup-bottom" role="button"><span
-                class="glyphicon glyphicon-refresh"></span> Эщо</a>
+        <div class="col-md-12 container">
+            <div class="text-center">
+                {{ announcement|raw }}
+            </div>
+        </div>
     </div>
-</div>";s:7:"viewBag";a:0:{}s:8:"settings";a:3:{s:3:"url";s:12:"/announcment";s:6:"layout";s:6:"layout";s:10:"components";a:0:{}}s:4:"code";s:22:"function onStart()
+</div>";s:7:"viewBag";a:0:{}s:8:"settings";a:3:{s:3:"url";s:14:"/announcements";s:6:"layout";s:6:"layout";s:10:"components";a:0:{}}s:4:"code";s:130:"function onStart()
 {
-}";s:6:"markup";s:6984:"<!--breadcrumbs start-->
+    $this['announcements'] = \Fotius\Site\Models\Announcement::orderBy('created_at', 'DESC')->paginate(10);
+}";s:6:"markup";s:2634:"<!--breadcrumbs start-->
 <div class="breadcrumbs">
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-sm-4">
                 <h1>
-                    Анонсы
+                    Галерея
                 </h1>
             </div>
             <div class="col-lg-8 col-sm-8">
                 <ol class="breadcrumb pull-right">
                     <li>
                         <a href="#">
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Pages
+                            Галерея
                         </a>
                     </li>
                     <li class="active">
-                        Story
+                        Анонси
                     </li>
                 </ol>
             </div>
@@ -199,122 +109,40 @@ function onStart()
         <div class="panel panel-default widget">
             <div class="panel-body">
                 <ul class="list-group">
-                    <li class="list-group-item">
-                        <div class="row">
-                            <div class="col-lg-2 col-sm-2">
-                                <div class="date-wrap anons-famely">
-								<span class="date">
-									11
-								</span>
-								<span class="month">
-									January
-								</span>
-								<span class="yiers">
-									2016
-								</span>
+                    {% for announcement in announcements %}
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-lg-2 col-sm-2">
+                                    <div class="date-wrap anons-famely">
+                                    <span class="date">
+                                        {{ announcement.created_at|date("d") }}
+                                    </span>
+                                    <span class="month">
+                                        {{ announcement.created_at|date("F") }}
+                                    </span>
+                                    <span class="yiers">
+                                        {{ announcement.created_at|date("Y") }}
+                                    </span>
+                                    </div>
+                                </div>
+                                <div class="col-xs-10 col-md-10">
+                                    <div class="name-anons">
+                                        <a href="{{ announcement.link }}">{{ announcement.title }}</a>
+                                    </div>
+                                    <div class="comment-text">
+                                        {{ announcement.description|raw }}
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-xs-10 col-md-10">
-                                <div class="name-anons">
-                                    <a href="#">Название (сылка на анонс в новостях, как идея/вариант)</a>
-                                </div>
-                                <div class="comment-text">
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-                                    euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-                                    euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="row">
-                            <div class="col-lg-2 col-sm-2">
-                                <div class="date-wrap anons-famely">
-								<span class="date">
-									11
-								</span>
-								<span class="month">
-									January
-								</span>
-								<span class="yiers">
-									2016
-								</span>
-                                </div>
-                            </div>
-                            <div class="col-xs-10 col-md-10">
-                                <div class="name-anons">
-                                    <a href="#">Название (сылка на анонс в новостях, как идея/вариант)</a>
-                                </div>
-                                <div class="comment-text">
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-                                    euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-                                    euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="row">
-                            <div class="col-lg-2 col-sm-2">
-                                <div class="date-wrap anons-famely">
-								<span class="date">
-									11
-								</span>
-								<span class="month">
-									January
-								</span>
-								<span class="yiers">
-									2016
-								</span>
-                                </div>
-                            </div>
-                            <div class="col-xs-10 col-md-10">
-                                <div class="name-anons">
-                                    <a href="#">Название (сылка на анонс в новостях, как идея/вариант)</a>
-                                </div>
-                                <div class="comment-text">
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-                                    euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-                                    euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="row">
-                            <div class="col-lg-2 col-sm-2">
-                                <div class="date-wrap anons-famely">
-								<span class="date">
-									11
-								</span>
-								<span class="month">
-									January
-								</span>
-								<span class="yiers">
-									2016
-								</span>
-                                </div>
-                            </div>
-                            <div class="col-xs-10 col-md-10">
-                                <div class="name-anons">
-                                    <a href="#">Название (сылка на анонс в новостях, как идея/вариант)</a>
-                                </div>
-                                <div class="comment-text">
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-                                    euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-                                    euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim
-                                </div>
-                            </div>
-                        </div>
-                    </li>
+                        </li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>
-        <a href="#" class="btn btn-primary btn-sm btn-block otstup-bottom" role="button"><span
-                class="glyphicon glyphicon-refresh"></span> Эщо</a>
+        <div class="col-md-12 container">
+            <div class="text-center">
+                {{ announcement|raw }}
+            </div>
+        </div>
     </div>
 </div>";}";

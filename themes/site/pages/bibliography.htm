@@ -1,0 +1,59 @@
+url = "/bibliographies"
+layout = layout
+==
+function onStart()
+{
+    $this['bibliographies'] = \Fotius\Site\Models\Bibliography::orderBy('created_at', 'DESC')->get();
+}
+==
+<!--breadcrumbs start-->
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-sm-4">
+                <h1>
+                    Публікації
+                </h1>
+            </div>
+            <div class="col-lg-8 col-sm-8">
+                <ol class="breadcrumb pull-right">
+                    <li>
+                        <a href="#">
+                            Публікації
+                        </a>
+                    </li>
+                    <li class="active">
+                        Бібліографія
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+<!--breadcrumbs end-->
+
+<!--container start-->
+<div class="container">
+    <div class="row">
+        <div class="panel-group" id="accordion">
+            {% for bibliography in bibliographies %}
+                <div class="panel panel-default wow bounceInUp animated">
+                    <div class="panel-heading cursor" data-toggle="collapse" data-parent="#accordion" href="#1-1">
+                        <h4 class="panel-title">
+                            {{ bibliography.author }}
+                            <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+                        </h4>
+                    </div>
+                    <div id="1-1" class="panel-collapse collapse in">
+                        <div class="panel-body col-xs-12 col-sm-3 .col-md-2 col-lg-2 bibliography-img">
+                            <img class="img-responsive" src="{{ bibliography.photo.path }}" alt="">
+                        </div>
+                        <div class="panel-body col-xs-12 col-sm-9 .col-md-10 col-lg-10">
+                            {{ bibliography.description|raw }}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

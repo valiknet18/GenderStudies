@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Bibliography
+
+# Model Form Field configuration
+form: $/fotius/site/models/bibliography/fields.yaml
+
+# Model Class name
+modelClass: Fotius\Site\Models\Bibliography
+
+# Default redirect location
+defaultRedirect: fotius/site/bibliographies
+
+# Create page
+create:
+    title: Create Bibliography
+    redirect: fotius/site/bibliographies/update/:id
+    redirectClose: fotius/site/bibliographies
+
+# Update page
+update:
+    title: Edit Bibliography
+    redirect: fotius/site/bibliographies
+    redirectClose: fotius/site/bibliographies
+
+# Preview page
+preview:
+    title: Preview Bibliography

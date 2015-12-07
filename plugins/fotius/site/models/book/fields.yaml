@@ -1,0 +1,33 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    id:
+        label: ID
+        disabled: true
+
+    name:
+        label: Назва книги
+        type: text
+
+    author:
+        label: Автор книги
+        type: text
+
+    description:
+        label: Опис
+        type: text
+
+    released_at:
+        label: Дата релізу
+        type: datepicker
+        mode: date
+
+    link_to_book:
+        label: Посилання на книгу
+        type: text
+
+    photo:
+        label: Фото
+        type: fileupload

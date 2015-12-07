@@ -3,6 +3,7 @@ layout = layout
 ==
 function onStart()
 {
+    $this['partners'] = \Fotius\Site\Models\Partner::orderBy('created_at', 'DESC')->get();
 }
 ==
 <!--breadcrumbs start-->
@@ -11,23 +12,18 @@ function onStart()
         <div class="row">
             <div class="col-lg-4 col-sm-4">
                 <h1>
-                    Партнеры
+                    Посилання
                 </h1>
             </div>
             <div class="col-lg-8 col-sm-8">
                 <ol class="breadcrumb pull-right">
                     <li>
                         <a href="#">
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Pages
+                            Посилання
                         </a>
                     </li>
                     <li class="active">
-                        Story
+                        Партнери
                     </li>
                 </ol>
             </div>
@@ -39,83 +35,20 @@ function onStart()
 <!--container start-->
 <div class="container">
     <div class="row destacados">
-        <div class="col-md-4 wow bounceIn">
-            <div>
-                <img src="http://lorempixel.com/200/200/abstract/1/" alt="Texto Alternativo" class="img-circle img-thumbnail">
-                <h2>Партнер_1</h2>
-                <p>
-                    <i class="glyphicon glyphicon-globe"></i> sait.com.ua <br/>
-                    <i class="glyphicon glyphicon-envelope"></i> sait@gmail.com <br/>
-                    <i class="glyphicon glyphicon-info-sign"></i> Информация
-                </p>
-                <a href="#" class="btn btn-primary" title="Enlace">Перейти »</a>
+        {% for partner in partners %}
+            <div class="col-md-4 wow bounceIn">
+                <div>
+                    <img src="{{ partner.photo.path }}" alt="Texto Alternativo" class="img-circle img-thumbnail">
+                    <h2>{{ partner.title }}</h2>
+                    <p>
+                        <i class="glyphicon glyphicon-globe"></i> {{ partner.site }} <br/>
+                        <i class="glyphicon glyphicon-envelope"></i> {{ partner.email }} <br/>
+                        <i class="glyphicon glyphicon-info-sign"></i> {{ partner.description }}
+                    </p>
+                    <a href="{{ partner.site }}" class="btn btn-primary" title="Enlace" target="_blank">Перейти »</a>
+                </div>
             </div>
-        </div>
-
-        <div class="col-md-4 wow bounceIn">
-            <div>
-                <img src="http://lorempixel.com/200/200/abstract/2/" alt="Texto Alternativo" class="img-circle img-thumbnail">
-                <h2>Партнер_2</h2>
-                <p>
-                    <i class="glyphicon glyphicon-globe"></i> sait.com.ua <br/>
-                    <i class="glyphicon glyphicon-envelope"></i> sait@gmail.com <br/>
-                    <i class="glyphicon glyphicon-info-sign"></i> Информация
-                </p>
-                <a href="#" class="btn btn-primary" title="Enlace">Перейти »</a>
-            </div>
-        </div>
-
-        <div class="col-md-4 wow bounceIn">
-            <div>
-                <img src="http://lorempixel.com/200/200/abstract/3/" alt="Texto Alternativo" class="img-circle img-thumbnail">
-                <h2>Партнер_3</h2>
-                <p>
-                    <i class="glyphicon glyphicon-globe"></i> sait.com.ua <br/>
-                    <i class="glyphicon glyphicon-envelope"></i> sait@gmail.com <br/>
-                    <i class="glyphicon glyphicon-info-sign"></i> Информация
-                </p>
-                <a href="#" class="btn btn-primary" title="Enlace">Перейти »</a>
-            </div>
-        </div>
-
-        <div class="col-md-4 wow bounceIn">
-            <div>
-                <img src="http://lorempixel.com/200/200/abstract/1/" alt="Texto Alternativo" class="img-circle img-thumbnail">
-                <h2>Партнер_1</h2>
-                <p>
-                    <i class="glyphicon glyphicon-globe"></i> sait.com.ua <br/>
-                    <i class="glyphicon glyphicon-envelope"></i> sait@gmail.com <br/>
-                    <i class="glyphicon glyphicon-info-sign"></i> Информация
-                </p>
-                <a href="#" class="btn btn-primary" title="Enlace">Перейти »</a>
-            </div>
-        </div>
-
-        <div class="col-md-4 wow bounceIn">
-            <div>
-                <img src="http://lorempixel.com/200/200/abstract/2/" alt="Texto Alternativo" class="img-circle img-thumbnail">
-                <h2>Партнер_2</h2>
-                <p>
-                    <i class="glyphicon glyphicon-globe"></i> sait.com.ua <br/>
-                    <i class="glyphicon glyphicon-envelope"></i> sait@gmail.com <br/>
-                    <i class="glyphicon glyphicon-info-sign"></i> Информация
-                </p>
-                <a href="#" class="btn btn-primary" title="Enlace">Перейти »</a>
-            </div>
-        </div>
-
-        <div class="col-md-4 wow bounceIn">
-            <div>
-                <img src="http://lorempixel.com/200/200/abstract/3/" alt="Texto Alternativo" class="img-circle img-thumbnail">
-                <h2>Партнер_3</h2>
-                <p>
-                    <i class="glyphicon glyphicon-globe"></i> sait.com.ua <br/>
-                    <i class="glyphicon glyphicon-envelope"></i> sait@gmail.com <br/>
-                    <i class="glyphicon glyphicon-info-sign"></i> Информация
-                </p>
-                <a href="#" class="btn btn-primary" title="Enlace">Перейти »</a>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 </div>
 <!--container end-->

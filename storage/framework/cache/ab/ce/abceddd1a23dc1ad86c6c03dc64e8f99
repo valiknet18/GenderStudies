@@ -1,4 +1,4 @@
-1449459972s:4426:"a:6:{s:5:"mtime";i:1448809570;s:7:"content";s:2135:"==
+1449470409s:8303:"a:6:{s:5:"mtime";i:1449464892;s:7:"content";s:4073:"==
 function onStart()
 {
     $this->addCss('assets/css/superfish.css');
@@ -66,6 +66,66 @@ function onStart()
 </script>
 {% scripts %}
 
+<script>
+
+    wow = new WOW(
+            {
+                boxClass:     'wow',      // default
+                animateClass: 'animated', // default
+                offset:       0          // default
+            }
+    )
+    wow.init();
+
+
+    $(window).load(function() {
+                $('.flexslider').flexslider({
+                            animation: "slide",
+                            start: function(slider) {
+                                $('body').removeClass('loading');
+                            }
+                        }
+                );
+            }
+    );
+
+
+
+
+    $(window).scroll(function() {
+                $('#skillz').each(function(){
+                            var imagePos = $(this).offset().top;
+                            var viewportheight = window.innerHeight;
+
+                            var topOfWindow = $(window).scrollTop();
+                            if (imagePos < topOfWindow+viewportheight) {
+                                $('.skill_bar').fadeIn('slow');
+                                $('.skill_one').animate({
+                                            width:'60%'}
+                                        , 2000);
+                                $('.skill_two').animate({
+                                            width:'90%'}
+                                        , 2000);
+                                $('.skill_three').animate({
+                                            width:'70%'}
+                                        , 1000);
+                                $('.skill_four').animate({
+                                            width:'55%'}
+                                        , 1000);
+                                $('.skill_bar_progress p').fadeIn('slow',function(){
+
+                                        }
+                                );
+                            }
+                        }
+                );
+            }
+    );
+
+
+
+
+</script>
 </body>
 </html>";s:7:"viewBag";a:0:{}s:8:"settings";a:1:{s:10:"components";a:0:{}}s:4:"code";s:1428:"function onStart()
 {
@@ -99,7 +159,7 @@ function onStart()
     $this->addJs('assets/js/jquery.cslider.js');
     $this->addJs('assets/js/common-scripts.js');
     $this->addJs('assets/js/app.js');
-}";s:6:"markup";s:700:"<!DOCTYPE html>
+}";s:6:"markup";s:2638:"<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -132,5 +192,65 @@ function onStart()
 </script>
 {% scripts %}
 
+<script>
+
+    wow = new WOW(
+            {
+                boxClass:     'wow',      // default
+                animateClass: 'animated', // default
+                offset:       0          // default
+            }
+    )
+    wow.init();
+
+
+    $(window).load(function() {
+                $('.flexslider').flexslider({
+                            animation: "slide",
+                            start: function(slider) {
+                                $('body').removeClass('loading');
+                            }
+                        }
+                );
+            }
+    );
+
+
+
+
+    $(window).scroll(function() {
+                $('#skillz').each(function(){
+                            var imagePos = $(this).offset().top;
+                            var viewportheight = window.innerHeight;
+
+                            var topOfWindow = $(window).scrollTop();
+                            if (imagePos < topOfWindow+viewportheight) {
+                                $('.skill_bar').fadeIn('slow');
+                                $('.skill_one').animate({
+                                            width:'60%'}
+                                        , 2000);
+                                $('.skill_two').animate({
+                                            width:'90%'}
+                                        , 2000);
+                                $('.skill_three').animate({
+                                            width:'70%'}
+                                        , 1000);
+                                $('.skill_four').animate({
+                                            width:'55%'}
+                                        , 1000);
+                                $('.skill_bar_progress p').fadeIn('slow',function(){
+
+                                        }
+                                );
+                            }
+                        }
+                );
+            }
+    );
+
+
+
+
+</script>
 </body>
 </html>";}";

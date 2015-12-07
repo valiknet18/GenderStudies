@@ -107,6 +107,22 @@ class Plugin extends PluginBase
                             'intertech.subscriber.access_articles'
                         ],
                     ],
+                    'bibliographies' => [
+                        'label' => 'Бібліографія',
+                        'icon' => '',
+                        'url' => Backend::url('fotius/site/bibliographies'),
+                        'permissions' => [
+                            'intertech.subscriber.access_articles'
+                        ],
+                    ],
+                    'books' => [
+                        'label' => 'Книги',
+                        'icon' => '',
+                        'url' => Backend::url('fotius/site/books'),
+                        'permissions' => [
+                            'intertech.subscriber.access_articles'
+                        ],
+                    ]
                 ]
             ],
         ];

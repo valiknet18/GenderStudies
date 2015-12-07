@@ -103,7 +103,7 @@ class __TwigTemplate_8b8efcc5cb91d89cef0a9495164b585b4c66509a5f229393897a45c6e60
                             <a href=\"/books\">Книги</a>
                         </li>
                         <li>
-                            <a href=\"#\">Бібліографія</a>
+                            <a href=\"/bibliographies\">Бібліографія</a>
                         </li>
                     </ul>
                 </li>
@@ -113,7 +113,7 @@ class __TwigTemplate_8b8efcc5cb91d89cef0a9495164b585b4c66509a5f229393897a45c6e60
                     </a>
                     <ul class=\"dropdown-menu\">
                         <li>
-                            <a href=\"/announcment\">Анонси</a>
+                            <a href=\"/announcements\">Анонси</a>
                         </li>
                         <li>
                             <a href=\"/albums\">Фотографії</a>
@@ -241,7 +241,7 @@ class __TwigTemplate_8b8efcc5cb91d89cef0a9495164b585b4c66509a5f229393897a45c6e60
 /*                             <a href="/books">Книги</a>*/
 /*                         </li>*/
 /*                         <li>*/
-/*                             <a href="#">Бібліографія</a>*/
+/*                             <a href="/bibliographies">Бібліографія</a>*/
 /*                         </li>*/
 /*                     </ul>*/
 /*                 </li>*/
@@ -251,7 +251,7 @@ class __TwigTemplate_8b8efcc5cb91d89cef0a9495164b585b4c66509a5f229393897a45c6e60
 /*                     </a>*/
 /*                     <ul class="dropdown-menu">*/
 /*                         <li>*/
-/*                             <a href="/announcment">Анонси</a>*/
+/*                             <a href="/announcements">Анонси</a>*/
 /*                         </li>*/
 /*                         <li>*/
 /*                             <a href="/albums">Фотографії</a>*/
