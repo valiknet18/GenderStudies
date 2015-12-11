@@ -30,3 +30,7 @@ fields:
     photo:
         label: Фото
         type: fileupload
+
+    active:
+        label: Активний
+        type: switch

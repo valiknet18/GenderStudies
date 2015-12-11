@@ -1,4 +1,4 @@
-1449470409s:8303:"a:6:{s:5:"mtime";i:1449464892;s:7:"content";s:4073:"==
+1449817271s:8433:"a:6:{s:5:"mtime";i:1449551956;s:7:"content";s:4138:"==
 function onStart()
 {
     $this->addCss('assets/css/superfish.css');
@@ -31,6 +31,8 @@ function onStart()
     $this->addJs('assets/js/jquery.cslider.js');
     $this->addJs('assets/js/common-scripts.js');
     $this->addJs('assets/js/app.js');
+
+    $this['contact'] = \Fotius\Site\Models\Contact::instance();
 }
 ==
 <!DOCTYPE html>
@@ -127,7 +129,7 @@ function onStart()
 
 </script>
 </body>
-</html>";s:7:"viewBag";a:0:{}s:8:"settings";a:1:{s:10:"components";a:0:{}}s:4:"code";s:1428:"function onStart()
+</html>";s:7:"viewBag";a:0:{}s:8:"settings";a:1:{s:10:"components";a:0:{}}s:4:"code";s:1493:"function onStart()
 {
     $this->addCss('assets/css/superfish.css');
     $this->addCss('assets/css/bootstrap.min.css');
@@ -159,6 +161,8 @@ function onStart()
     $this->addJs('assets/js/jquery.cslider.js');
     $this->addJs('assets/js/common-scripts.js');
     $this->addJs('assets/js/app.js');
+
+    $this['contact'] = \Fotius\Site\Models\Contact::instance();
 }";s:6:"markup";s:2638:"<!DOCTYPE html>
 <html lang="en">
 <head>

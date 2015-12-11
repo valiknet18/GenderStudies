@@ -62,7 +62,7 @@ class __TwigTemplate_129f5e296a848e7bcfb21f94baae0bc3fcb4f591f7316704c33b7b21233
             </section>
             <section class=\"contact-infos\">
                 <h4 class=\"title custom-font text-black\">
-                    Адрес
+                    Адреса
                 </h4>
                 <address>
                     Revox
@@ -198,7 +198,7 @@ class __TwigTemplate_129f5e296a848e7bcfb21f94baae0bc3fcb4f591f7316704c33b7b21233
 /*             </section>*/
 /*             <section class="contact-infos">*/
 /*                 <h4 class="title custom-font text-black">*/
-/*                     Адрес*/
+/*                     Адреса*/
 /*                 </h4>*/
 /*                 <address>*/
 /*                     Revox*/

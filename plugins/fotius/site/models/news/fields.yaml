@@ -34,3 +34,17 @@ fields:
     photo:
         label: Фото
         type: fileupload
+
+    active:
+        label: Активний
+        type: switch
+
+    news:
+        label: Додати в друбрику "Актуально"
+        type: switch
+        span: left
+
+    needKnow:
+        label: Додати в рубрику "Потрібно знати"
+        type: switch
+        span: right

@@ -1,5 +1,5 @@
 <?php 
-class Cms56652771b3e56_3722977425Class extends \Cms\Classes\LayoutCode
+class Cms566a725fb9de4_3764362730Class extends \Cms\Classes\LayoutCode
 {
 public function onStart()
 {
@@ -33,5 +33,7 @@ public function onStart()
     $this->addJs('assets/js/jquery.cslider.js');
     $this->addJs('assets/js/common-scripts.js');
     $this->addJs('assets/js/app.js');
+
+    $this['contact'] = \Fotius\Site\Models\Contact::instance();
 }
 }

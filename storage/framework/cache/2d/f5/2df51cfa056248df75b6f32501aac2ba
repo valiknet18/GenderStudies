@@ -1,4 +1,4 @@
-1449470409s:7715:"a:6:{s:5:"mtime";i:1448809639;s:7:"content";s:3772:"url = "/contacts"
+1449817271s:7719:"a:6:{s:5:"mtime";i:1449555907;s:7:"content";s:3774:"url = "/contacts"
 layout = layout
 ==
 function onStart()
@@ -52,7 +52,7 @@ function onStart()
             </section>
             <section class="contact-infos">
                 <h4 class="title custom-font text-black">
-                    Адрес
+                    Адреса
                 </h4>
                 <address>
                     Revox
@@ -134,7 +134,7 @@ function onStart()
 ";s:7:"viewBag";a:0:{}s:8:"settings";a:3:{s:3:"url";s:9:"/contacts";s:6:"layout";s:6:"layout";s:10:"components";a:0:{}}s:4:"code";s:65:"function onStart()
 {
     $this->addJs('assets/js/contacts.js');
-}";s:6:"markup";s:3664:"<!--breadcrumbs start-->
+}";s:6:"markup";s:3666:"<!--breadcrumbs start-->
 <div class="breadcrumbs">
     <div class="container">
         <div class="row">
@@ -180,7 +180,7 @@ function onStart()
             </section>
             <section class="contact-infos">
                 <h4 class="title custom-font text-black">
-                    Адрес
+                    Адреса
                 </h4>
                 <address>
                     Revox

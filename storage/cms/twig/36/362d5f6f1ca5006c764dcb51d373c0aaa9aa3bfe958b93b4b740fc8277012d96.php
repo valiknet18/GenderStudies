@@ -21,19 +21,60 @@ class __TwigTemplate_36b03ef592f98cd7758464a9e4a9a1e6744d48d1fb9191ab63dc1a4123c
         <div class=\"row\">
             <div class=\"col-lg-6 col-sm-6 col-xs-12 address wow fadeInUp\" data-wow-duration=\"2s\" data-wow-delay=\".1s\">
                 <h1>
-                    Контакты
+                    Контакти
                 </h1>
                 <address>
-                    <p><i class=\"fa fa-home pr-10\"></i>Адрес: No.XXXXXX street</p>
-                    <p><i class=\"fa fa-phone pr-10\"></i>Номер 1 : (123) 456-7890 </p>
-                    <p><i class=\"fa fa-phone pr-10\"></i>Номер 2 : (123) 456-7890 </p>
-                    <p><i class=\"fa fa-envelope pr-10\"></i>Email :   <a href=\"javascript:;\">support@example.com</a></p>
-                </address>
+                    ";
+        // line 9
+        if ($this->getAttribute((isset($context["contact"]) ? $context["contact"] : null), "address", array())) {
+            // line 10
+            echo "                        <p><i class=\"fa fa-home pr-10\"></i>Адреса: ";
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["contact"]) ? $context["contact"] : null), "address", array()), "html", null, true);
+            echo "</p>
+                    ";
+        }
+        // line 12
+        echo "
+                    ";
+        // line 13
+        if ($this->getAttribute((isset($context["contact"]) ? $context["contact"] : null), "phone1", array())) {
+            // line 14
+            echo "                        <p><i class=\"fa fa-phone pr-10\"></i>Номер 1: ";
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["contact"]) ? $context["contact"] : null), "phone1", array()), "html", null, true);
+            echo "</p>
+                    ";
+        }
+        // line 16
+        echo "
+                    ";
+        // line 17
+        if ($this->getAttribute((isset($context["contact"]) ? $context["contact"] : null), "phone2", array())) {
+            // line 18
+            echo "                        <p><i class=\"fa fa-phone pr-10\"></i>Номер 2: ";
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["contact"]) ? $context["contact"] : null), "phone2", array()), "html", null, true);
+            echo "</p>
+                    ";
+        }
+        // line 20
+        echo "
+                    ";
+        // line 21
+        if ($this->getAttribute((isset($context["contact"]) ? $context["contact"] : null), "email", array())) {
+            // line 22
+            echo "                        <p><i class=\"fa fa-envelope pr-10\"></i>Email: <a href=\"mailto:";
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["contact"]) ? $context["contact"] : null), "email", array()), "html", null, true);
+            echo "\">";
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["contact"]) ? $context["contact"] : null), "email", array()), "html", null, true);
+            echo "</a></p>
+                    ";
+        }
+        // line 24
+        echo "                </address>
             </div>
             <div class=\"col-lg-6 col-sm-6 col-xs-12\">
                 <div class=\"page-footer wow fadeInUp\" data-wow-duration=\"2s\" data-wow-delay=\".5s\">
                     <h1>
-                        Наша организация
+                        Наша организація
                     </h1>
                     <ul class=\"page-footer-list\">
                         <li>
@@ -42,23 +83,27 @@ class __TwigTemplate_36b03ef592f98cd7758464a9e4a9a1e6744d48d1fb9191ab63dc1a4123c
                         </li>
                         <li>
                             <i class=\"fa fa-angle-right\"></i>
-                            <a href=\"#\">Ссылка</a>
+                            <a href=\"#\">Новини</a>
                         </li>
                         <li>
                             <i class=\"fa fa-angle-right\"></i>
-                            <a href=\"#\">Ссылка</a>
+                            <a href=\"#\">Проекти</a>
                         </li>
                         <li>
                             <i class=\"fa fa-angle-right\"></i>
-                            <a href=\"#\">Ссылка</a>
+                            <a href=\"#\">Публікації</a>
                         </li>
                         <li>
                             <i class=\"fa fa-angle-right\"></i>
-                            <a href=\"#\">Ссылка</a>
+                            <a href=\"#\">Галерея</a>
                         </li>
                         <li>
                             <i class=\"fa fa-angle-right\"></i>
-                            <a href=\"#\">Ссылка</a>
+                            <a href=\"#\">Партнери</a>
+                        </li>
+                        <li>
+                            <i class=\"fa fa-angle-right\"></i>
+                            <a href=\"/contacts\">Контакти</a>
                         </li>
                     </ul>
                 </div>
@@ -74,59 +119,59 @@ class __TwigTemplate_36b03ef592f98cd7758464a9e4a9a1e6744d48d1fb9191ab63dc1a4123c
             <div class=\"col-lg-6 col-sm-6 pull-right\">
                 <ul class=\"social-link-footer list-unstyled\">
                     ";
-        // line 58
+        // line 73
         if ($this->getAttribute((isset($context["social"]) ? $context["social"] : null), "fb", array())) {
-            // line 59
+            // line 74
             echo "                        <li class=\"wow flipInX\" data-wow-duration=\"2s\" data-wow-delay=\".1s\"><a href=\"";
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["social"]) ? $context["social"] : null), "fb", array()), "html", null, true);
             echo "\"><i class=\"fa fa-facebook\"></i></a></li>
                     ";
         }
-        // line 61
+        // line 76
         echo "
                     ";
-        // line 62
+        // line 77
         if ($this->getAttribute((isset($context["social"]) ? $context["social"] : null), "twitter", array())) {
-            // line 63
+            // line 78
             echo "                        <li class=\"wow flipInX\" data-wow-duration=\"2s\" data-wow-delay=\".2s\"><a href=\"";
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["social"]) ? $context["social"] : null), "twitter", array()), "html", null, true);
             echo "\"><i class=\"fa fa-twitter\"></i></a></li>
                     ";
         }
-        // line 65
+        // line 80
         echo "
                     ";
-        // line 66
+        // line 81
         if ($this->getAttribute((isset($context["social"]) ? $context["social"] : null), "vk", array())) {
-            // line 67
+            // line 82
             echo "                        <li class=\"wow flipInX\" data-wow-duration=\"2s\" data-wow-delay=\".3s\"><a href=\"";
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["social"]) ? $context["social"] : null), "vk", array()), "html", null, true);
             echo "\"><i class=\"fa fa-vk\"></i></a></li>
                     ";
         }
-        // line 69
+        // line 84
         echo "
                     ";
-        // line 70
+        // line 85
         if ($this->getAttribute((isset($context["social"]) ? $context["social"] : null), "gplus", array())) {
-            // line 71
+            // line 86
             echo "                        <li class=\"wow flipInX\" data-wow-duration=\"2s\" data-wow-delay=\".4s\"><a href=\"";
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["social"]) ? $context["social"] : null), "gplus", array()), "html", null, true);
             echo "\"><i class=\"fa fa-google-plus\"></i></a></li>
                     ";
         }
-        // line 73
+        // line 88
         echo "
                     ";
-        // line 74
+        // line 89
         if ($this->getAttribute((isset($context["social"]) ? $context["social"] : null), "youtube", array())) {
-            // line 75
+            // line 90
             echo "                        <li class=\"wow flipInX\" data-wow-duration=\"2s\" data-wow-delay=\".5s\"><a href=\"";
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["social"]) ? $context["social"] : null), "youtube", array()), "html", null, true);
             echo "\"><i class=\"fa fa-youtube\"></i></a></li>
                     ";
         }
-        // line 77
+        // line 92
         echo "
                 </ul>
             </div>
@@ -152,7 +197,7 @@ class __TwigTemplate_36b03ef592f98cd7758464a9e4a9a1e6744d48d1fb9191ab63dc1a4123c
 
     public function getDebugInfo()
     {
-        return array (  130 => 77,  124 => 75,  122 => 74,  119 => 73,  113 => 71,  111 => 70,  108 => 69,  102 => 67,  100 => 66,  97 => 65,  91 => 63,  89 => 62,  86 => 61,  80 => 59,  78 => 58,  19 => 1,);
+        return array (  175 => 92,  169 => 90,  167 => 89,  164 => 88,  158 => 86,  156 => 85,  153 => 84,  147 => 82,  145 => 81,  142 => 80,  136 => 78,  134 => 77,  131 => 76,  125 => 74,  123 => 73,  72 => 24,  64 => 22,  62 => 21,  59 => 20,  53 => 18,  51 => 17,  48 => 16,  42 => 14,  40 => 13,  37 => 12,  31 => 10,  29 => 9,  19 => 1,);
     }
 }
 /* <footer class="footer">*/
@@ -160,19 +205,30 @@ class __TwigTemplate_36b03ef592f98cd7758464a9e4a9a1e6744d48d1fb9191ab63dc1a4123c
 /*         <div class="row">*/
 /*             <div class="col-lg-6 col-sm-6 col-xs-12 address wow fadeInUp" data-wow-duration="2s" data-wow-delay=".1s">*/
 /*                 <h1>*/
-/*                     Контакты*/
+/*                     Контакти*/
 /*                 </h1>*/
 /*                 <address>*/
-/*                     <p><i class="fa fa-home pr-10"></i>Адрес: No.XXXXXX street</p>*/
-/*                     <p><i class="fa fa-phone pr-10"></i>Номер 1 : (123) 456-7890 </p>*/
-/*                     <p><i class="fa fa-phone pr-10"></i>Номер 2 : (123) 456-7890 </p>*/
-/*                     <p><i class="fa fa-envelope pr-10"></i>Email :   <a href="javascript:;">support@example.com</a></p>*/
+/*                     {% if contact.address %}*/
+/*                         <p><i class="fa fa-home pr-10"></i>Адреса: {{ contact.address }}</p>*/
+/*                     {% endif %}*/
+/* */
+/*                     {% if contact.phone1 %}*/
+/*                         <p><i class="fa fa-phone pr-10"></i>Номер 1: {{ contact.phone1 }}</p>*/
+/*                     {% endif %}*/
+/* */
+/*                     {% if contact.phone2 %}*/
+/*                         <p><i class="fa fa-phone pr-10"></i>Номер 2: {{ contact.phone2 }}</p>*/
+/*                     {% endif %}*/
+/* */
+/*                     {% if contact.email %}*/
+/*                         <p><i class="fa fa-envelope pr-10"></i>Email: <a href="mailto:{{ contact.email }}">{{ contact.email }}</a></p>*/
+/*                     {% endif %}*/
 /*                 </address>*/
 /*             </div>*/
 /*             <div class="col-lg-6 col-sm-6 col-xs-12">*/
 /*                 <div class="page-footer wow fadeInUp" data-wow-duration="2s" data-wow-delay=".5s">*/
 /*                     <h1>*/
-/*                         Наша организация*/
+/*                         Наша организація*/
 /*                     </h1>*/
 /*                     <ul class="page-footer-list">*/
 /*                         <li>*/
@@ -181,23 +237,27 @@ class __TwigTemplate_36b03ef592f98cd7758464a9e4a9a1e6744d48d1fb9191ab63dc1a4123c
 /*                         </li>*/
 /*                         <li>*/
 /*                             <i class="fa fa-angle-right"></i>*/
-/*                             <a href="#">Ссылка</a>*/
+/*                             <a href="#">Новини</a>*/
 /*                         </li>*/
 /*                         <li>*/
 /*                             <i class="fa fa-angle-right"></i>*/
-/*                             <a href="#">Ссылка</a>*/
+/*                             <a href="#">Проекти</a>*/
 /*                         </li>*/
 /*                         <li>*/
 /*                             <i class="fa fa-angle-right"></i>*/
-/*                             <a href="#">Ссылка</a>*/
+/*                             <a href="#">Публікації</a>*/
 /*                         </li>*/
 /*                         <li>*/
 /*                             <i class="fa fa-angle-right"></i>*/
-/*                             <a href="#">Ссылка</a>*/
+/*                             <a href="#">Галерея</a>*/
 /*                         </li>*/
 /*                         <li>*/
 /*                             <i class="fa fa-angle-right"></i>*/
-/*                             <a href="#">Ссылка</a>*/
+/*                             <a href="#">Партнери</a>*/
+/*                         </li>*/
+/*                         <li>*/
+/*                             <i class="fa fa-angle-right"></i>*/
+/*                             <a href="/contacts">Контакти</a>*/
 /*                         </li>*/
 /*                     </ul>*/
 /*                 </div>*/

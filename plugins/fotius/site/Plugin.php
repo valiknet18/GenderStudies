@@ -35,58 +35,75 @@ class Plugin extends PluginBase
                 ],
                 'order' => 5,
                 'sideMenu' => [
-                    'articles' => [
-                        'label' => 'Статті',
+                    'index'     => [
+                        'label' => 'Головна',
+                        'icon' => 'icon-link',
+                        'url' => Backend::url('fotius/site/links'),
+                        'permissions' => [
+                            'intertech.subscriber.access_articles'
+                        ],
+                    ],
+                    'about'     => [
+                        'label' => 'Про центр',
+                        'icon'  => 'icon-tasks',
+                        'url'   => Backend::url('fotius/site/structures'),
+                        'permissions' => [
+                            'intertech.subscriber.access_articles'
+                        ]
+                    ],
+                    'news'      => [
+                        'label' => 'Новини',
+                        'icon'  => 'icon-file-text-o',
+                        'url'   => Backend::url('fotius/site/news'),
+                        'permissions' => [
+                            'intertech.subscriber.access_articles'
+                        ]
+                    ],
+                    'projects'  => [
+                        'label' => 'Проекты',
+                        'icon'  => 'icon-sticky-note',
+                        'url'   => Backend::url('fotius/site/projects'),
+                        'permissions' => [
+                            'intertech.subscriber.access_articles'
+                        ]
+                    ],
+                    'articles'  => [
+                        'label' => 'Публікації',
                         'icon'  => 'icon-file-text',
                         'url'   => Backend::url('fotius/site/articles'),
                         'permissions' => [
                             'intertech.subscriber.access_articles'
-                        ],
+                        ]
                     ],
-                    'structures' => [
-                        'label' => 'Структура',
-                        'icon' => 'icon-tasks',
-                        'url' => Backend::url('fotius/site/structures'),
+                    'galery'    => [
+                        'label' => 'Галерея',
+                        'icon'  => 'icon-picture-o',
+                        'url'   => Backend::url('fotius/site/albums'),
                         'permissions' => [
                             'intertech.subscriber.access_articles'
-                        ],
+                        ]
                     ],
-                    'partners' => [
+                    'partners'  => [
                         'label' => 'Партнери',
-                        'icon' => 'icon-user',
-                        'url' => Backend::url('fotius/site/partners'),
+                        'icon'  => 'icon-user',
+                        'url'   => Backend::url('fotius/site/partners'),
                         'permissions' => [
                             'intertech.subscriber.access_articles'
-                        ],
+                        ]
                     ],
-                    'news' => [
-                        'label' => 'Новини',
-                        'icon' => 'icon-file-text-o',
-                        'url' => Backend::url('fotius/site/news'),
+                    'contacts'  => [
+                        'label' => 'Контакти',
+                        'icon'  => '',
+                        'url'   => '',
                         'permissions' => [
                             'intertech.subscriber.access_articles'
-                        ],
+                        ]
                     ],
-                    'projects' => [
-                        'label' => 'Проекти',
-                        'icon' => 'icon-sticky-note',
-                        'url' => Backend::url('fotius/site/projects'),
-                        'permissions' => [
-                            'intertech.subscriber.access_articles'
-                        ],
-                    ],
-                    'albums' => [
-                        'label' => 'Альбоми',
-                        'icon' => 'icon-picture-o',
-                        'url' => Backend::url('fotius/site/albums'),
-                        'permissions' => [
-                            'intertech.subscriber.access_articles'
-                        ],
-                    ],
-                    'announcments' => [
+
+                    'announcements' => [
                         'label' => 'Анонси',
                         'icon' => 'icon-file',
-                        'url' => Backend::url('fotius/site/announcments'),
+                        'url' => Backend::url('fotius/site/announcements'),
                         'permissions' => [
                             'intertech.subscriber.access_articles'
                         ],
@@ -95,14 +112,6 @@ class Plugin extends PluginBase
                         'label' => 'Віртуальний музей',
                         'icon' => 'icon-university',
                         'url' => Backend::url('fotius/site/museums'),
-                        'permissions' => [
-                            'intertech.subscriber.access_articles'
-                        ],
-                    ],
-                    'links' => [
-                        'label' => 'Посилання',
-                        'icon' => 'icon-link',
-                        'url' => Backend::url('fotius/site/links'),
                         'permissions' => [
                             'intertech.subscriber.access_articles'
                         ],

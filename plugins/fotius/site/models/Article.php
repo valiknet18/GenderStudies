@@ -45,4 +45,26 @@ class Article extends Model
     ];
     public $attachMany = [];
 
+    public function beforeCreate()
+    {
+        if ($this->needKnow) {
+            Link::create([
+                'title' => $this->title,
+                'description'   => $this->short_description,
+                'link'  => '/news/' . $this->slug,
+                'category'  => 'needKnow',
+                'active'    => true,
+            ]);
+        }
+
+        if ($this->news) {
+            Link::create([
+                'title' => $this->title,
+                'description'   => $this->short_description,
+                'link'  => '/news/' . $this->slug,
+                'category'  => 'news',
+                'active'    => true,
+            ]);
+        }
+    }
 }

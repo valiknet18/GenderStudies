@@ -21,7 +21,12 @@ class Link extends Model
     /**
      * @var array Fillable fields
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'title',
+        'link',
+        'description',
+        'category'
+    ];
 
     /**
      * @var array Relations

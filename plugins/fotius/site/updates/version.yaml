@@ -27,3 +27,9 @@
 1.0.6:
   - Update database schema 5
   - create_books_table.php
+
+1.0.7:
+  - Update tables
+  - update_links_table.php
+  - update_news_table.php
+  - update_articles_table_v2.php

@@ -183,10 +183,9 @@ class __TwigTemplate_339969a426748eb4e403a559619cb64dc31865617c78166d5b45e1abb82
             // line 109
             echo twig_escape_filter($this->env, $this->getAttribute($context["tag"], "slug", array()), "html", null, true);
             echo "\">
-                                    <i class=\"fa fa-tags pr-5\">
-                                    </i>
+                                    <i class=\"fa fa-tags pr-5\"></i>
                                     ";
-            // line 112
+            // line 111
             echo twig_escape_filter($this->env, $this->getAttribute($context["tag"], "title", array()), "html", null, true);
             echo "
                                 </a>
@@ -196,7 +195,7 @@ class __TwigTemplate_339969a426748eb4e403a559619cb64dc31865617c78166d5b45e1abb82
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['tag'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 116
+        // line 115
         echo "                    </ul>
                 </div>
 
@@ -265,7 +264,7 @@ class __TwigTemplate_339969a426748eb4e403a559619cb64dc31865617c78166d5b45e1abb82
 
     public function getDebugInfo()
     {
-        return array (  200 => 116,  190 => 112,  184 => 109,  181 => 108,  177 => 107,  168 => 100,  157 => 95,  150 => 91,  142 => 86,  138 => 84,  134 => 83,  115 => 67,  111 => 65,  98 => 58,  94 => 57,  89 => 55,  78 => 47,  69 => 41,  63 => 38,  56 => 33,  52 => 32,  19 => 1,);
+        return array (  199 => 115,  189 => 111,  184 => 109,  181 => 108,  177 => 107,  168 => 100,  157 => 95,  150 => 91,  142 => 86,  138 => 84,  134 => 83,  115 => 67,  111 => 65,  98 => 58,  94 => 57,  89 => 55,  78 => 47,  69 => 41,  63 => 38,  56 => 33,  52 => 32,  19 => 1,);
     }
 }
 /* <!--breadcrumbs start-->*/
@@ -377,8 +376,7 @@ class __TwigTemplate_339969a426748eb4e403a559619cb64dc31865617c78166d5b45e1abb82
 /*                         {% for tag in tags %}*/
 /*                             <li>*/
 /*                                 <a href="/tags/{{ tag.slug }}">*/
-/*                                     <i class="fa fa-tags pr-5">*/
-/*                                     </i>*/
+/*                                     <i class="fa fa-tags pr-5"></i>*/
 /*                                     {{ tag.title }}*/
 /*                                 </a>*/
 /*                             </li>*/

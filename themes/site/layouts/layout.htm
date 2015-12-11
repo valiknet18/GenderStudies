@@ -31,6 +31,8 @@ function onStart()
     $this->addJs('assets/js/jquery.cslider.js');
     $this->addJs('assets/js/common-scripts.js');
     $this->addJs('assets/js/app.js');
+
+    $this['contact'] = \Fotius\Site\Models\Contact::instance();
 }
 ==
 <!DOCTYPE html>
