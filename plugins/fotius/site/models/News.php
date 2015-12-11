@@ -57,7 +57,7 @@ class News extends Model
             $links = Link::where('link', $link)->get();
 
             foreach ($links as $item) {
-
+                $item->delete();
             }
         }
 
@@ -69,6 +69,12 @@ class News extends Model
                 'category'  => 'news',
                 'active'    => true,
             ]);
+        } else {
+            $links = Link::where('link', $link)->get();
+
+            foreach ($links as $item) {
+                $item->delete();
+            }
         }
     }
 }

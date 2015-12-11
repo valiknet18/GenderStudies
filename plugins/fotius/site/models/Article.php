@@ -47,6 +47,8 @@ class Article extends Model
 
     public function beforeCreate()
     {
+        $link = '/news/' . $this->slug;
+
         if ($this->needKnow) {
             Link::create([
                 'title' => $this->title,
@@ -55,6 +57,12 @@ class Article extends Model
                 'category'  => 'needKnow',
                 'active'    => true,
             ]);
+        } else {
+            $links = Link::where('link', $link)->get();
+
+            foreach ($links as $item) {
+                $item->delete();
+            }
         }
 
         if ($this->news) {
@@ -65,6 +73,12 @@ class Article extends Model
                 'category'  => 'news',
                 'active'    => true,
             ]);
+        } else {
+            $links = Link::where('link', $link)->get();
+
+            foreach ($links as $item) {
+                $item->delete();
+            }
         }
     }
 }

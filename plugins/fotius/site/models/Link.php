@@ -25,7 +25,8 @@ class Link extends Model
         'title',
         'link',
         'description',
-        'category'
+        'category',
+        'active'
     ];
 
     /**

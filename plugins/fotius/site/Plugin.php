@@ -94,44 +94,11 @@ class Plugin extends PluginBase
                     'contacts'  => [
                         'label' => 'Контакти',
                         'icon'  => '',
-                        'url'   => '',
+                        'url'   => Backend::url('fotius/site/partners'),
                         'permissions' => [
                             'intertech.subscriber.access_articles'
                         ]
                     ],
-
-                    'announcements' => [
-                        'label' => 'Анонси',
-                        'icon' => 'icon-file',
-                        'url' => Backend::url('fotius/site/announcements'),
-                        'permissions' => [
-                            'intertech.subscriber.access_articles'
-                        ],
-                    ],
-                    'museums' => [
-                        'label' => 'Віртуальний музей',
-                        'icon' => 'icon-university',
-                        'url' => Backend::url('fotius/site/museums'),
-                        'permissions' => [
-                            'intertech.subscriber.access_articles'
-                        ],
-                    ],
-                    'bibliographies' => [
-                        'label' => 'Бібліографія',
-                        'icon' => '',
-                        'url' => Backend::url('fotius/site/bibliographies'),
-                        'permissions' => [
-                            'intertech.subscriber.access_articles'
-                        ],
-                    ],
-                    'books' => [
-                        'label' => 'Книги',
-                        'icon' => '',
-                        'url' => Backend::url('fotius/site/books'),
-                        'permissions' => [
-                            'intertech.subscriber.access_articles'
-                        ],
-                    ]
                 ]
             ],
         ];
