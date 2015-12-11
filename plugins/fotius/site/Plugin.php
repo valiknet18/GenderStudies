@@ -93,8 +93,8 @@ class Plugin extends PluginBase
                     ],
                     'contacts'  => [
                         'label' => 'Контакти',
-                        'icon'  => '',
-                        'url'   => Backend::url('fotius/site/partners'),
+                        'icon'  => 'icon-sticky-note',
+                        'url'   => Backend::url('system/settings/update/fotius/site/contacts'),
                         'permissions' => [
                             'intertech.subscriber.access_articles'
                         ]
