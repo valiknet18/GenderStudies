@@ -99,6 +99,14 @@ class Plugin extends PluginBase
                             'intertech.subscriber.access_articles'
                         ]
                     ],
+                    'annotations' => [
+                        'label' => 'Анотації',
+                        'icon'  => '',
+                        'url'   => Backend::url('fotius/site/annotations'),
+                        'permissions' => [
+                            'intertech.subscriber.access_articles'
+                        ]
+                    ]
                 ]
             ],
         ];

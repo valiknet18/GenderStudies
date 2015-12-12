@@ -1,0 +1,38 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    id:
+        label: ID
+        disabled: true
+
+    image:
+        label: Фото
+        type: fileupload
+        span: left
+
+    type:
+        label: Тип аннотації
+        type: dropdown
+        options:
+            about: Про центр
+            news: Новини
+            projects: Проекти
+            articles: Публікації
+            galery: Галерея
+        span: right
+
+    title:
+        label: Назва
+        type: text
+        span: left
+
+    link:
+        label: Посилання на сторінку
+        type: text
+        span: right
+
+    description:
+        label: Опис
+        type: textarea

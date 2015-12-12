@@ -1,9 +1,10 @@
-url = "/articles"
+url = "/tags/:slug"
 layout = layout
 ==
 function onStart()
 {
-    $this['articles'] = \Fotius\Site\Models\Article::orderBy('created_at', 'DESC')->paginate(10);
+    $tag = \Fotius\Site\Models\Tag::where('slug', $this->param('slug'))->first();
+    $this['articles'] = $tag->articles()->paginate(10);
     $this['tags'] = \Fotius\Site\Models\Tag::orderBy('id', 'DESC')->get();
 }
 ==

@@ -33,3 +33,11 @@
   - update_links_table.php
   - update_news_table.php
   - update_articles_table_v2.php
+
+1.0.8:
+  - Create annotations table
+  - create_annotations_table.php
+
+1.0.9:
+  - Update annotations table
+  - update_annotations_table.php

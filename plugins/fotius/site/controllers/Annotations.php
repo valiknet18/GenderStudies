@@ -4,9 +4,9 @@ use BackendMenu;
 use Backend\Classes\Controller;
 
 /**
- * Links Back-end Controller
+ * Annotations Back-end Controller
  */
-class Links extends Controller
+class Annotations extends Controller
 {
     public $implement = [
         'Backend.Behaviors.FormController',
@@ -20,6 +20,6 @@ class Links extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext('Fotius.Site', 'site', 'index');
+        BackendMenu::setContext('Fotius.Site', 'site', 'annotations');
     }
 }

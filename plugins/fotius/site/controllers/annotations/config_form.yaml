@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Annotation
+
+# Model Form Field configuration
+form: $/fotius/site/models/annotation/fields.yaml
+
+# Model Class name
+modelClass: Fotius\Site\Models\Annotation
+
+# Default redirect location
+defaultRedirect: fotius/site/annotations
+
+# Create page
+create:
+    title: Create Annotation
+    redirect: fotius/site/annotations/update/:id
+    redirectClose: fotius/site/annotations
+
+# Update page
+update:
+    title: Edit Annotation
+    redirect: fotius/site/annotations
+    redirectClose: fotius/site/annotations
+
+# Preview page
+preview:
+    title: Preview Annotation

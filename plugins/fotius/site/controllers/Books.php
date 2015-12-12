@@ -20,6 +20,6 @@ class Books extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext('Fotius.Site', 'site', 'books');
+        BackendMenu::setContext('Fotius.Site', 'site', 'articles');
     }
 }

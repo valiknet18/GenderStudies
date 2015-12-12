@@ -29,7 +29,12 @@ class Tag extends Model
     public $hasOne = [];
     public $hasMany = [];
     public $belongsTo = [];
-    public $belongsToMany = [];
+    public $belongsToMany = [
+        'articles' => [
+            'Fotius\Site\Models\Article',
+            'table' => 'fotius_site_article_tag'
+        ]
+    ];
     public $morphTo = [];
     public $morphOne = [];
     public $morphMany = [];

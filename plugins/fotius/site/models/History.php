@@ -8,7 +8,12 @@ use Model;
 class History extends Model
 {
     public $implement = [
-        'System.Behaviors.SettingsModel'
+        'System.Behaviors.SettingsModel',
+        'RainLab.Translate.Behaviors.TranslatableModel'
+    ];
+
+    public $translatable = [
+        'description'
     ];
 
     public $settingsCode = 'site_history';

@@ -31,8 +31,19 @@ secondaryTabs:
             type: richeditor
             span: right
             tab: Основна інформація
+
         tags:
             title: Теги
             type: partial
             path: field_tags
             tab: Теги
+
+        news:
+            label: Додати в рубрику "Актуально"
+            type: switch
+            span: left
+
+        needKnow:
+            label: Додати в рубрику "Потрібно знати"
+            type: switch
+            span: right

@@ -20,6 +20,6 @@ class Museums extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext('Fotius.Site', 'site', 'museums');
+        BackendMenu::setContext('Fotius.Site', 'site', 'galery');
     }
 }

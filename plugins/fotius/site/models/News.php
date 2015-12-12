@@ -8,6 +8,16 @@ use Model;
  */
 class News extends Model
 {
+    public $implement = [
+        'RainLab.Translate.Behaviors.TranslatableModel'
+    ];
+
+    public $translatable = [
+        'header',
+        'title',
+        'short_description',
+        'description'
+    ];
 
     /**
      * @var string The database table used by the model.

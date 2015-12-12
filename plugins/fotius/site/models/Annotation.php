@@ -3,22 +3,15 @@
 use Model;
 
 /**
- * bibliography Model
+ * Annotation Model
  */
-class Bibliography extends Model
+class Annotation extends Model
 {
-    public $implement = [
-        'RainLab.Translate.Behaviors.TranslatableModel'
-    ];
-
-    public $translatable = [
-        'description'
-    ];
 
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'fotius_site_bibliographies';
+    public $table = 'fotius_site_annotations';
 
     /**
      * @var array Guarded fields
@@ -41,7 +34,7 @@ class Bibliography extends Model
     public $morphOne = [];
     public $morphMany = [];
     public $attachOne = [
-        'photo' => [
+        'image' => [
             'System\Models\File'
         ]
     ];

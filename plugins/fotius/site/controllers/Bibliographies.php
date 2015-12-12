@@ -20,6 +20,6 @@ class Bibliographies extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext('Fotius.Site', 'site', 'bibliographies');
+        BackendMenu::setContext('Fotius.Site', 'site', 'articles');
     }
 }

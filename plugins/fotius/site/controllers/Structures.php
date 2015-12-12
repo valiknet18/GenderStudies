@@ -20,6 +20,6 @@ class Structures extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext('Fotius.Site', 'site', 'structures');
+        BackendMenu::setContext('Fotius.Site', 'site', 'about');
     }
 }

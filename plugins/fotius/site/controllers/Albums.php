@@ -20,6 +20,6 @@ class Albums extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext('Fotius.Site', 'site', 'albums');
+        BackendMenu::setContext('Fotius.Site', 'site', 'galery');
     }
 }

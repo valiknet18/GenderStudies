@@ -20,6 +20,6 @@ class Announcements extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext('Fotius.Site', 'site', 'announcements');
+        BackendMenu::setContext('Fotius.Site', 'site', 'galery');
     }
 }

@@ -7,6 +7,14 @@ use Model;
  */
 class Book extends Model
 {
+    public $implement = [
+        'RainLab.Translate.Behaviors.TranslatableModel'
+    ];
+
+    public $translatable = [
+        'name',
+        'description'
+    ];
 
     /**
      * @var string The database table used by the model.

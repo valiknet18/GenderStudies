@@ -8,7 +8,12 @@ use Model;
 class Contact extends Model
 {
     public $implement = [
-        'System.Behaviors.SettingsModel'
+        'System.Behaviors.SettingsModel',
+        'RainLab.Translate.Behaviors.TranslatableModel'
+    ];
+
+    public $translatable = [
+        'address',
     ];
 
     public $settingsCode = 'site_contacts';
