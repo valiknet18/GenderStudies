@@ -6,3 +6,9 @@ columns:
     id:
         label: ID
         searchable: true
+
+    title:
+        label: Назва
+
+    short_description:
+        label: Короткий опис

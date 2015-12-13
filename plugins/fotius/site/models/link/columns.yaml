@@ -12,3 +12,6 @@ columns:
 
     link:
         label: Посилання
+
+    category:
+        label: Тип

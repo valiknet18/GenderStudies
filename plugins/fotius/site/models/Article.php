@@ -56,18 +56,21 @@ class Article extends Model
 
     public function beforeCreate()
     {
-        $link = '/news/' . $this->slug;
+        $articleLink = '/articles/' . $this->slug;
 
         if ($this->needKnow) {
-            Link::create([
+            $link = Link::create([
                 'title' => $this->title,
                 'description'   => $this->short_description,
-                'link'  => '/news/' . $this->slug,
+                'link'  => $articleLink,
                 'category'  => 'needKnow',
                 'active'    => true,
             ]);
+
+            $link->photo = $this->photo;
+            $link->save();
         } else {
-            $links = Link::where('link', $link)->get();
+            $links = Link::where('link', $articleLink)->get();
 
             foreach ($links as $item) {
                 $item->delete();
@@ -75,19 +78,33 @@ class Article extends Model
         }
 
         if ($this->news) {
-            Link::create([
+            $link = Link::create([
                 'title' => $this->title,
                 'description'   => $this->short_description,
-                'link'  => '/news/' . $this->slug,
+                'link'  => $articleLink,
                 'category'  => 'news',
                 'active'    => true,
             ]);
+
+            $link->photo = $this->photo;
+            $link->save();
         } else {
-            $links = Link::where('link', $link)->get();
+            $links = Link::where('link', $articleLink)->get();
 
             foreach ($links as $item) {
                 $item->delete();
             }
+        }
+    }
+
+    public function afterCreate()
+    {
+        $articleLink = '/articles/' . $this->slug;
+        $links = Link::where('link', $articleLink)->get();
+
+        foreach ($links as $link) {
+            $link->photo = $this->photo;
+            $link->save();
         }
     }
 }

@@ -78,7 +78,7 @@ function onStart()
 
         <div class="col-md-4 col-sm-12 right-line ot-top">
             <div class="content-blocks">
-                {% if news.length > 0 %}
+                {% if news.count > 0 %}
                     <div class="blog-post wow fadeInRight animated">
                         <h3 class="text-center">
                             Актуально
@@ -99,7 +99,7 @@ function onStart()
                                         </a>
                                     </h5>
                                     <p>
-                                        {{ item.description }}
+                                        {{ item.description|raw }}
                                     </p>
                                 </div>
                             </div>
@@ -108,7 +108,7 @@ function onStart()
                 {% endif %}
             </div>
             <div class="content-blocks">
-                {% if needKnow.length > 0 %}
+                {% if needKnow.count > 0 %}
                     <div class="blog-post wow fadeInRight animated">
                         <h3 class="text-center">
                             Потрібно знати
@@ -129,7 +129,7 @@ function onStart()
                                         </a>
                                     </h5>
                                     <p>
-                                        {{ item.description }}
+                                        {{ item.description|raw }}
                                     </p>
                                 </div>
                             </div>
