@@ -4,7 +4,7 @@ title = "Головна"
 ==
 function onStart()
 {
-    $this['slider'] = \System\Models\File::where('attachment_type', 'Fotius\Site\Models\Slider')->limit(8)->get();
+    $this['slider'] = \Fotius\Site\Models\Slider::instance();
     $this['main'] = \Fotius\Site\Models\Link::where('category', 'main')->get();
     $this['news'] = \Fotius\Site\Models\Link::where('category', 'news')->get();
     $this['needKnow'] = \Fotius\Site\Models\Link::where('category', 'needKnow')->get();
@@ -14,7 +14,7 @@ function onStart()
 <div class="home-slideshow">
     <div id="slider-wrap">
         <div id="slider">
-            {% for photo in slider %}
+            {% for photo in slider.photos %}
                 <div class="slide">
                     <img src="{{ photo.path }}">
                 </div>
@@ -25,7 +25,7 @@ function onStart()
             <span class="control-slide">2</span>
             <span class="control-slide active">3</span>
 
-            {% for photo in slider %}
+            {% for photo in slider.photos %}
                 <span class="control-slide {% if loop.index == 1%} active {% endif %}">{{ loop.index - 1 }}</span>
             {% endfor %}
         </div>
