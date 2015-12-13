@@ -4,7 +4,6 @@ $(function() {
         autoplay    : true,
         bgincrement : 100
     });
-
 });
 
 jQuery(document).ready(function() {
