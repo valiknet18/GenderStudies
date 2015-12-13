@@ -6,10 +6,17 @@ fields:
     title:
         label: Назва
         type: text
+        span: left
 
     link:
         label: Посилання
         type: text
+        span: right
+
+    event_date:
+        label: Дата події
+        type: datepicker
+        mode: date
 
     description:
         label: Опис

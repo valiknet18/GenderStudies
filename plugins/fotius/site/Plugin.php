@@ -24,6 +24,23 @@ class Plugin extends PluginBase
         ];
     }
 
+    public function registerMarkupTags()
+    {
+        return [
+            'filters' => [
+                'transInTemplate' => [$this, 'translate']
+            ],
+            'functions' => [
+
+            ]
+        ];
+    }
+
+    public function translate($type, $path)
+    {
+        return Lang::get('fotius.site::' . $path . '.' . $type);
+    }
+
     public function registerNavigation()
     {
         return [

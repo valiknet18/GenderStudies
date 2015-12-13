@@ -14,7 +14,3 @@ columns:
     description:
         label: Опис
         type: textarea
-
-    photos:
-        label: Фотографії
-        type: fileupload

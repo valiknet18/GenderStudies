@@ -41,3 +41,7 @@
 1.0.9:
   - Update annotations table
   - update_annotations_table.php
+
+1.0.10:
+  - Update announcements table
+  - update_announcements_table.php

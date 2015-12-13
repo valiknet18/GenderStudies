@@ -19,7 +19,7 @@ function onStart()
             <div class="col-lg-8 col-sm-8">
                 <ol class="breadcrumb pull-right">
                     <li>
-                        <a href="#">
+                        <a href="/galery/home">
                             Галерея
                         </a>
                     </li>
@@ -45,13 +45,13 @@ function onStart()
                                 <div class="col-lg-2 col-sm-2">
                                     <div class="date-wrap anons-famely">
                                     <span class="date">
-                                        {{ announcement.created_at|date("d") }}
+                                        {{ announcement.event_date|date("d") }}
                                     </span>
                                     <span class="month">
-                                        {{ announcement.created_at|date("F") }}
+                                        {{ announcement.event_date|date("F") }}
                                     </span>
                                     <span class="yiers">
-                                        {{ announcement.created_at|date("Y") }}
+                                        {{ announcement.event_date|date("Y") }}
                                     </span>
                                     </div>
                                 </div>

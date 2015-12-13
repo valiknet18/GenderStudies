@@ -1,0 +1,55 @@
+url = "/galery/home"
+layout = layout
+title = "Галерея - Домашня"
+==
+function onStart()
+{
+    $this['annotations'] = \Fotius\Site\Models\Annotation::where('type', 'galery')->get();
+}
+==
+
+<!--breadcrumbs start-->
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-sm-4">
+                <h1>
+                    Галереї
+                </h1>
+            </div>
+            <div class="col-lg-8 col-sm-8">
+                <ol class="breadcrumb pull-right">
+                    <li>
+                        <a href="/galery/home">
+                            Галереї
+                        </a>
+                    </li>
+                    <li class="active">
+                        Головна
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+<!--breadcrumbs end-->
+
+<!--container start-->
+<div class="container">
+    <div class="row">
+        {% for annotation in annotations %}
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <div class="box">
+                    <div class="box-icon">
+                        <img src="{{ annotation.image.path }}" alt="{{ annotation.title }}" />
+                    </div>
+                    <div class="info">
+                        <h4 class="text-center">{{ annotation.title }}</h4>
+                        {{ annotation.description }}
+                        <a href="{{ annotation.link }}" class="btn">Перейти</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
