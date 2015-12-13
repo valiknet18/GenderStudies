@@ -30,3 +30,7 @@ fields:
     logo:
         label: Логотип
         type: fileupload
+
+    copyright:
+        label: Копирайт
+        type: text

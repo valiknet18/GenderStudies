@@ -1,5 +1,6 @@
 url = "/projects/:category/item/:slug"
 layout = layout
+title = "Проект"
 ==
 function onStart()
 {
@@ -25,6 +26,11 @@ function onStart()
     }
 
     $this['item'] = \Fotius\Site\Models\Project::where('slug', $this->param('slug'))->first();
+}
+
+function onEnd()
+{
+    $this->page->title .= " | " . $this['item']['title'];
 }
 ==
 <!--breadcrumbs start-->

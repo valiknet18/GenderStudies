@@ -1,11 +1,17 @@
 url = "/articles/:slug"
 layout = layout
+title = "Стаття"
 ==
 function onStart()
 {
     $this['article'] = \Fotius\Site\Models\Article::where('slug', $this->param('slug'))->first();
     $this['articles'] = \Fotius\Site\Models\Article::limit(3)->get();
     $this['tags'] = \Fotius\Site\Models\Tag::get();
+}
+
+function onEnd()
+{
+    $this->page->title .= " | " . $this['article']['title'];
 }
 ==
 <!--breadcrumbs start-->

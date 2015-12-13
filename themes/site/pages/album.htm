@@ -1,9 +1,15 @@
 url = "/albums/:slug"
 layout = layout
+title = "Альбом"
 ==
 function onStart()
 {
     $this['album'] = \Fotius\Site\Models\Album::where('slug', $this->param('slug'))->first();
+}
+
+function onEnd()
+{
+    $this->page->title .= " | " . $this['album']['title'];
 }
 ==
 <div class="breadcrumbs">

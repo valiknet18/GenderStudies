@@ -1,9 +1,14 @@
 url = "/museum"
 layout = layout
+title = "Віртуальний музей"
 ==
 function onStart()
 {
     $this['museum'] = \Fotius\Site\Models\Museum::orderBy('created_at', 'DESC')->paginate(10);
+}
+
+function onEnd()
+{
 }
 ==
 <!--breadcrumbs start-->

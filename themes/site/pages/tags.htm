@@ -1,11 +1,17 @@
 url = "/tags/:slug"
 layout = layout
+title = "Статті по тегу"
 ==
 function onStart()
 {
-    $tag = \Fotius\Site\Models\Tag::where('slug', $this->param('slug'))->first();
+    $this['tag'] = \Fotius\Site\Models\Tag::where('slug', $this->param('slug'))->first();
     $this['articles'] = $tag->articles()->paginate(10);
     $this['tags'] = \Fotius\Site\Models\Tag::orderBy('id', 'DESC')->get();
+}
+
+function onEnd()
+{
+    $this->page->title .= " | " . $this['tag']['title'];
 }
 ==
 <!--breadcrumbs start-->

@@ -1,9 +1,13 @@
 ==
+function onStart()
+{
+    $this['settings'] = \Fotius\Site\Models\Contact::instance();
+}
 ==
 <div class="language">
     <a href="#" title="UA" data-request="localePicker::onSwitchLocale" data-request-data="locale: 'ua'" class="language-flag"><img  src="{{ 'assets/image/ua.png'|theme }}" alt="" width="18" height="12"></a>
     <a href="#" title="RU" data-request="localePicker::onSwitchLocale" data-request-data="locale: 'ru'" class="language-flag"><img  src="{{ 'assets/image/ru.png'|theme }}" alt="" width="18" height="12"></a>
-    <span class="language-text">Мова</span>
+    <span class="language-text">{{ "Мова"|_ }}</span>
 </div>
 
 <header class="head-section">
@@ -14,95 +18,100 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">L<span>ogo</span></a>
+
+            {% if settings.logo %}
+                <img src="{{ settings.logo.path }}" />
+            {% else %}
+                <a class="navbar-brand" href="/">L<span>ogo</span></a>
+            {% endif %}
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="/">Головна</a>
+                    <a href="/">{{ "Головна"|_ }}</a>
                 </li>
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-hover="dropdown" href="/about/home">Про центр <i class="fa fa-angle-down"></i>
+                    <a class="dropdown-toggle" data-hover="dropdown" href="/about/home">{{ "Про центр"|_ }} <i class="fa fa-angle-down"></i>
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="/history">Істория</a>
+                            <a href="/history">{{ "Істория"|_ }}</a>
                         </li>
                         <li>
-                            <a href="/structure">Структура</a>
+                            <a href="/structure">{{ "Структура"|_ }}</a>
                         </li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-hover="dropdown" href="/news/home">Новини <i class="fa fa-angle-down"></i>
+                    <a class="dropdown-toggle" data-hover="dropdown" href="/news/home">{{ "Новини"|_ }} <i class="fa fa-angle-down"></i>
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="/news/training">Тренінги</a>
+                            <a href="/news/training">{{ "Тренінги"|_ }}</a>
                         </li>
                         <li>
-                            <a href="/news/ad">Оголошення</a>
+                            <a href="/news/ad">{{ "Оголошення"|_ }}</a>
                         </li>
                         <li>
-                            <a href="/news/charity">Благодійність</a>
+                            <a href="/news/charity">{{ "Благодійність"|_ }}</a>
                         </li>
                         <li>
-                            <a href="/archive">Архів</a>
+                            <a href="/archive">{{ "Архів"|_ }}</a>
                         </li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-hover="dropdown" href="/projects/home">Проекти <i class="fa fa-angle-down"></i>
+                    <a class="dropdown-toggle" data-hover="dropdown" href="/projects/home">{{ "Проекти"|_ }} <i class="fa fa-angle-down"></i>
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="/projects/conferentions">Конференції</a>
+                            <a href="/projects/conferentions">{{ "Конференції"|_ }}</a>
                         </li>
                         <li>
-                            <a href="/projects/exploration">Дослідження</a>
+                            <a href="/projects/exploration">{{ "Дослідження"|_ }}</a>
                         </li>
                         <li>
-                            <a href="/projects/internships">Стажування</a>
+                            <a href="/projects/internships">{{ "Стажування"|_ }}</a>
                         </li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-hover="dropdown" href="/projects/home">Публікації <i class="fa fa-angle-down"></i>
+                    <a class="dropdown-toggle" data-hover="dropdown" href="/projects/home">{{ "Публікації"|_ }} <i class="fa fa-angle-down"></i>
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="/articles">Статі</a>
+                            <a href="/articles">{{ "Статі"|_ }}</a>
                         </li>
                         <li>
-                            <a href="/books">Книги</a>
+                            <a href="/books">{{ "Книги"|_ }}</a>
                         </li>
                         <li>
-                            <a href="/bibliographies">Бібліографія</a>
+                            <a href="/bibliographies">{{ "Бібліографія"|_ }}</a>
                         </li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-hover="dropdown" href="/articles/home">Галерея <i class="fa fa-angle-down"></i>
+                    <a class="dropdown-toggle" data-hover="dropdown" href="/articles/home">{{ "Галерея"|_ }} <i class="fa fa-angle-down"></i>
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="/announcements">Анонси</a>
+                            <a href="/announcements">{{ "Анонси"|_ }}</a>
                         </li>
                         <li>
-                            <a href="/albums">Фотографії</a>
+                            <a href="/albums">{{ "Фотографії"|_ }}</a>
                         </li>
                         <li>
-                            <a href="/museum">Віртуальний музей</a>
+                            <a href="/museum">{{ "Віртуальний музей"|_ }}</a>
                         </li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a href="/partners">
-                        Партнери
+                        {{ "Партнери"|_ }}
                     </a>
                 </li>
                 <li>
-                    <a href="/contacts">Контакти</a>
+                    <a href="/contacts">{{ "Контакти"|_ }}</a>
                 </li>
                 <li>
                     <form action="/search">

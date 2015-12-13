@@ -1,9 +1,15 @@
 url = "/museum/:id"
 layout = layout
+title = "Віртуальний музей"
 ==
 function onStart()
 {
     $this['album'] = \Fotius\Site\Models\Museum::find($this->param("id"));
+}
+
+function onEnd()
+{
+    $this->page->title .= " | " . $this['album']['title'];
 }
 ==
 <!--breadcrumbs start-->
