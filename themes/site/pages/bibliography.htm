@@ -45,7 +45,7 @@ function onStart()
                             <span class="glyphicon glyphicon-chevron-down pull-right"></span>
                         </h4>
                     </div>
-                    <div id="1-1" class="panel-collapse collapse {% loop.index == 1 %} in {% endif %}">
+                    <div id="1-1" class="panel-collapse collapse {% if loop.index == 1 %} in {% endif %}">
                         <div class="panel-body col-xs-12 col-sm-3 .col-md-2 col-lg-2 bibliography-img">
                             <img class="img-responsive" src="{{ bibliography.photo.path }}" alt="">
                         </div>
@@ -54,6 +54,8 @@ function onStart()
                         </div>
                     </div>
                 </div>
+            {% else %}
+                <h3>{{ 'На жаль, на данний момент не створений ні один запис в категорії бібліографія'|_ }}</h3>
             {% endfor %}
         </div>
     </div>
