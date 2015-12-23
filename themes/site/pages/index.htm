@@ -11,6 +11,7 @@ function onStart()
     $this['partners'] = \Fotius\Site\Models\Partner::limit(15)->get();
 }
 ==
+{% if slider.photos.count > 0 %}
 <div class="home-slideshow">
     <div id="slider-wrap">
         <div id="slider">
@@ -28,6 +29,7 @@ function onStart()
     </div>
 </div>
 <div class="slideshow-line-bottom"></div>
+{% endif %}
 
 <div class="container">
     <div class="row">
@@ -62,7 +64,7 @@ function onStart()
                                 <div class="item view view-tenth">
                                     <img src="{{ partner.photo.path }}" alt="{{ partner.title }}">
                                     <div class="mask">
-                                        <a href="{{ partner.site }}" class="info" data-toggle="tooltip" data-placement="top" title="{{ partner.site }}">
+                                        <a href="{{ partner.site }}" class="info" data-toggle="tooltip" data-placement="top" target="_blank" title="{{ partner.site }}">
                                             <i class="fa fa-link">
                                             </i>
                                         </a>
