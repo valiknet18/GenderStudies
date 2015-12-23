@@ -24,7 +24,6 @@ function onStart()
                     {% if contact.phone2 %}
                         <p><i class="fa fa-phone pr-10"></i>{{ "Номер 2:"|_ }} {{ contact.phone2 }}</p>
                     {% endif %}
-
                     {% if contact.email %}
                         <p><i class="fa fa-envelope pr-10"></i>{{ "Email:"|_ }} <a href="mailto:{{ contact.email }}">{{ contact.email }}</a></p>
                     {% endif %}

@@ -39,9 +39,11 @@ function onStart()
     {% for item in news %}
         <div class="well wow fadeInUp">
             <div class="media">
-                <a class="pull-left wow zoomIn" href="/news/{{ item.category }}/item/{{ item.slug }}">
-                    <img class="media-object" src="{{ item.photo.path }}">
-                </a>
+                {% if item.photos.count > 0 %}
+                  <a class="pull-left wow zoomIn" href="/news/{{ item.category }}/item/{{ item.slug }}">
+                      <img class="media-object" src="{{ item.photos[0].path }}">
+                  </a>
+                {% endif %}
 
                 <div class="media-body">
                     <h4 class="media-heading"><a href="#">{{ item.title }}</a></h4>

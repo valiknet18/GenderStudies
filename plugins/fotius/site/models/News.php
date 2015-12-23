@@ -44,12 +44,12 @@ class News extends Model
     public $morphTo = [];
     public $morphOne = [];
     public $morphMany = [];
-    public $attachOne = [
-        'photo' => [
-            'System\Models\File'
-        ]
+    public $attachOne = [];
+    public $attachMany = [
+      'photos' => [
+          'System\Models\File'
+      ]
     ];
-    public $attachMany = [];
 
     public function beforeCreate()
     {
@@ -64,7 +64,7 @@ class News extends Model
                 'active'    => true,
             ]);
 
-            $link->photo = $this->photo;
+            $link->photo = (isset($this->photos[0]))?$this->photos[0]:null;
             $link->save();
         } else {
             $links = Link::where('link', $newsLink)->get();
@@ -83,7 +83,7 @@ class News extends Model
                 'active'    => true,
             ]);
 
-            $link->photo = $this->photo;
+            $link->photo = (isset($this->photos[0]))?$this->photos[0]:null;
             $link->save();
         } else {
             $links = Link::where('link', $newsLink)->get();
@@ -100,7 +100,7 @@ class News extends Model
         $links = Link::where('link', $newsLink)->get();
 
         foreach ($links as $link) {
-            $link->photo = $this->photo;
+            $link->photo = (isset($this->photos[0]))?$this->photos[0]:null;
             $link->save();
         }
     }

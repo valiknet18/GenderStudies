@@ -45,30 +45,32 @@ function onStart()
                 <h4 class="title custom-font text-black">
                     Адреса
                 </h4>
-                <address>
-                    Revox
-                    Crossraid, 85/B Cross Street,
-                    <br>
-                    New York, USA
-                    <br>
-                    NA1 42SL
-                </address>
+                {% if contact.address %}
+                  <address>
+                      {{ contact.address }}
+                  </address>
+                {% endif %}
             </section>
             <section class="contact-infos">
                 <h4>
-                    Телефон
+                    Телефони:
                 </h4>
-                <p>
-                    <i class="icon-phone">
-                    </i>
-                    +093-0000000
-                </p>
 
-                <p>
-                    <i class="icon-phone">
-                    </i>
-                    +093-0000000
-                </p>
+                {% if contact.phone1 %}
+                  <p>
+                      <i class="icon-phone">
+                      </i>
+                      {{ contact.phone1 }}
+                  </p>
+                {% endif %}
+
+                {% if contact.phone2 %}
+                  <p>
+                      <i class="icon-phone">
+                      </i>
+                      {{ contact.phone2 }}
+                  </p>
+                {% endif %}
 
             </section>
         </div>
@@ -121,4 +123,3 @@ function onStart()
     </div>
 </div>
 <!--google map end-->
-

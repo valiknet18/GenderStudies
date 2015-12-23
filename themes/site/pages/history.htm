@@ -44,7 +44,7 @@ function onStart()
                     <div class="carousel-inner">
                         {% for item in slider %}
                             <div class="{% if loop.index == 1 %} active {% endif %} item">
-                                <img src="{{ item.photo.path }}" alt="">
+                                <img src="{{ item.path }}" alt="">
                             </div>
                         {% endfor %}
                     </div>

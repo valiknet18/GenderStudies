@@ -31,7 +31,7 @@ fields:
             ad: Оголошення
             charity: Благодійність
 
-    photo:
+    photos:
         label: Фото
         type: fileupload
 
