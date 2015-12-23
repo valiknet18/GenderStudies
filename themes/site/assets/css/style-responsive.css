@@ -37,10 +37,6 @@
         color: #999!important; ;
     }
 
-    .head-section .nav li .dropdown-menu li a:hover, .head-section .nav li .dropdown-menu li.active a {
-        color: #fff !important;
-    }
-
     .purchase-btn, .about-testimonial {
         margin-top: 10px;
     }

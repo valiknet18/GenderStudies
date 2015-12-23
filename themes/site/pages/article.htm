@@ -20,19 +20,19 @@ function onEnd()
         <div class="row">
             <div class="col-lg-4 col-sm-4">
                 <h1>
-                    Публікації
+                    {{ 'Публікації'|_ }}
                 </h1>
             </div>
             <div class="col-lg-8 col-sm-8">
                 <ol class="breadcrumb pull-right">
                     <li>
                         <a href="/articles/home">
-                            Публікації
+                            {{ 'Публікації'|_ }}
                         </a>
                     </li>
                     <li>
                         <a href="/articles">
-                            Статі
+                            {{ 'Статі'|_ }}
                         </a>
                     </li>
                     <li class="active">
@@ -85,7 +85,7 @@ function onEnd()
             <div class="blog-side-item">
                 <div class="blog-post">
                     <h3>
-                        Останні публікації
+                        {{ 'Останні публікації'|_ }}
                     </h3>
                     {% for article in articles|slice(0, 3) %}
                         <div class="media">
@@ -108,7 +108,7 @@ function onEnd()
 
                 <div class="tags">
                     <h3>
-                        Tags
+                        {{ 'Теги'|_ }}
                     </h3>
                     <ul class="tag">
                         {% for tag in tags %}
@@ -123,10 +123,7 @@ function onEnd()
                 </div>
             </div>
         </div>
-
-
     </div>
-
 </div>
 
 

@@ -19,11 +19,13 @@ function onStart()
                 <span class="icon-bar"></span>
             </button>
 
-            {% if settings.logo %}
-                <img src="{{ settings.logo.path }}" />
-            {% else %}
-                <a class="navbar-brand" href="/">L<span>ogo</span></a>
-            {% endif %}
+            <div>
+                {% if settings.logo %}
+                    <img src="{{ settings.logo.path }}" />
+                {% else %}
+                    <a class="navbar-brand" href="/">L<span>ogo</span></a>
+                {% endif %}
+            </div>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">

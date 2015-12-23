@@ -14,18 +14,18 @@ function onStart()
         <div class="row">
             <div class="col-lg-4 col-sm-4">
                 <h1>
-                    Галереї
+                    {{ 'Галереї'|_ }}
                 </h1>
             </div>
             <div class="col-lg-8 col-sm-8">
                 <ol class="breadcrumb pull-right">
                     <li>
                         <a href="/galery/home">
-                            Галереї
+                            {{ 'Галереї'|_ }}
                         </a>
                     </li>
                     <li class="active">
-                        Головна
+                        {{ 'Головна'|_ }}
                     </li>
                 </ol>
             </div>
@@ -46,7 +46,7 @@ function onStart()
                     <div class="info">
                         <h4 class="text-center">{{ annotation.title }}</h4>
                         {{ annotation.description }}
-                        <a href="{{ annotation.link }}" class="btn">Перейти</a>
+                        <a href="{{ annotation.link }}" class="btn">{{ 'Перейти'|_ }}</a>
                     </div>
                 </div>
             </div>

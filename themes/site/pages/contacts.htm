@@ -13,13 +13,13 @@ function onStart()
         <div class="row">
             <div class="col-lg-4 col-sm-4">
                 <h1>
-                    Контакты
+                    {{ 'Контакты'|_ }}
                 </h1>
             </div>
             <div class="col-lg-8 col-sm-8">
                 <ol class="breadcrumb pull-right">
                     <li class="active">
-                        Контакты
+                        {{ 'Контакты'|_ }}
                     </li>
                 </ol>
             </div>
@@ -38,12 +38,12 @@ function onStart()
         <div class="col-lg-5 col-sm-5 address">
             <section class="contact-infos">
                 <address>
-                    Логотип
+                    {{ 'Логотип'|_ }}
                 </address>
             </section>
             <section class="contact-infos">
                 <h4 class="title custom-font text-black">
-                    Адреса
+                    {{ 'Адреса'|_ }}
                 </h4>
                 {% if contact.address %}
                   <address>
@@ -53,7 +53,7 @@ function onStart()
             </section>
             <section class="contact-infos">
                 <h4>
-                    Телефони:
+                    {{ 'Телефони:'|_ }}
                 </h4>
 
                 {% if contact.phone1 %}
@@ -76,13 +76,13 @@ function onStart()
         </div>
         <div class="col-lg-7 col-sm-7 address">
             <h4>
-                Drop us a line so that we can hear from you
+                {{ 'Напишіть нам'|_ }}
             </h4>
             <div class="contact-form">
                 <form role="form">
                     <div class="form-group">
                         <label for="name">
-                            Name
+
                         </label>
                         <input type="text" placeholder="" id="name" class="form-control">
                     </div>
