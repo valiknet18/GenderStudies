@@ -48,7 +48,7 @@ function onStart()
                                 </a>
                             </div>
                             <p class="text-center">
-                                {{ link.description }}
+                                {{ link.description|raw }}
                             </p>
                         </div>
                     {% endfor %}
@@ -57,7 +57,7 @@ function onStart()
                 <div class="col-lg-12 recent container">
                     {% if partners.count > 0 %}
                         <h3 class="recent-work">
-                            Посилання
+                            {{ 'Посилання'|_ }}
                         </h3>
                         <div id="owl-demo" class="owl-carousel owl-theme wow fadeIn">
                             {% for partner in partners %}
@@ -83,7 +83,7 @@ function onStart()
                 {% if news.count > 0 %}
                     <div class="blog-post wow fadeInRight animated">
                         <h3 class="text-center">
-                            Актуально
+                            {{ 'Актуально'|_ }}
                         </h3>
                         <div class="hr">
                             <span class="hr-inner"></span>
@@ -113,7 +113,7 @@ function onStart()
                 {% if needKnow.count > 0 %}
                     <div class="blog-post wow fadeInRight animated">
                         <h3 class="text-center">
-                            Потрібно знати
+                            {{ 'Потрібно знати'|_ }}
                         </h3>
                         <div class="hr">
                             <span class="hr-inner"></span>
