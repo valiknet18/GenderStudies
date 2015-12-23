@@ -49,13 +49,14 @@ function onStart()
         {{ this.page.title }}
     </title>
 
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     {% styles %}
 
     <script src="{{ '/assets/js/jquery-1.8.3.min.js'|theme }}"></script>
     <!--[if lt IE 9]>
       <script src=" {{ '/assets/js/html5shiv.js'|theme }}">
       </script>
-      
+
       <script src=" {{ '/assets/js/respond.min.js'|theme }}">
       </script>
     <![endif]-->
@@ -75,5 +76,72 @@ function onStart()
 </script>
 {% scripts %}
 {% framework extras %}
+
+<script>
+  wow = new WOW({
+    boxClass:     'wow',      // default
+    animateClass: 'animated', // default
+    offset:       0          // default
+  })
+
+  wow.init();
+
+
+  $(window).load(function() {
+    $('.flexslider').flexslider({
+      animation: "slide",
+      start: function(slider) {
+        $('body').removeClass('loading');
+      }
+    });
+  });
+
+
+
+
+      $(window).scroll(function() {
+        $('#skillz').each(function(){
+          var imagePos = $(this).offset().top;
+          var viewportheight = window.innerHeight;
+
+          var topOfWindow = $(window).scrollTop();
+          if (imagePos < topOfWindow+viewportheight) {
+            $('.skill_bar').fadeIn('slow');
+            $('.skill_one').animate(
+              {
+                width:'60%'
+              },
+              2000
+            );
+
+            $('.skill_two').animate(
+              {
+                width:'90%'
+              },
+              2000
+            );
+
+            $('.skill_three').animate(
+              {
+                width:'70%'
+              },
+              1000
+            );
+            $('.skill_four').animate(
+              {
+                width:'55%'
+              }, 1000
+            );
+
+            $('.skill_bar_progress p').fadeIn('slow',function(){});
+          }
+        });
+      }
+    );
+
+
+
+
+    </script>
 </body>
 </html>

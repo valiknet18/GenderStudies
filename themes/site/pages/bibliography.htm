@@ -39,13 +39,13 @@ function onStart()
         <div class="panel-group" id="accordion">
             {% for bibliography in bibliographies %}
                 <div class="panel panel-default wow bounceInUp animated">
-                    <div class="panel-heading cursor" data-toggle="collapse" data-parent="#accordion" href="#1-1">
+                    <div class="panel-heading cursor" data-toggle="collapse" data-parent="#accordion" href="#panel-{{ loop.index }}">
                         <h4 class="panel-title">
                             {{ bibliography.author }}
                             <span class="glyphicon glyphicon-chevron-down pull-right"></span>
                         </h4>
                     </div>
-                    <div id="1-1" class="panel-collapse collapse {% if loop.index == 1 %} in {% endif %}">
+                    <div id="panel-{{ loop.index }}" class="panel-collapse collapse {% if loop.index == 1 %} in {% endif %}">
                         <div class="panel-body col-xs-12 col-sm-3 .col-md-2 col-lg-2 bibliography-img">
                             <img class="img-responsive" src="{{ bibliography.photo.path }}" alt="">
                         </div>
