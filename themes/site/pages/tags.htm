@@ -77,6 +77,8 @@ function onEnd()
                         </div>
                     </div>
                 </div>
+            {% else %}
+                <h3>{{ 'На жаль, на даний момент по цьому тегу не знайдена ні одна стаття'|_ }}</h3>
             {% endfor %}
 
             <div class="text-center">
@@ -87,10 +89,6 @@ function onEnd()
 
         <div class="col-lg-3">
             <div class="blog-side-item">
-                <!--<div class="search-row">-->
-                    <!--<input type="text" class="form-control" placeholder="Search here">-->
-                <!--</div>-->
-
                 <div class="blog-post">
                     <h3>
                         {{ 'Останні публікації'|_ }}
@@ -99,7 +97,7 @@ function onEnd()
                     {% for article in articles|slice(0, 3) %}
                         <div class="media">
                             <a class="pull-left" href="/articles/{{ article.slug }}">
-                                <img class=" " src="{{ article.photo.path }}" alt="" />
+                                <img class="" src="{{ article.photo.path }}" alt="" />
                             </a>
                             <div class="media-body">
                                 <h5 class="media-heading">

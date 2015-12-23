@@ -80,6 +80,8 @@ function onStart()
                     <a href="/news/{{ item.category }}/item/{{ item.slug }}" class="btn btn-primary">Читати</a>
                 </div>
             </div>
+        {% else %}
+            <h3>{{ 'На жаль, в даний момент не додано ні одного запису'|_ }}</h3>
         {% endfor %}
         <!--blog end-->
     </div>

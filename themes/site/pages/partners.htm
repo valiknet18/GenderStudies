@@ -49,6 +49,8 @@ function onStart()
                     <a href="{{ partner.site }}" class="btn btn-primary" title="Enlace" target="_blank">Перейти »</a>
                 </div>
             </div>
+        {% else %}
+            <h3>{{ 'На жаль, на даний момент не додано ні одного партнеру' }}</h3>
         {% endfor %}
     </div>
 </div>

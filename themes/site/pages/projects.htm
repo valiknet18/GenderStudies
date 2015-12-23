@@ -76,6 +76,8 @@ function onStart()
                     </div>
                 </div>
             </div>
+        {% else %}
+            <h3>{{ 'На жаль, на даний момент не додано ні одного проекту'|_ }}</h3>
         {% endfor %}
     </div>
     <div class="col-md-12">
