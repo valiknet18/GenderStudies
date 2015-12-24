@@ -45,3 +45,11 @@
 1.0.10:
   - Update announcements table
   - update_announcements_table.php
+
+1.0.11:
+    - Update announcements table 2
+    - update_announcements_table_2.php
+
+1.0.12:
+    - Update annotations table 2
+    - update_annotations_table_2.php

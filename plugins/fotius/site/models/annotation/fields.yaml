@@ -3,36 +3,53 @@
 # ===================================
 
 fields:
-    id:
-        label: ID
-        disabled: true
+  id:
+      label: ID
+      disabled: true
 
-    image:
-        label: Фото
-        type: fileupload
-        span: left
+  use_icon:
+    label: Використовувати іконку?
+    type: checkbox
 
-    type:
-        label: Тип аннотації
-        type: dropdown
-        options:
-            about: Про центр
-            news: Новини
-            projects: Проекти
-            articles: Публікації
-            galery: Галерея
-        span: right
+  icon:
+    label: Ви можете вписати назва любой іконки, список з всих іконок є на сайті (http://fontawesome.io/icons/)
+    type: text
+    span: left
+    trigger:
+        action: show
+        field: use_icon
+        condition: checked
 
-    title:
-        label: Назва
-        type: text
-        span: left
+  image:
+    label: Фото
+    type: fileupload
+    span: left
+    trigger:
+        action: hide
+        field: use_icon
+        condition: checked
 
-    link:
-        label: Посилання на сторінку
-        type: text
-        span: right
+  type:
+    label: Тип аннотації
+    type: dropdown
+    options:
+        about: Про центр
+        news: Новини
+        projects: Проекти
+        articles: Публікації
+        galery: Галерея
+    span: right
 
-    description:
-        label: Опис
-        type: textarea
+  title:
+      label: Назва
+      type: text
+      span: left
+
+  link:
+      label: Посилання на сторінку
+      type: text
+      span: right
+
+  description:
+      label: Опис
+      type: textarea

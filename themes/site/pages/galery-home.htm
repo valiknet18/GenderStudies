@@ -37,11 +37,20 @@ function onStart()
 <!--container start-->
 <div class="container">
     <div class="row">
+        <div class="row">
         {% for annotation in annotations %}
+            {% if (loop.index % 2) == 0 %}
+              </div>
+              <div class="row">
+            {% endif %}
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                 <div class="box">
                     <div class="box-icon">
+                      {% if annotation.use_icon %}
+                        <span class="fa fa-4x {{ annotation.icon }}"></span>
+                      {% else %}
                         <img src="{{ annotation.image.path }}" alt="{{ annotation.title }}" />
+                      {% endif %}
                     </div>
                     <div class="info">
                         <h4 class="text-center">{{ annotation.title }}</h4>
@@ -51,5 +60,6 @@ function onStart()
                 </div>
             </div>
         {% endfor %}
+      </div>
     </div>
 </div>
