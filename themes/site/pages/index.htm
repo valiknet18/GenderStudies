@@ -38,7 +38,7 @@ function onStart()
                 <div class="col-lg-12 recent container">
                     <div class="row">
                     {% for link in main %}
-                        {% if (loop.index % 2) == 0 %}
+                        {% if ((loop.index % 2) == 1) and (loop.index != 1) %}
                           </div>
                           <div class="row">
                         {% endif %}

@@ -39,7 +39,7 @@ function onStart()
     <div class="row">
         <div class="row">
         {% for annotation in annotations %}
-            {% if (loop.index % 2) == 0 %}
+            {% if ((loop.index % 2) == 1) and (loop.index != 1) %}
               </div>
               <div class="row">
             {% endif %}
