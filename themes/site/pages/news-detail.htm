@@ -84,7 +84,25 @@ function onEnd()
                     <div class="col-lg-10 col-sm-10">
                         <!-- TODO add slider -->
                         <div class="blog-img gs">
-                            <img src="{{ item.photos[0].path }}" alt="{{ item.title }}"/>
+                            <div id="myCarousel" class="carousel slide">
+                                <!-- Carousel items -->
+                                <div class="carousel-inner">
+                                    {% for item in item.photos %}
+                                        <div class="{% if loop.index == 1 %} active {% endif %} item">
+                                            <img src="{{ item.path }}" alt="">
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                                <!-- Carousel nav -->
+                                <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+                                    <i class="fa fa-angle-left">
+                                    </i>
+                                </a>
+                                <a class="carousel-control right" href="#myCarousel" data-slide="next">
+                                    <i class="fa fa-angle-right">
+                                    </i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
