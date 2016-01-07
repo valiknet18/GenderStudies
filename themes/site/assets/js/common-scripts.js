@@ -28,25 +28,25 @@ var Script = function () {
 			$(window).scroll(function() {
 
 				if($(this).scrollTop() != 0) {
-					$('#back-to-top').fadeIn();	
+					$('#back-to-top').fadeIn();
 				} else {
 					$('#back-to-top').fadeOut();
 				}
 
 			});
-			
+
 			$('#back-to-top').click(function() {
 				$('body,html').animate({scrollTop:0},600);
-			});	
+			});
 
 	})();
-	
+
   jQuery(document).ready(function($) {
- 
+
         $('#myCarousel').carousel({
                 interval: 5000
         });
- 
+
         //Handles the carousel thumbnails
         $('[id^=carousel-selector-]').click(function () {
         var id_selector = $(this).attr("id");
@@ -64,4 +64,3 @@ var Script = function () {
                 $('#carousel-text').html($('#slide-content-'+id).html());
         });
 });
-

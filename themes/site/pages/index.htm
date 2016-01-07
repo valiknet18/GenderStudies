@@ -9,6 +9,8 @@ function onStart()
     $this['news'] = \Fotius\Site\Models\Link::where('category', 'news')->get();
     $this['needKnow'] = \Fotius\Site\Models\Link::where('category', 'needKnow')->get();
     $this['partners'] = \Fotius\Site\Models\Partner::limit(15)->get();
+
+    $this->addJs('assets/js/owl.carousel.js');
 }
 ==
 {% if slider.photos.count > 0 %}

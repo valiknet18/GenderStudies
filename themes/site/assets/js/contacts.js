@@ -20,9 +20,9 @@ $(document).ready(function() {
 
 //google map
 function initialize() {
-    var myLatlng = new google.maps.LatLng(51.508742,-0.120850);
+    var myLatlng = new google.maps.LatLng(49.4533105,32.045947);
     var mapOptions = {
-        zoom: 5,
+        zoom: 16,
         center: myLatlng,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     }
