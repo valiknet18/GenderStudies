@@ -4,6 +4,7 @@ title = "Альбом"
 ==
 function onStart()
 {
+    $this->addJs('assets/js/owl.carousel.js');
     $this['album'] = \Fotius\Site\Models\Album::where('slug', $this->param('slug'))->first();
 }
 

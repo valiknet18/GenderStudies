@@ -23,7 +23,6 @@ function onStart()
     $this->addJs('assets/js/jquery.bxslider.min.js');
     $this->addJs('assets/js/jquery.parallax-1.1.3.js');
     $this->addJs('assets/js/wow.min.js');
-    $this->addJs('assets/js/owl.carousel.js');
     $this->addJs('assets/js/jquery.easing.min.js');
     $this->addJs('assets/js/link-hover.js');
     $this->addJs('assets/js/superfish.js');
@@ -39,9 +38,9 @@ function onStart()
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Developed By M Abdur Rokib Promy">
-    <meta name="author" content="cosmic">
-    <meta name="keywords" content="Bootstrap 3, Template, Theme, Responsive, Corporate, Business">
+    <meta name="description" content="Сайт гендерного навчання">
+    <meta name="author" content="Developed By Valentyn Hrynevych and Andriy Moshkovsky">
+    <meta name="keywords" content="Сайт гендерного навчання, чоловік, жінка, сайт гендерного обучения, ЧНУ">
 
     <link rel="shortcut icon" href="img/favicon.png">
 
@@ -78,13 +77,13 @@ function onStart()
 {% framework extras %}
 
 <script>
-  wow = new WOW({
-    boxClass:     'wow',      // default
-    animateClass: 'animated', // default
-    offset:       0          // default
-  })
-
-  wow.init();
+  // wow = new WOW({
+  //   boxClass:     'wow',      // default
+  //   animateClass: 'animated', // default
+  //   offset:       0          // default
+  // })
+  //
+  // wow.init();
 
 
   $(window).load(function() {
@@ -99,45 +98,45 @@ function onStart()
 
 
 
-      $(window).scroll(function() {
-        $('#skillz').each(function(){
-          var imagePos = $(this).offset().top;
-          var viewportheight = window.innerHeight;
-
-          var topOfWindow = $(window).scrollTop();
-          if (imagePos < topOfWindow+viewportheight) {
-            $('.skill_bar').fadeIn('slow');
-            $('.skill_one').animate(
-              {
-                width:'60%'
-              },
-              2000
-            );
-
-            $('.skill_two').animate(
-              {
-                width:'90%'
-              },
-              2000
-            );
-
-            $('.skill_three').animate(
-              {
-                width:'70%'
-              },
-              1000
-            );
-            $('.skill_four').animate(
-              {
-                width:'55%'
-              }, 1000
-            );
-
-            $('.skill_bar_progress p').fadeIn('slow',function(){});
-          }
-        });
-      }
-    );
+    //   $(window).scroll(function() {
+    //     $('#skillz').each(function(){
+    //       var imagePos = $(this).offset().top;
+    //       var viewportheight = window.innerHeight;
+    //
+    //       var topOfWindow = $(window).scrollTop();
+    //       if (imagePos < topOfWindow+viewportheight) {
+    //         $('.skill_bar').fadeIn('slow');
+    //         $('.skill_one').animate(
+    //           {
+    //             width:'60%'
+    //           },
+    //           2000
+    //         );
+    //
+    //         $('.skill_two').animate(
+    //           {
+    //             width:'90%'
+    //           },
+    //           2000
+    //         );
+    //
+    //         $('.skill_three').animate(
+    //           {
+    //             width:'70%'
+    //           },
+    //           1000
+    //         );
+    //         $('.skill_four').animate(
+    //           {
+    //             width:'55%'
+    //           }, 1000
+    //         );
+    //
+    //         $('.skill_bar_progress p').fadeIn('slow',function(){});
+    //       }
+    //     });
+    //   }
+    // );
 
 
 
