@@ -1,5 +1,6 @@
 <?php namespace Fotius\Site;
 
+use Illuminate\Support\Facades\Lang;
 use Backend\Facades\Backend;
 use System\Classes\PluginBase;
 
