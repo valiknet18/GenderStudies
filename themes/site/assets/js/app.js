@@ -38,13 +38,13 @@ $(window).load(function() {
 });
 
 $(document).ready(function() {
+    if (typeof $("#owl-demo").owlCarousel != "undefined") {  
+        $("#owl-demo").owlCarousel({
 
-    $("#owl-demo").owlCarousel({
+            items : 4
 
-        items : 4
-
-    });
-
+        });
+    }
 });
 
 jQuery(document).ready(function(){
