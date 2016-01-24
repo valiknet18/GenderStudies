@@ -23,6 +23,7 @@ fields:
         label: Дата релізу
         type: datepicker
         mode: date
+        minDate: 01.01.1600
 
     link_to_book:
         label: Посилання на книгу

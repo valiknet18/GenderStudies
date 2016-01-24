@@ -39,7 +39,7 @@ a { color: #1EBE96 }
 a:hover { color: #17BB92 }
 p { line-height: 22px }
 /*header*/
-.head-section { 
+.head-section {
 border-bottom: 10px solid #1EBE96;
 }
 .head-section .navbar {
@@ -2986,7 +2986,7 @@ div.header h3{
 
 #slider-wrap{ /* Оболочка слайдера и кнопок */
 	width:100%;
-	height:550px;	
+	height:550px;
 	}
 #slider{ /* Оболочка слайдера */
 	width:100%;
@@ -3005,12 +3005,12 @@ div.header h3{
     margin-right: auto;
 	display: block;
 	}
-@media screen and (min-width: 2000px) {	
+@media screen and (min-width: 2000px) {
 	.slide img{ /* Слайд */
 	width:1200px;
 	}
 }
-	
+
 .sli-links{ /* Кнопки смены слайдов */
 	margin-top:10px;
 	text-align:center;}
@@ -3406,7 +3406,7 @@ div.header h3{
 
 @import url("http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
 .panel-image {
-    position: relative;   
+    position: relative;
 }
 .panel-image img.panel-image-preview {
     width: 100%;
@@ -3433,7 +3433,7 @@ div.header h3{
 .panel-image ~ input[type=checkbox] {
     position:absolute;
     top:- 30px;
-    z-index: -1;   
+    z-index: -1;
 }
 
 .panel-image ~ input[type=checkbox] ~ .panel-body {
@@ -3465,7 +3465,7 @@ div.header h3{
     display:none;
   }
 }
-  
+
 .media {
     margin-top: 5px;
 }
@@ -3497,7 +3497,7 @@ border-top: 1px solid #ddd;
    -o-transition: all 0.6s ease-in-out;
    transition: all 0.6s ease-in-out;
 }
-.widget li.list-group-item:hover { 
+.widget li.list-group-item:hover {
 -webkit-box-shadow: 0px 3px 20px 2px rgba(0,0,0,0.75);
 -moz-box-shadow: 0px 3px 20px 2px rgba(0,0,0,0.75);
 -o-transition:  0px 3px 20px 2px rgba(0,0,0,0.75);
@@ -3507,7 +3507,7 @@ z-index:999;
 	-webkit-transition: all 0.6s ease;
 	-moz-transition: all 0.6s ease;
 	-o-transition: all 0.6s ease;
-	transition: all 0.6s ease; 
+	transition: all 0.6s ease;
 }
 .widget .mic-info { color: #444;font-size: 11px; }
 .widget .action { margin-top:5px; }
@@ -3526,7 +3526,7 @@ z-index:999;
    -o-transition: all 0.6s ease-in-out;
    transition: all 0.6s ease-in-out;
 }
-.shadow-conteiner:hover { 
+.shadow-conteiner:hover {
 	-webkit-box-shadow: 0 0 10px rgba(0,0,0,1.75);
 	-moz-box-shadow: 0 0 10px rgba(0,0,0,1.75);
 	-o-transition: 0 0 10px rgba(0,0,0,1.75);
@@ -3534,12 +3534,12 @@ z-index:999;
 	-webkit-transition: all 0.6s ease;
 	-moz-transition: all 0.6s ease;
 	-o-transition: all 0.6s ease;
-	transition: all 0.6s ease; 
+	transition: all 0.6s ease;
 }
 .bibliography-img img{
 	width:165px;
 	height:165px;
-	display:block; 
+	display:block;
 	margin:0 auto;
 	border:3px solid #17BB92;
 }
@@ -3601,7 +3601,7 @@ z-index:999;
 .img-circle{
 	width:186px;
 	height:186px;
-}	
+}
 
 .feature-box-heading a{
     text-align: center;
@@ -3626,10 +3626,10 @@ z-index:999;
 }
 .blog-img img{
 	width:553px;
-	height:340px;	
+	height:340px;
 }
 .blog-img{
-	height:320px;	
+	height:320px;
 }
 @media (min-width: 768px) and (max-width: 1200px) {
 .logo-site img{
@@ -3638,7 +3638,7 @@ z-index:999;
 }
 
 .hide-bullets img {
-	height:70px;	
+	height:70px;
 }
 
 @media (min-width: 268px) and (max-width: 740px) {
@@ -3652,7 +3652,7 @@ z-index:999;
 .language{
 	width:93px;
 	background:#48cfad;
-	position:fixed;	
+	position:fixed;
     margin-top: 35px;
 	left:-51px;
 	z-index:99999;
@@ -3707,3 +3707,10 @@ z-index:999;
 	cursor:pointer;
 }
 
+.timeline-holder .timeline-body p {
+      margin-left: 60px;
+}
+
+.container .row .text-margin {
+    margin-top: 20px
+}

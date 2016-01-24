@@ -15,11 +15,6 @@ fields:
 
 secondaryTabs:
     fields:
-        photo:
-            label: Фото
-            type: fileupload
-            tab: Основна інформація
-
         short_description:
             label: Короткий опис
             type: richeditor
@@ -37,6 +32,11 @@ secondaryTabs:
             type: partial
             path: field_tags
             tab: Теги
+
+        author:
+            label: Автор
+            type: text
+            tab: Основна інформація
 
         news:
             label: Додати в рубрику "Актуально"

@@ -53,3 +53,11 @@
 1.0.12:
     - Update annotations table 2
     - update_annotations_table_2.php
+
+1.0.13:
+    - Update news table 2
+    - update_news_table_2.php
+
+1.0.14:
+    - Update articles table 3
+    - update_articles_table_v3.php
