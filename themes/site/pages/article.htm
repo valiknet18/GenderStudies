@@ -62,11 +62,6 @@ function onEnd()
                           </span>
                         </div>
                     </div>
-                    <div class="col-lg-10 col-sm-10">
-                        <div class="blog-img gs">
-                            <img src="{{ article.photo.path }}" alt="{{ article.title }}"/>
-                        </div>
-                    </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-2 col-sm-2 text-right"></div>
@@ -75,6 +70,9 @@ function onEnd()
                             {{ article.title }}
                         </h1>
                         {{ article.description|raw }}
+                        <div>
+                            {{ 'Автор:'|_ }} {{ article.author }}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -89,9 +87,6 @@ function onEnd()
                     </h3>
                     {% for article in articles|slice(0, 3) %}
                         <div class="media">
-                            <a class="pull-left" href="/articles/{{ article.slug }}">
-                                <img class=" " src="{{ article.photo.path }}" alt="" />
-                            </a>
                             <div class="media-body">
                                 <h5 class="media-heading">
                                     <a href="/articles/{{ article.slug }}">
@@ -101,6 +96,9 @@ function onEnd()
                                 <p>
                                     {{ article.short_description|raw }}
                                 </p>
+                                <div>
+                                    {{ 'Автор:'|_ }} {{ article.author }}
+                                </div>
                             </div>
                         </div>
                     {% endfor %}
@@ -125,5 +123,3 @@ function onEnd()
         </div>
     </div>
 </div>
-
-

@@ -61,7 +61,9 @@ function onStart()
             <div class="col-sm-4 col-md-4">
                 <div class="post wow zoomIn">
                     <div class="post-img-content">
-                        <img src="{{ item.photo.path }}" class="img-responsive" />
+                        {% if item.photo %}
+                            <img src="{{ item.photo.path }}" class="img-responsive" />
+                        {% endif %}
                         <span class="post-title">
                             <b>{{ item.title }}</b><br />
                         </span>

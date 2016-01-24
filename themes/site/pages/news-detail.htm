@@ -26,7 +26,7 @@ function onStart()
             break;
 
         case "educationalActivities": {
-            $this['category'] = 'Просвітницька діяльність'
+            $this['category'] = 'Просвітницька діяльність';
         }
             break;
 
@@ -82,18 +82,18 @@ function onEnd()
                 <div class="row">
                     <div class="col-lg-2 col-sm-2">
                         <div class="date-wrap">
-                  <span class="date">
-                    {{ item.created_at|date('d') }}
-                  </span>
-                  <span class="month">
-                    {{ item.created_at|date('F') }}
-                  </span>
+                            <span class="date">
+                              {{ item.created_at|date('d') }}
+                            </span>
+                            <span class="month">
+                              {{ item.created_at|date('m')|transInTemplate('months') }}
+                            </span>
                         </div>
 
                     </div>
+                    {% if item.photos.length > 0 %}
                     <div class="col-lg-10 col-sm-10">
-                        <!-- TODO add slider -->
-                        <div class="blog-img gs">
+                      <div class="blog-img gs">
                             <div id="myCarousel" class="carousel slide">
                                 <!-- Carousel items -->
                                 <div class="carousel-inner">
@@ -115,8 +115,9 @@ function onEnd()
                             </div>
                         </div>
                     </div>
-                </div>
                 <div class="row" style="margin-top: 150px">
+                </div>
+              {% endif %}
                     <div class="col-lg-2 col-sm-2 text-right"></div>
                     <div class="col-lg-10 col-sm-10 text-margin">
                         <h1>

@@ -77,18 +77,17 @@ function onEnd()
                             {{ item.created_at|date('d') }}
                           </span>
                           <span class="month">
-                            {{ item.created_at|date('F') }}
+                            {{ item.created_at|date('m')|transInTemplate('months') }}
                           </span>
                         </div>
 
                     </div>
                     <div class="col-lg-10 col-sm-10">
-
-
-                        <div class="blog-img gs">
-                            <img src="{{ item.photo.path }}" alt=""/>
-                        </div>
-
+                        {% if item.photo %}
+                          <div class="blog-img gs">
+                              <img src="{{ item.photo.path }}" alt=""/>
+                          </div>
+                        {% endif %}
                     </div>
                 </div>
                 <div class="row">

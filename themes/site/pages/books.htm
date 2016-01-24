@@ -36,30 +36,35 @@ function onStart()
 <!--container start-->
 <div class="container">
     <div class="row">
-
-        {% for book in books %}
-            <div class="col-sm-6 col-md-6 bt-bottom wow zoomIn">
-                <div class="col-sm-4 col-md-4">
-                    <img src="{{ book.photo.path }}"
-                         alt="" class="img-rounded img-responsive"/>
-                </div>
-                <div class="col-sm-8 col-md-8">
-                    <blockquote>
-                        <p>{{ book.author }}</p>
-                        <small><cite title="Source Title">{{ book.name }}</cite></small>
+        <div class="row">
+            {% for book in books %}
+                {% if (loop.index != 0) and ((loop.index % 2) == 0)  %}
+                  </div>
+                  <div class="row">
+                {% endif %}
+                <div class="col-sm-6 col-md-6 bt-bottom wow zoomIn">
+                    <div class="col-sm-4 col-md-4">
+                        <img src="{{ book.photo.path }}"
+                             alt="" class="img-rounded img-responsive"/>
+                    </div>
+                    <div class="col-sm-8 col-md-8">
+                        <blockquote>
+                            <p>{{ book.author }}</p>
+                            <small><cite title="Source Title">{{ book.name }}</cite></small>
+                            <p>
+                                {{ book.description }}
+                            </p>
+                        </blockquote>
                         <p>
-                            {{ book.description }}
+                            <i class="glyphicon glyphicon-calendar"></i> {{ book.released_at|date('d.m.Y') }}
+                            <br/><i class="glyphicon glyphicon-floppy-save"></i>
+                            <a href="{{ book.link_to_book }}" class="label label-tema" target="_blank">{{ 'Скачать'|_ }}</a>
                         </p>
-                    </blockquote>
-                    <p>
-                        <i class="glyphicon glyphicon-calendar"></i> {{ book.released_at|date('d.m.Y') }}
-                        <br/><i class="glyphicon glyphicon-floppy-save"></i>
-                        <a href="{{ book.link_to_book }}" class="label label-tema">{{ 'Скачать'|_ }}</a>
-                    </p>
+                    </div>
                 </div>
-            </div>
-        {% else %}
-            <h3>{{ 'На жаль, в даний момент не додана ні одна книга'|_ }}</h3>
-        {% endfor %}
+            {% else %}
+                <h3>{{ 'На жаль, в даний момент не додана ні одна книга'|_ }}</h3>
+            {% endfor %}
+        </div>
     </div>
 </div>
