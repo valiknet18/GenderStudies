@@ -92,8 +92,8 @@ function onEnd()
 
                     </div>
                     {% if item.photos.length > 0 %}
-                    <div class="col-lg-10 col-sm-10">
-                      <div class="blog-img gs">
+                      <div class="col-lg-10 col-sm-10">
+                        <div class="blog-img gs">
                             <div id="myCarousel" class="carousel slide">
                                 <!-- Carousel items -->
                                 <div class="carousel-inner">
@@ -114,16 +114,18 @@ function onEnd()
                                 </a>
                             </div>
                         </div>
-                    </div>
-                <div class="row" style="margin-top: 150px">
-                </div>
-              {% endif %}
-                    <div class="col-lg-2 col-sm-2 text-right"></div>
+                      </div>
+                      <div class="row" style="margin-top: 150px">
+                      </div>
+                    {% endif %}
                     <div class="col-lg-10 col-sm-10 text-margin">
                         <h1>
                             {{ item.title }}
                         </h1>
                         {{ item.description|raw }}
+                    </div>
+                    <div class="col-lg-10 col-sm-10">
+                        <div class="ya-share2" data-title="{{ item.title }}" data-desciption="{{ item.description|raw }}" {% if item.photos.length > 0 %} data-image="{{ item.photos[0].path }}" {% endif %} data-services="vkontakte,facebook,odnoklassniki,gplus,twitter"></div>
                     </div>
                 </div>
             </div>

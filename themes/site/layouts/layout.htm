@@ -77,15 +77,6 @@ function onStart()
 {% framework extras %}
 
 <script>
-  // wow = new WOW({
-  //   boxClass:     'wow',      // default
-  //   animateClass: 'animated', // default
-  //   offset:       0          // default
-  // })
-  //
-  // wow.init();
-
-
   $(window).load(function() {
     $('.flexslider').flexslider({
       animation: "slide",
@@ -94,53 +85,9 @@ function onStart()
       }
     });
   });
-
-
-
-
-    //   $(window).scroll(function() {
-    //     $('#skillz').each(function(){
-    //       var imagePos = $(this).offset().top;
-    //       var viewportheight = window.innerHeight;
-    //
-    //       var topOfWindow = $(window).scrollTop();
-    //       if (imagePos < topOfWindow+viewportheight) {
-    //         $('.skill_bar').fadeIn('slow');
-    //         $('.skill_one').animate(
-    //           {
-    //             width:'60%'
-    //           },
-    //           2000
-    //         );
-    //
-    //         $('.skill_two').animate(
-    //           {
-    //             width:'90%'
-    //           },
-    //           2000
-    //         );
-    //
-    //         $('.skill_three').animate(
-    //           {
-    //             width:'70%'
-    //           },
-    //           1000
-    //         );
-    //         $('.skill_four').animate(
-    //           {
-    //             width:'55%'
-    //           }, 1000
-    //         );
-    //
-    //         $('.skill_bar_progress p').fadeIn('slow',function(){});
-    //       }
-    //     });
-    //   }
-    // );
-
-
-
-
     </script>
+
+    <script type="text/javascript" src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="//yastatic.net/share2/share.js" charset="utf-8"></script>
 </body>
 </html>

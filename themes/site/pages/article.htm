@@ -74,6 +74,9 @@ function onEnd()
                             {{ 'Автор:'|_ }} {{ article.author }}
                         </div>
                     </div>
+                    <div class="col-lg-10 col-sm-10">
+                        <div class="ya-share2" data-title="{{ article.title }}" data-desciption="{{ article.description|raw }}" data-services="vkontakte,facebook,odnoklassniki,gplus,twitter"></div>
+                    </div>
                 </div>
             </div>
 

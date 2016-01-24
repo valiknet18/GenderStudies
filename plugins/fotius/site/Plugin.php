@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Lang;
 use Backend\Facades\Backend;
 use System\Classes\PluginBase;
+use App;
 
 /**
  * site Plugin Information File
@@ -39,7 +40,7 @@ class Plugin extends PluginBase
 
     public function translate($type, $path)
     {
-        return Lang::get('fotius.site::' . $path . '.' . $type);
+        return Lang::get('fotius.site::lang.' . $path . '.' . $type);
     }
 
     public function registerNavigation()
