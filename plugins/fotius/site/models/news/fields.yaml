@@ -30,6 +30,8 @@ fields:
             training: Тренінг
             ad: Оголошення
             charity: Благодійність
+            сhronograph: Хронограф
+            educationalActivities: Просвітницька діяльність
 
     photos:
         label: Фото

@@ -8,17 +8,27 @@ function onStart()
         case "training": {
             $this['category'] = 'Тренинг';
         }
-        break;
+            break;
 
         case "ad": {
             $this['category'] = 'Оголошення';
         }
-        break;
+            break;
 
         case "charity": {
             $this['category'] = 'Благодійність';
         }
-        break;
+            break;
+
+        case "сhronograph": {
+            $this['category'] = 'Хронограф';
+        }
+            break;
+
+        case "educationalActivities": {
+            $this['category'] = 'Просвітницька діяльність'
+        }
+            break;
 
         default: {
             throw new Exception('Такой сторінки не існує');
@@ -108,7 +118,7 @@ function onEnd()
                 </div>
                 <div class="row" style="margin-top: 150px">
                     <div class="col-lg-2 col-sm-2 text-right"></div>
-                    <div class="col-lg-10 col-sm-10">
+                    <div class="col-lg-10 col-sm-10 text-margin">
                         <h1>
                             {{ item.title }}
                         </h1>

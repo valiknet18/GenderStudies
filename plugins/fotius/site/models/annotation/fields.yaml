@@ -50,6 +50,6 @@ fields:
       type: text
       span: right
 
-  description:
+  short_description:
       label: Опис
       type: textarea
