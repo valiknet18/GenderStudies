@@ -38,6 +38,10 @@ secondaryTabs:
             type: text
             tab: Основна інформація
 
+        created_at:
+            label: Дата створення статті
+            type: datepicker
+
         news:
             label: Додати в рубрику "Актуально"
             type: switch

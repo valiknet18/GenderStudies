@@ -41,6 +41,10 @@ fields:
         label: Активний
         type: switch
 
+    created_at:
+        label: Дата публікації
+        type: datepicker
+
     news:
         label: Додати в рубрику "Актуально"
         type: switch
