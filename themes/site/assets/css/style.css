@@ -3557,6 +3557,7 @@ z-index:999;
     text-align: right;
     display: block;
     margin-top: 60px;
+    margin-bottom: 60px;
 }
 .box-icon {
     background-color: #FFFFFF;
@@ -3713,4 +3714,7 @@ z-index:999;
 
 .container .row .text-margin {
     text-align: right;
+}
+.error-message {
+    margin-bottom: 60px;
 }
