@@ -34,3 +34,7 @@ fields:
     photo:
         label: Фото
         type: fileupload
+
+    created_at:
+        label: Дата публікації
+        type: datepicker
