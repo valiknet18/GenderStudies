@@ -25,7 +25,7 @@ function onStart()
         }
     }
 
-    $this['projects'] = \Fotius\Site\Models\Project::where('category', $this->param('category'))->paginate(9);
+    $this['projects'] = \Fotius\Site\Models\Project::where('category', $this->param('category'))->orderBy('created_at', 'DESC')->paginate(9);
 }
 ==
 <!--breadcrumbs start-->
