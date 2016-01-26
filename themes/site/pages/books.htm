@@ -4,7 +4,8 @@ title = "Книги"
 ==
 function onStart()
 {
-    $this['books'] = \Fotius\Site\Models\Book::orderBy('created_at', 'DESC')->get();
+    //TODO need add pagination
+    $this['books'] = \Fotius\Site\Models\Book::orderBy('created_at', 'DESC')->limit(20)->get();
 }
 ==
 <!--breadcrumbs start-->
