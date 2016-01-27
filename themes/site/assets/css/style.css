@@ -3718,3 +3718,12 @@ z-index:999;
 .error-message {
     margin-bottom: 60px;
 }
+
+.footer a.email {
+    color: #ffffff;
+}
+
+.post div.post-title {
+    text-align: center;
+    width: 100%;
+}
