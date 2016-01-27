@@ -60,13 +60,14 @@ function onStart()
         {% for item in projects %}
             <div class="col-sm-4 col-md-4">
                 <div class="post wow zoomIn">
+                    <div class="post-title">
+                        <b>{{ item.title }}</b><br />
+                    </div>
+
                     <div class="post-img-content">
                         {% if item.photo %}
                             <img src="{{ item.photo.path }}" class="img-responsive" />
                         {% endif %}
-                        <span class="post-title">
-                            <b>{{ item.title }}</b><br />
-                        </span>
                     </div>
                     <div class="content">
                         <div>
