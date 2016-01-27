@@ -3621,12 +3621,12 @@ z-index:999;
 	width:180px;
 	vertical-align: middle;
 }
-.blog-img img{
-	width:553px;
-	height:340px;
+.blog-img img {
+	width: 100%;
+	height: auto;
 }
-.blog-img{
-	height:320px;
+.blog-img {
+	height: auto;
 }
 @media (min-width: 768px) and (max-width: 1200px) {
 .logo-site img{
