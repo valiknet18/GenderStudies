@@ -3622,8 +3622,8 @@ z-index:999;
 	vertical-align: middle;
 }
 .blog-img img {
-	width: 100%;
 	height: auto;
+  margin: auto;
 }
 .blog-img {
 	height: auto;
