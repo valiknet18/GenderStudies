@@ -3726,4 +3726,19 @@ z-index:999;
 .post div.post-title {
     text-align: center;
     width: 100%;
+    display: block;
+}
+
+.post div.post-title b {
+    width: 100%;
+}
+
+.post div.post-img-content {
+    overflow: hidden;
+}
+
+.post div.post-img-content img {
+    position: none;
+    margin: auto;
+    height: 100%;
 }
