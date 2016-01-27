@@ -85,7 +85,7 @@ function onEnd()
                     <div class="col-lg-10 col-sm-10">
                         {% if item.photo %}
                           <div class="blog-img gs">
-                              <img src="{{ item.photo.path }}" alt=""/>
+                              <img src="{{ item.photo.thumb(320, 'auto') }}" alt=""/>
                           </div>
                         {% endif %}
                     </div>
