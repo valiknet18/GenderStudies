@@ -3325,10 +3325,6 @@ div.header h3{
     height: 196px;
     position: relative;
 }
-.post .post-img-content img
-{
-    position: absolute;
-}
 .post .post-title
 {
     display: table-cell;
