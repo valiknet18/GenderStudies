@@ -72,7 +72,7 @@ function onStart()
     <div class="row" id="news-holder">
 
         {% for item in news %}
-            {% if (loop.index != 0) and ((loop.index % 2) == 0) %}
+            {% if (loop.index != 1) and ((loop.index % 2) == 1) %}
                 </div>
                 <div class="row">
             {% endif %}
