@@ -20,3 +20,7 @@ fields:
     photos:
         label: Фотографії
         type: fileupload
+
+    created_at:
+        label: Дата створення
+        type: datepicker

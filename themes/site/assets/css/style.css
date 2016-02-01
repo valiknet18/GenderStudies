@@ -3738,3 +3738,7 @@ z-index:999;
     margin: auto;
     height: 100%;
 }
+
+#news-holder .blog-img img {
+    width: 100%;
+}
