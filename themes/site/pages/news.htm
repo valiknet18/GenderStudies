@@ -68,8 +68,8 @@ function onStart()
 <!--breadcrumbs end-->
 
 <!--container start-->
-<div class="container">
-    <div class="row" id="news-holder">
+<div class="container" id="news-holder">
+    <div class="row" >
 
         {% for item in news %}
             {% if (loop.index != 1) and ((loop.index % 2) == 1) %}
