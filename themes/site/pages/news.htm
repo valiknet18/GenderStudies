@@ -72,6 +72,10 @@ function onStart()
     <div class="row" id="news-holder">
 
         {% for item in news %}
+            {% if (loop.index != 0) and ((loop.index % 2) == 0) %}
+                </div>
+                <div class="row">
+            {% endif %}
             <div class="col-md-6">
                 <div class="blog-left wow fadeInLeft">
                     {% if item.photos.count > 0 %}
