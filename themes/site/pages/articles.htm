@@ -48,7 +48,7 @@ function onStart()
                                 {{ article.created_at|date('d') }}
                               </span>
                               <span class="month">
-                                {{ article.created_at|date('F') }}
+                                  {{ item.created_at|date('m')|transInTemplate('months') }}
                               </span>
                             </div>
                         </div>
