@@ -7,26 +7,31 @@ function onStart()
     switch ($this->param('category')) {
         case "training": {
             $this['category'] = 'Тренинг';
+            $this['news'] = \Fotius\Site\Models\News::where('category', $this->param('category'))->orderBy('created_at', 'DESC')->paginate(10);
         }
             break;
 
         case "ad": {
             $this['category'] = 'Оголошення';
+            $this['news'] = \Fotius\Site\Models\News::where('category', $this->param('category'))->orderBy('created_at', 'DESC')->paginate(10);
         }
             break;
 
         case "charity": {
             $this['category'] = 'Благодійність';
+            $this['news'] = \Fotius\Site\Models\News::where('category', $this->param('category'))->orderBy('created_at', 'DESC')->paginate(10);
         }
             break;
 
         case "сhronograph": {
             $this['category'] = 'Хронограф';
+            $this['news'] = \Fotius\Site\Models\News::where('category', $this->param('category'))->paginate(10);
         }
             break;
 
         case "educationalActivities": {
             $this['category'] = 'Просвітницька діяльність';
+            $this['news'] = \Fotius\Site\Models\News::where('category', $this->param('category'))->orderBy('created_at', 'DESC')->paginate(10);
         }
             break;
 
@@ -34,8 +39,6 @@ function onStart()
             throw new Exception('Такой сторінки не існує');
         }
     }
-
-    $this['news'] = \Fotius\Site\Models\News::where('category', $this->param('category'))->paginate(10);
 }
 
 ==

@@ -10,5 +10,5 @@ columns:
     title:
         label: Назва
 
-    description:
+    short_description:
         label: Опис

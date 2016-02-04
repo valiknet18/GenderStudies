@@ -5,7 +5,7 @@ title = "Архів"
 ==
 function onStart()
 {
-    $this['news'] = \Fotius\Site\Models\News::paginate(10);
+    $this['news'] = \Fotius\Site\Models\News::orderBy('created_at', 'DESC')->paginate(10);
 }
 ==
 <!--breadcrumbs start-->
