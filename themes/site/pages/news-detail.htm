@@ -91,33 +91,6 @@ function onEnd()
                         </div>
 
                     </div>
-                    {% if item.photos.count > 0 %}
-                      <div class="col-lg-10 col-sm-10">
-                        <div class="blog-img gs">
-                            <div id="myCarousel" class="carousel slide">
-                                <!-- Carousel items -->
-                                <div class="carousel-inner">
-                                    {% for item in item.photos %}
-                                        <div class="{% if loop.index == 1 %} active {% endif %} item">
-                                            <img src="{{ item.path }}" alt="">
-                                        </div>
-                                    {% endfor %}
-                                </div>
-                                <!-- Carousel nav -->
-                                <a class="carousel-control left" href="#myCarousel" data-slide="prev">
-                                    <i class="fa fa-angle-left">
-                                    </i>
-                                </a>
-                                <a class="carousel-control right" href="#myCarousel" data-slide="next">
-                                    <i class="fa fa-angle-right">
-                                    </i>
-                                </a>
-                            </div>
-                        </div>
-                      </div>
-                      <div class="row" style="margin-top: 150px">
-                      </div>
-                    {% endif %}
 
                     <div class="col-lg-10 col-lg-offset-2 col-sm-12 text-margin">
                         <h1>
