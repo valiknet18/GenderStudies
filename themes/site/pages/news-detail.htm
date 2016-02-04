@@ -126,7 +126,7 @@ function onEnd()
                         {{ item.description|raw }}
                     </div>
                     <div class="col-lg-10 col-lg-offset-2 col-sm-12">
-                        <div class="ya-share2" data-title="{{ item.title }}" data-desciption="{{ item.description|raw }}" {% if item.photos.length > 0 %} data-image="{{ item.photos[0].path }}" {% endif %} data-services="vkontakte,facebook,odnoklassniki,gplus,twitter"></div>
+                        <div class="ya-share2" data-title="{{ item.title }}" data-desciption="{{ item.description|raw }}" {% if item.photos.count > 0 %} data-image="{{ item.photos[0].path }}" {% endif %} data-services="vkontakte,facebook,odnoklassniki,gplus,twitter"></div>
                     </div>
                 </div>
             </div>
