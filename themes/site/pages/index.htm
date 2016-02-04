@@ -10,7 +10,7 @@ function onStart()
     $this['needKnow'] = \Fotius\Site\Models\Link::where('category', 'needKnow')->get();
     $this['partners'] = \Fotius\Site\Models\Partner::limit(15)->get();
 
-    $this->addJs('assets/js/owl.carousel.js');
+    $this->addJs('assets/js/jquery.bxslider.min.js');
 }
 ==
 {% if slider.photos.count > 0 %}
