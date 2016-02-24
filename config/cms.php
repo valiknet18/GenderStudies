@@ -262,4 +262,5 @@ return [
 
     'enableCsrfProtection' => false,
 
+    'allowedAssetTypes' => ['jpg','jpeg','bmp','png','gif','css','js','woff','svg','ttf','eot','json','md','less','sass','scss','pdf'],
 ];

@@ -30,6 +30,8 @@
     ##
     RewriteCond %{REQUEST_FILENAME} -f
     RewriteCond %{REQUEST_URI} !\.js
+    RewriteCond %{REQUEST_URI} !\.doc
+    RewriteCond %{REQUEST_URI} !\.docx
     RewriteCond %{REQUEST_URI} !\.map
     RewriteCond %{REQUEST_URI} !\.ico
     RewriteCond %{REQUEST_URI} !\.jpg

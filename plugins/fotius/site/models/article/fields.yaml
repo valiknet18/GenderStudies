@@ -51,3 +51,7 @@ secondaryTabs:
             label: Додати в рубрику "Потрібно знати"
             type: switch
             span: right
+
+        document_id:
+            label: Документи
+            type: mediafinder
