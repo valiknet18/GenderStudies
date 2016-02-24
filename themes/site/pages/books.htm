@@ -60,7 +60,15 @@ function onStart()
                             <i class="glyphicon glyphicon-calendar"></i> {{ book.released_at|date('d.m.Y') }}
                             <br/><i class="glyphicon glyphicon-floppy-save"></i>
                             <a href="{{ book.link_to_book }}" class="label label-tema" target="_blank">{{ 'Скачать'|_ }}</a>
+
                         </p>
+
+                        {% if (book.file_id) %}
+                        <p>
+                            <i class="fa fa-file"></i>
+                            <a href="/storage/app/media{{ book.file_id }}">{{ book.file_id }}</a>
+                        </p>
+                        {% endif %}
                     </div>
                 </div>
             {% else %}

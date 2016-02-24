@@ -50,9 +50,13 @@ class Article extends Model
     public $attachOne = [
         'photo' => [
             'System\Models\File'
-        ]
+        ],
+        'document' => [
+            'System\Models\File'
+        ],
     ];
-    public $attachMany = [];
+    public $attachMany = [
+    ];
 
     public function beforeCreate()
     {

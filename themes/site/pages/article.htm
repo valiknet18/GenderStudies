@@ -78,6 +78,17 @@ function onEnd()
                         <div class="ya-share2" data-title="{{ article.title }}" data-desciption="{{ article.description|raw }}" data-services="vkontakte,facebook,odnoklassniki,gplus,twitter"></div>
                     </div>
                 </div>
+
+                <div class="row">
+                    {% if (article.document_id) %}
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <i class="fa fa-file"></i>
+                            <a href="/storage/app/media{{ article.document_id }}">{{ article.document_id }}</a>
+                        </li>
+                    </ul>
+                    {% endif %}
+                </div>
             </div>
 
         </div>

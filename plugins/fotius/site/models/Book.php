@@ -44,7 +44,10 @@ class Book extends Model
     public $attachOne = [
         'photo' => [
             'System\Models\File'
-        ]
+        ],
+        'file' => [
+            'System\Models\File'
+        ],
     ];
     public $attachMany = [];
 

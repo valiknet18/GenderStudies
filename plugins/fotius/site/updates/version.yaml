@@ -61,3 +61,8 @@
 1.0.14:
     - Update articles table 3
     - update_articles_table_v3.php
+
+1.0.15:
+    - Make some new updates
+    - update_articles_table_v4.php
+    - update_books_table.php
