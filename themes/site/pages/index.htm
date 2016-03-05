@@ -6,11 +6,12 @@ function onStart()
 {
     $this['slider'] = \Fotius\Site\Models\Slider::instance();
     $this['main'] = \Fotius\Site\Models\Link::where('category', 'main')->get();
-    $this['news'] = \Fotius\Site\Models\Link::where('category', 'news')->get();
-    $this['needKnow'] = \Fotius\Site\Models\Link::where('category', 'needKnow')->get();
+    $this['news'] = \Fotius\Site\Models\Link::where('category', 'news')->limit(3)->get();
+    $this['needKnow'] = \Fotius\Site\Models\Link::where('category', 'needKnow')->limit(3)->get();
     $this['partners'] = \Fotius\Site\Models\Partner::limit(15)->get();
 
     $this->addJs('assets/js/jquery.bxslider.min.js');
+    $this->addJs('assets/js/owl.carousel.js');
 }
 ==
 {% if slider.photos.count > 0 %}
