@@ -43,7 +43,7 @@ function onStart()
                 {% for item in structures %}
                     <li class="{% if (loop.index % 2) == 0 %} timeline-inverted {% else %} timeline-holder {% endif %}  wow zoomIn">
                         <div class="timeline-image">
-                            <img class="img-circle img-responsive" src="{{ item.photo.path }}" alt="">
+                            <img class="img-circle img-responsive" src="{{ item.photo.thumb(200, 185, 'crop') }}" alt="">
                         </div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
